@@ -6,6 +6,9 @@
         <!-- Bootplus -->
         <link href="css/bootplus.min.css" rel="stylesheet" media="screen">
         <link href="css/bootplus-responsive.min.css" rel="stylesheet" media="screen">
+	<!-- <link rel="stylesheet" href="css/font-awesome.min.css">  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
         <!--[if IE 7]>
         <link rel="stylesheet" href="css/bootplus-ie7.min.css">
         <![endif]-->
@@ -22,11 +25,17 @@ body{
 background-color : transparent;
 }
 .navbar .navbar-inner{
-background-color : rgba(255, 255, 255, 0.5);
+background-color : rgba(255, 255, 255, 0.8);
 }
+    .brand{
+        font-family: Lobster ;
+    }
 </style>
       </head>
       <body>
+          
+          
+          
     <div class="navbar ">
       <div class="navbar-inner">
         <a class="brand" href="#">Demo</a>
@@ -37,12 +46,35 @@ background-color : rgba(255, 255, 255, 0.5);
         </ul>
       </div>
     </div>
-<div class="container-fluid">
-
-<h1> hello </h1>
+<div class="container">
+<div class="row">
+    <div class="span4">
+    <div class="card hovercard">
+       <img src="img/place.png" alt="no image"/>
+       <div class="avatar">
+          <img src="img/place.png" alt="no image" />
+       </div>
+       <div class="info">
+          <div class="title">
+             Titolo
+          </div>
+          <div class="desc"><i class="fa fa-camera-retro fa-lg"></i>Lorem ipsum</div>
+          <div class="desc">Lorem ipsum</div>
+          <div class="desc">Lorem ipsum</div>
+       </div>
+       <div class="bottom">
+          <button class="btn">Add</button>
+       </div>
+    </div>
 </div>
-
-
+    
+                                    <div class="span8">
+                          <div class="well well-large">
+                              hello
+                                        </div>div>
+                        </div>
+    </div>
+</div>
         <script src="http://code.jquery.com/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
       </body>
