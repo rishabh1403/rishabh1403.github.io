@@ -1,0 +1,22 @@
+ body {
+     background-color: transparent;
+ }
+ .navbar .navbar-inner {
+     background-color: rgba(0, 0, 0, 0.3);
+ }
+ .brand {
+     font-family: Lobster;
+ }
+ .mycard {
+     box-shadow: 5px 5px 5px #000;
+ }
+ .myhorizontalRule {
+     height: 1px;
+     color: #ed1d61;
+     background: #ed1d61;
+     font-size: 0;
+     border: 0;
+ }
+ .desc {
+     font-size: 15px !important;
+ }
