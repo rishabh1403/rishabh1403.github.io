@@ -42,3 +42,50 @@
  a:hover {
      text-decoration: none;
  }
+ .myinfo {
+     font-family: monospace;
+     font-size: 20px;
+     padding-top: 10px;
+     padding-left: 20px;
+ }
+ .skilllist {
+     font-size: 15px;
+     font-family: sans-serif;
+     padding-left: 400px;
+ }
+ .mehead {
+     text-align: center;
+     font-size: 30px;
+     color: black;
+     margin-top: 20px;
+ }
+ .personalhead {
+     padding-left: 330px;
+     font-size: 30px;
+     color: black;
+ }
+ .hrule1 {
+     height: 3px;
+     color: #000;
+     background: #000;
+     margin-bottom: 10px;
+     border: 0;
+     width: 60%;
+     margin: auto;
+ }
+ .hrule2 {
+     height: 2px;
+     color: #000;
+     background: #000;
+     border: 0;
+     width: 25%;
+ }
+ .hrule3 {
+     height: 2px;
+     color: #000;
+     background: #000;
+     margin-bottom: 10px;
+     border: 0;
+     width: 25%;
+     margin-left: 300px;
+ }
