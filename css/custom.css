@@ -89,3 +89,9 @@
      width: 25%;
      margin-left: 300px;
  }
+ .contactbutton {
+     padding: 40px;
+     text-align: center;
+     font-size: 30px;
+     line-height: 10px;
+ }
