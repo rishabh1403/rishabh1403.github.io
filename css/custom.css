@@ -12,11 +12,33 @@
  }
  .myhorizontalRule {
      height: 1px;
-     color: #ed1d61;
-     background: #ed1d61;
+     color: #000;
+     background: #000;
      font-size: 0;
      border: 0;
  }
  .desc {
-     font-size: 15px !important;
+     font-size: 13px !important;
+ }
+ .navbar .nav>li>a {
+     font-size: 20px;
+     color: white;
+     padding-right: 40px;
+     padding-left: 40px;
+     padding-top: 30px;
+     margin-bottom: 10px;
+ }
+ .navbar .brand {
+     font-size: 40px;
+     color: white;
+     padding-left: 40px;
+     padding-top: 30px;
+     margin-bottom: 10px;
+ }
+ /* .navbar .nav>li>a:hover {
+     text-decoration: none;
+ }*/
+ 
+ a:hover {
+     text-decoration: none;
  }
