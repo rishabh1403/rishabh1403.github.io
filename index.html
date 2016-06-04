@@ -11,22 +11,6 @@ title: Rishabh Jain
 		<hr class="divider" />
 		<!-- <h1 class="blogHeading">Mean Stack</h1>
 		<h1 class="blogHeading">Blog</h1> -->
-		<ul class="posts">
-
-		  {% for post in site.categories.socialNetwork %}
-		  <div class="postListHolder">
-
-		  	<div>
-				<div class="alltitle"><a  href="{{ post.url }}">{{post.title}}</a></div>
-				<div class="allexcerpt">{{post.excerpt}}</div>
-				<div class="alldate">{{ post.date | date: "%B %d, %Y" }}</div>
-
-			</div>
-			<br />
-			<!-- <hr /> -->
-
-		</div>
-		  {% endfor %}
-		</ul>
+		{% include bloglist.html %}
 	</div>
 </div>
