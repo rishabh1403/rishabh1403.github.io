@@ -2,6 +2,7 @@
 layout: posts
 category: socialNetwork
 title: "test"
+comments: true
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo"
 date: 2016-05-25
 ---
