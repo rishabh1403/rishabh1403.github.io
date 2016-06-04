@@ -5,19 +5,7 @@ title: Rishabh Jain
 
 
 <div class="sitecontent">
-	<div class="sidenav">
-		<div class="profilePicContainer">
-			<img src="{{site.baseurl}}/img/stuart.jpg" alt="rishabh1403" class="profilePic"/>
-		</div>
-		<div class="profileName">
-			<p>Rishabh Jain</p>
-		</div>
-		<div class="profileLinksContainer">
-			<img src="{{site.baseurl}}/img/git.png" alt="rishabh1403 github" class="profileLinks" />
-			<img src="{{site.baseurl}}/img/mail.png" alt="rishabh1403 mail" class="profileLinks" />
-			<img src="{{site.baseurl}}/img/link.png" alt="rishabh1403 mail" class="profileLinks" />
-		</div>
-	</div>
+	{% include sidebar.html %}
 	<div class="blogListBody">
 		<h1 class="blogHeading">Blog</h1>
 		<!-- <h1 class="blogHeading">Mean Stack</h1>
@@ -27,7 +15,7 @@ title: Rishabh Jain
 		  {% for post in site.posts %}
 		  <div>
 		  	<div>
-				<span class="date">{{ post.date | date: "%B %d, %Y" }}</span> >> 
+				<span class="date">{{ post.date | date: "%B %d, %Y" }}</span> >>
 				<a class="alltitle" href="{{ post.url }}">{{post.title}}</a>
 
 			</div>

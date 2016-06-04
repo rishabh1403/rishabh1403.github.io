@@ -1,28 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>{{page.title}}</title>
-    <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+		{% include head.html %}
 	</head>
 	<body>
-		<div>
-			<div class="navbar">
-		    		<ul class="navbarmenu">
-		        		<li><a href="/">Home</a></li>
-			        	<li><a href="/about">About</a></li>
-		        		<!-- <li><a href="/cv">hv</a></li> -->
-		        		<!-- <li><a href="/blog">Blog</a></li> -->
-		    		</ul>
-				</div>
-		</div>
+		{% include navlink.html %}
 		 <div class="container">
     		{{content}}
 		</div>
-		<footer>
-    		<ul>
-        		<li><a href="#">email</a></li>
-        		<li><a href="https://github.com/rishabh1403">github.com/rishabh1403</a></li>
-			</ul>
-		</footer>
+		{% include footer.html %}
 	</body>
 </html>

@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "Hank Quinlan, Horrible Cop, Launches Site"
+title: ""
 date: 2016-05-25
 ---
 
