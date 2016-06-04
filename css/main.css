@@ -1,22 +1,22 @@
 body {
-    margin: 60px auto;
-    width: 70%;
+    margin: 0px;
+    width: 100%;
 }
-nav ul, footer ul {
+.navbarmenu {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
     list-style: none;
     font-weight: bold;
 }
-nav ul li, footer ul li {
+.navbarmenu li {
     display: inline;
+
     margin-right: 20px;
 }
-a {
+li a {
     text-decoration: none;
     color: #999;
 }
-a:hover {
+li a:hover {
     text-decoration: underline;
 }
 h1 {
@@ -29,15 +29,120 @@ p {
     color: #333;
 }
 footer {
+    margin: 10px 50px 10px 50px;
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
 
 ul.posts {
-    margin: 20px auto 40px;
-    font-size: 1.5em;
+    /*margin: 20px auto 40px;
+    font-size: 1.5em;*/
 }
 
 ul.posts li {
     list-style: none;
+}
+.navbar{
+    margin-left: 70%;
+    margin-top: 4%;
+    /*float: right;
+    margin-right: 10%;
+    width: 100%;*/
+}
+.sidenav{
+    float: left;
+    margin: 10px 30px 10px 30px;
+}
+.blogListBody{
+
+    margin: 10px 30px 10px 30px;
+}
+.profilePic{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+.container{
+    margin: 30px 50px 10px 50px;
+}
+.profileName{
+    font-weight: bold;
+font-family: sans-serif;
+margin-top: -15px;
+}
+.profileLinksContainer{
+    text-align: center;
+margin-top: -18px;
+}
+.profileLinks{
+    height: 30px;
+    width: 30px;
+padding: 0px 5px 0px 5px;
+}
+.blogHeading{
+    font-weight: bold;
+    text-align: center;
+    color: rgba(0,0,0,0.5);
+    font-size: 2em;
+}
+.alltitle{
+
+
+    padding-left: 10%;
+    font-size: 1.5em;
+}
+div.alltitle a{
+    text-decoration: none;
+    color: #EC4E20;
+}
+.allexcerpt{
+    padding-left: 15%;
+    margin-top: 5px;
+    font-size: 1.2em;
+    color: rgba(33,33,33,0.8);
+}
+.alldate{
+    padding-left: 15%;
+    margin-top: 5px;
+    font-size: 1em;
+    color: rgba(33,33,33,0.5);
+}
+.divider{
+    margin-top: -20px;
+width: 20%;
+}
+.postListHolder{
+    padding-left: 10%;
+}
+footer a{
+    text-decoration: none;
+    color: #EC4E20;
+}
+.footertext{
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 10px;
+    color: rgba(0,0,0,0.8);
+}
+.footerLinksContainer{
+    text-align: center;
+    margin-top: 10px;
+}
+.singlePostContainer{
+    width: 70%;
+margin: auto;
+}
+.singletitle{
+    font-size: 2.0em;
+    color: #36d;
+    letter-spacing: 0.05em;
+}
+.singlepost{
+    padding-left: 5%;
+    margin-top: 0px;
+    font-size: 1em;
+}
+div.singlepost a{
+    text-decoration: none;
+    color: #EC4E20;
 }
