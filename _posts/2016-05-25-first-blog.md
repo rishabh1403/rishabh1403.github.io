@@ -1,12 +1,9 @@
 ---
 layout: posts
-<<<<<<< HEAD
 category: socialNetwork
 title: "test"
+comments: true
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo"
-=======
-title: "Rishabh Jain Launches Site"
->>>>>>> master
 date: 2016-05-25
 ---
 
