@@ -2,12 +2,12 @@ body {
     margin: 0px;
     width: 100%;
 }
-.navbarmenu , footer ul {
+.navbarmenu {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     list-style: none;
     font-weight: bold;
 }
-.navbarmenu li, footer ul li {
+.navbarmenu li {
     display: inline;
 
     margin-right: 20px;
@@ -29,6 +29,7 @@ p {
     color: #333;
 }
 footer {
+    margin: 10px 50px 10px 50px;
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
@@ -112,4 +113,18 @@ width: 20%;
 }
 .postListHolder{
     padding-left: 10%;
+}
+footer a{
+    text-decoration: none;
+    color: #EC4E20;
+}
+.footertext{
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 10px;
+    color: rgba(0,0,0,0.8);
+}
+.footerLinksContainer{
+    text-align: center;
+    margin-top: 10px;
 }
