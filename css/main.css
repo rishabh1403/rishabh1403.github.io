@@ -34,8 +34,8 @@ footer {
 }
 
 ul.posts {
-    margin: 20px auto 40px;
-    font-size: 1.5em;
+    /*margin: 20px auto 40px;
+    font-size: 1.5em;*/
 }
 
 ul.posts li {
@@ -62,7 +62,7 @@ ul.posts li {
     border-radius: 10px;
 }
 .container{
-    margin: 10px 50px 10px 50px;
+    margin: 30px 50px 10px 50px;
 }
 .profileName{
     font-weight: bold;
@@ -82,10 +82,34 @@ padding: 0px 5px 0px 5px;
     font-weight: bold;
     text-align: center;
     color: rgba(0,0,0,0.5);
-    font-size: 2.8em;
+    font-size: 2em;
 }
 .alltitle{
-    color: #EC4E20;
+
+
+    padding-left: 10%;
+    font-size: 1.5em;
+}
+div.alltitle a{
     text-decoration: none;
-    margin-left: 5%;
+    color: #EC4E20;
+}
+.allexcerpt{
+    padding-left: 15%;
+    margin-top: 5px;
+    font-size: 1.2em;
+    color: rgba(33,33,33,0.8);
+}
+.alldate{
+    padding-left: 15%;
+    margin-top: 5px;
+    font-size: 1em;
+    color: rgba(33,33,33,0.5);
+}
+.divider{
+    margin-top: -20px;
+width: 20%;
+}
+.postListHolder{
+    padding-left: 10%;
 }
