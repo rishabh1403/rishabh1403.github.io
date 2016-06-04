@@ -1,5 +1,9 @@
 name: Rishabh Jain
 markdown: kramdown
+title:            Rishabh Jain
+description:      "Full-Stack JavaScript Developer"
+disqus_shortname: rishabh1403
+url:              http://rishabh1403.com
 permalink: /blog/:year/:month/:day/:title
 
 gems:
