@@ -2,7 +2,39 @@
 layout: default
 title: Rishabh Jain
 ---
-<div class="blurb">
-	<h1>Hi there, I'm Hank Quinlan!</h1>
-	<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-</div><!-- /.blurb -->
+
+
+<div class="sitecontent">
+	<div class="sidenav">
+		<div class="profilePicContainer">
+			<img src="{{site.baseurl}}/img/stuart.jpg" alt="rishabh1403" class="profilePic"/>
+		</div>
+		<div class="profileName">
+			<p>Rishabh Jain</p>
+		</div>
+		<div class="profileLinksContainer">
+			<img src="{{site.baseurl}}/img/git.png" alt="rishabh1403 github" class="profileLinks" />
+			<img src="{{site.baseurl}}/img/mail.png" alt="rishabh1403 mail" class="profileLinks" />
+			<img src="{{site.baseurl}}/img/link.png" alt="rishabh1403 mail" class="profileLinks" />
+		</div>
+	</div>
+	<div class="blogListBody">
+		<h1 class="blogHeading">Blog</h1>
+		<!-- <h1 class="blogHeading">Mean Stack</h1>
+		<h1 class="blogHeading">Blog</h1> -->
+		<ul class="posts">
+
+		  {% for post in site.posts %}
+		  <div>
+		  	<div>
+				<span class="date">{{ post.date | date: "%B %d, %Y" }}</span> >> 
+				<a class="alltitle" href="{{ post.url }}">{{post.title}}</a>
+
+			</div>
+		  	<!-- <div class="excerpt">{{post.excerpt}}</div> -->
+
+		</div>
+		  {% endfor %}
+		</ul>
+	</div>
+</div>
