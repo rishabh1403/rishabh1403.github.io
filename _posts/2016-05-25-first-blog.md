@@ -1,6 +1,6 @@
 ---
 layout: posts
-category: socialNetwork
+category: socialnetwork
 title: "test"
 comments: true
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo"
