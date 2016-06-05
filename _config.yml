@@ -6,6 +6,6 @@ disqus_shortname: rishabh1403
 url:              http://rishabh1403.com
 permalink: /blog/:year/:month/:day/:title
 
-# gems:
-#   - jekyll-seo-tag
-#   - jekyll-sitemap
+gems:
+  - jekyll-seo-tag
+  - jekyll-sitemap
