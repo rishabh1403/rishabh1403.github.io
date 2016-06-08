@@ -1,4 +1,6 @@
 name: Rishabh Jain
+
+highlighter: rouge
 markdown: kramdown
 kramdown:
   input: GFM
