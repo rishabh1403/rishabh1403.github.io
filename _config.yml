@@ -1,5 +1,6 @@
 name: Rishabh Jain
 markdown: kramdown
+highlighter: rouge
 title:            Rishabh Jain
 description:      "Full-Stack JavaScript Developer"
 disqus_shortname: rishabh1403
