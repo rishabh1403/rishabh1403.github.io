@@ -45,4 +45,12 @@ Starting from top the `app` directory will contain all server side stuff, where 
 
 The `public` folder will contain all our frontend side of code including html, css, and JavaScript. `img` will contain images , `css` will contain css , `templates` will contain all html files . `lib` will contain all external libraries which we will use for our app , like angular or bootstrap or some material design libraries. As I said in last post , I will be using angular , which uses controllers, routes and factory , that explains the presence of `controllers` , `routes` and `factory` folders.
 
+{% highlight js %} var express = require('express'); var path = require('path'); var logger = require('morgan'); var cookieParser = require('cookie-parser'); var bodyParser = require('body-parser');
+
+var app = express();
+
+app.set('port', process.env.PORT || 3000); app.use(logger('dev')); app.use(bodyParser.json()); app.use(bodyParser.urlencoded()); app.use(cookieParser()); app.use(express.static(path.join(dirname, 'public')));
+
+app.listen(app.get('port'), function() { console.log('Express server listening on port ' + app.get('port')); }); {% endhighlight %}
+
 Thats it for this post , in the next post i will start the app by writing a simple Hello World!!! program. Check out my [Youtube Channel](https://www.youtube.com/channel/UC5qMKRZgKizuz9JtztFijHQ) , where I will be posting videos related to every posts I publish here.For comments , questions , and feedback send me an [email](mailto:me@rishabh1403.com) or leave a comment below . Thanks, Happy Coding !!!
