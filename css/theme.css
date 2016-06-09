@@ -3,7 +3,12 @@
   (c) 2014 Sourcey
   http://sourcey.com
 */
-
+code.highlighter-rouge{
+    background-color: #343642;
+    color: white;
+    padding: 2px;
+    border-radius: 2px;
+}
 .highlight {
   white-space: pre;
   overflow: auto;
