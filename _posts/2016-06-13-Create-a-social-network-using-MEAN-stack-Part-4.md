@@ -21,6 +21,6 @@ In our app.js write the following code
 (function () {
     angular.module('socialnetwork',[]);
 }());
-{% endhighlight %}
+{% end highlight %}
 
 Line 2 creates an angular app with name socialnetwork;
