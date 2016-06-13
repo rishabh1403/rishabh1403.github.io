@@ -16,7 +16,7 @@ Description :- app.js is the main angular file , here we will define that the ap
 appController.js is the main controller for our app , which means that this file will contain codes which will control the flow of data in our app . There can be many controllers in an app , we will be creating a lot of them as we go along , controllers can also be nested , for more information visit angularjs documentation on controllers.
 In our app.js write the following code
 
-{% highlight js linenos %}
+{% highlight js linenos=table %}
 
 (function () {
     angular.module('socialnetwork',[]);
