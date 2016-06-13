@@ -66,6 +66,7 @@ Now in the html tag of the html file add
 ```
 This binds the angular module to our view and assigns the controller to everything inside html tags.
 Now to make sure that everything is setup correctly , in place of hello world in html file replce it with {{hello}} and in appController.js in the function add
+
 ```js
 
 $scope.hello = "hello angular";
