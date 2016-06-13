@@ -12,12 +12,12 @@ Hello everyone , in this post we will start adding angular to frontend of our ap
 First of all you will need to include angularjs script to your html , so go ahead to this [link](https://code.angularjs.org/1.5.6/angular.min.js) , copy everything . create a new file in public/lib named ```angular.min.js``` and paste everything in it . Save and close the file.
 Next thing we need to do is include this in our **index.html** , so open your **index.html** and write this code just above the ending body tag.
 
-
 ```html
 
 <script type="text/javascript" src="lib/angular.min.js"></script>
 
 ```
+
 Now create two files , first in ```public/js``` named ```app.js``` and second in ```public/js/controllers``` named ```appController.js``` .
 Description :- ```app.js``` is the main angular file , here we will define that the app is an angular app and give it a name.
 
@@ -37,7 +37,6 @@ In ```appController.js``` add the following code.
 
 
 ```js
-
 (function(){
     angular.module('socialnetwork').controller('appCtrl',['$scope',function($scope){
 
