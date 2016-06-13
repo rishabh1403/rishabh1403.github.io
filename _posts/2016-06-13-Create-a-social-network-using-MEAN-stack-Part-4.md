@@ -69,7 +69,7 @@ Now to make sure that everything is setup correctly , in place of hello world in
 
 ```js
 
-\{\{ hello \}\}
+{{ hello }}
 
 ```
 and in appController.js in the function add the following code .
