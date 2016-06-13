@@ -66,14 +66,7 @@ Now in the html tag of the html file add
 ```
 This binds the angular module to our view and assigns the controller to everything inside html tags.
 Now to make sure that everything is setup correctly , in place of hello world in html file replce it with
-
-```html
-
-<body>
-    {{hello}}
-</body>
-
-```
+&#123;&#123;hello&#125;&#125;
 and in appController.js in the function add the following code .
 
 
