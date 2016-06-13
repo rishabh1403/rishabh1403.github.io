@@ -37,6 +37,7 @@ In ```appController.js``` add the following code.
 
 
 ```js
+
 (function(){
     angular.module('socialnetwork').controller('appCtrl',['$scope',function($scope){
 
@@ -70,6 +71,7 @@ Now to make sure that everything is setup correctly , in place of hello world in
 $scope.hello = "hello angular";
 
 ```
+
 All done , now start the server , go to the link in web browser , you must see Hello Angular instead of Hello world . If You got it right go ahead and read the description on how it works , if not , please post your doubts in comments section below.
 Description :- $scope binds a variable with a value and we can access this in our view using {{ }} . We just have to use the same name here.
 
