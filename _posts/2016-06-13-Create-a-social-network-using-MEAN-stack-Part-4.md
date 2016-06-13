@@ -65,7 +65,7 @@ Now in the html tag of the html file add
 
 ```
 This binds the angular module to our view and assigns the controller to everything inside html tags.
-Now to make sure that everything is setup correctly , in place of hello world in html file replce it with ```{{hello}}``` and in appController.js in the function add the following code .
+Now to make sure that everything is setup correctly , in place of hello world in html file replce it with **{{hello}}** and in appController.js in the function add the following code .
 
 
 ```js
@@ -75,6 +75,6 @@ $scope.hello = "hello angular";
 ```
 
 All done , now start the server , go to the link in web browser , you must see Hello Angular instead of Hello world . If You got it right go ahead and read the description on how it works , if not , please post your doubts in comments section below.
-Description :- $scope binds a variable with a value and we can access this in our view using ```{{ }}``` . We just have to use the same name here.
+Description :- $scope binds a variable with a value and we can access this in our view using **{{ }}** . We just have to use the same name here.
 
 That is it for this tutorial folks !!!. Next tutorial is going to be a long one , I Will start with client side routing and create pages for Authentication . Subscribe to my blog and [Youtube  channel](https://www.youtube.com/channel/UC5qMKRZgKizuz9JtztFijHQ) to find out when new posts come out. Again if you have any doubts , you can see video regarding to this post .For comments , questions , and feedback send me an [email](mailto:me@rishabh1403.com) or leave a comment below . Thanks, Happy Coding !!!
