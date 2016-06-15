@@ -4,8 +4,8 @@
   http://sourcey.com
 */
 code.highlighter-rouge{
-    background-color: #343642;
-    color: white;
+    background-color: #f8f8f8;
+    color: green;
     padding: 2px;
     border-radius: 2px;
 }
@@ -13,11 +13,11 @@ code.highlighter-rouge{
   white-space: pre;
   overflow: auto;
   word-wrap: normal; /* horizontal scrolling */
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
   padding: 20px;
-  background: #343642;
+  background: #f8f8f8;
   color: #C1C2C3;
 }
 .highlight .hll { background-color: #ffc; }
