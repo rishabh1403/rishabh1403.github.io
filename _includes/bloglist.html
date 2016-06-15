@@ -1,17 +1,23 @@
-<ul class="posts">
+<div class="blogListBody">
+    <div class="blogHeading">
+        BLOGS
+    </div>
+    <hr class="divider">
+    <ul class="posts">
 
-  {% for post in site.categories.socialnetwork %}
-  <div class="postListHolder">
+      {% for post in site.categories.socialnetwork %}
+      <div class="postListHolder">
 
-    <div>
-        <div class="alltitle"><a  href="{{ post.url }}">{{post.title}}</a></div>
-        <div class="allexcerpt">{{post.excerpt}}</div>
-        <div class="alldate">{{ post.date | date: "%B %d, %Y" }}</div>
+        <div>
+            <div class="alltitle"><a  href="{{ post.url }}">{{post.title}}</a></div>
+            <div class="allexcerpt">{{post.excerpt}}</div>
+            <div class="alldate">{{ post.date | date: "%B %d, %Y" }}</div>
+
+        </div>
+        <br />
+        <!-- <hr /> -->
 
     </div>
-    <br />
-    <!-- <hr /> -->
-
+      {% endfor %}
+    </ul>
 </div>
-  {% endfor %}
-</ul>

@@ -1,11 +1,27 @@
-body {
-    margin: 0px;
-    width: 100%;
+body{
+    font-family: 'Ubuntu', sans-serif;
 }
 .navbarmenu {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     list-style: none;
     font-weight: bold;
+}
+h1 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+p {
+    margin-top: 24px;
+
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+}
+.navbar{
+    font-size: 1.2em;
+    margin-left: 70%;
+    margin-top: 4%;
 }
 .navbarmenu li {
     display: inline;
@@ -21,72 +37,50 @@ li a {
 }
 li a:hover {
     text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    margin: 10px 50px 10px 50px;
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
-
-ul.posts {
-    /*margin: 20px auto 40px;
-    font-size: 1.5em;*/
-}
-
-ul.posts li {
-    list-style: none;
-}
-.navbar{
-    margin-left: 70%;
-    margin-top: 4%;
-    /*float: right;
-    margin-right: 10%;
-    width: 100%;*/
-}
-.sidenav{
-    float: left;
-    margin: 10px 30px 10px 30px;
-}
-.blogListBody{
-
-    margin: 10px 30px 10px 30px;
+    color: #999;
 }
 .profilePic{
-    width: 150px;
-    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
     border-radius: 10px;
+    margin: 0 auto;
 }
-.container{
-    margin: 30px 50px 10px 50px;
+.sidenav{
+    width: 100%;
+text-align: center;
+margin-top: 10%;
+margin-bottom: 5%;
 }
 .profileName{
     font-weight: bold;
 font-family: sans-serif;
-margin-top: -15px;
-}
-.profileLinksContainer{
-    text-align: center;
-margin-top: -18px;
 }
 .profileLinks{
     height: 30px;
     width: 30px;
-padding: 0px 5px 0px 5px;
+    padding: 0px 5px 0px 5px;
+}
+.youtubeButton{
+    text-align: center;
+    margin-top: 10px;
+}
+.blogListBody{
+    /*margin: 10px 30px 10px 30px;*/
 }
 .blogHeading{
     font-weight: bold;
     text-align: center;
     color: rgba(0,0,0,0.5);
     font-size: 2em;
+}
+ul.posts {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+ul.posts li {
+    list-style: none;
 }
 .alltitle{
 
@@ -111,11 +105,15 @@ div.alltitle a{
     color: rgba(33,33,33,0.5);
 }
 .divider{
-    margin-top: -20px;
-width: 20%;
+    margin-top: -2px;
+width: 25%;
+background: rgba(33,33,33,0.5);
+height: 2px;
 }
-.postListHolder{
-    padding-left: 10%;
+footer {
+    margin: 10px 50px 10px 50px;
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
 }
 footer a{
     text-decoration: none;
@@ -131,25 +129,20 @@ footer a{
     text-align: center;
     margin-top: 10px;
 }
-.singlePostContainer{
-    width: 70%;
-margin: auto;
-}
 .singletitle{
     font-size: 2.0em;
     color: #36d;
     letter-spacing: 0.05em;
+    font-weight: bold;
 }
+
 .singlepost{
     padding-left: 5%;
-    margin-top: 0px;
+    margin-top: 20px;
+    letter-spacing: 1px;
     font-size: 1em;
 }
 div.singlepost a{
     text-decoration: none;
     color: #EC4E20;
-}
-.youtubeButton{
-    text-align: center;
-    margin-top: 10px;
 }
