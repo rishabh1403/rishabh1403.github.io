@@ -44,5 +44,9 @@ Now the directories are created , notice I have only created directories , `/` a
 Starting from top the `app` directory will contain all server side stuff, where all the logic of our backend will be stored in `controllers` , while all the database models will be stored in `models` . The `routes` folder will contain all our **rest api** and server side routing and `services` will contain different services. The `config` folder will hold our configuration files , for example :- api keys of different external services , token secrets , (It will start making sense once we start coding). The `uploads` folder will contain all media files which user uploads , for example the profile picture .
 
 The `public` folder will contain all our frontend side of code including html, css, and JavaScript. `img` will contain images , `css` will contain css , `templates` will contain all html files . `lib` will contain all external libraries which we will use for our app , like angular or bootstrap or some material design libraries. As I said in last post , I will be using angular , which uses controllers, routes and factory , that explains the presence of `controllers` , `routes` and `factory` folders.
+<div class="ytVidContainer">
+<iframe class="ytVid" width="60%" height="50%" src="https://www.youtube.com/embed/bYleP001rXY" frameborder="0" allowfullscreen></iframe>
+</div>
+<br />
 
 Thats it for this post , in the next post i will start the app by writing a simple Hello World!!! program. Check out my [Youtube Channel](https://www.youtube.com/channel/UC5qMKRZgKizuz9JtztFijHQ) , where I will be posting videos related to every posts I publish here.For comments , questions , and feedback send me an [email](mailto:me@rishabh1403.com) or leave a comment below . Thanks, Happy Coding !!!

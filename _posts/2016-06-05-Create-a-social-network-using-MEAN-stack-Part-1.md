@@ -29,6 +29,10 @@ I will be assuming that you have little knowledge to JavaScript . If you need li
 * [Udacity](http://www.udacity.com/)
 * [Eloquent JavaScript](http://eloquentjavascript.net/)
 
+<div class="ytVidContainer">
+<iframe class="ytVid" width="560" height="315" src="https://www.youtube.com/embed/PsSoM0Ktt4o" frameborder="0" allowfullscreen></iframe>
+</div>
+<br />
 There are a lot of good resources on [Udacity](http://www.udacity.com/) from beginner level to advanced one.
 Once you are done with these , we can move to Second part of our  tutorials series . In the next post I will be creating the file structure for our application and write a simple hello world program.
 For comments , questions , and feedback send me an [email](mailto:me@rishabh1403.com) or leave a comment below . Thanks, Happy Coding !!!

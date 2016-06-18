@@ -24,7 +24,7 @@ app.listen(3000);
 ```
 and following in ```index.html```
 
-```html 
+```html
 
 <!DOCTYPE html>
 <html>
@@ -44,4 +44,8 @@ Now make sure you are in your project root directory , run ```node server.js``` 
 
 Now how does this code works ? Looking at the server code , first we are requiring the installed library , it is basically telling the system that we will be using that library in this file , in next line we are creating an instance of express , so that we can use its predefined methods. In the third line we are using a **middleware** , recognized by  ```app.use()``` .**Middleware** is basically a set of actions from which program control flow , ```express.static('public')``` refers that express should look for static files in public directory . ```app.listen(3000)``` starts a simple web server at port 3000 . So now if anyone visits the link ```http://localhost:3000/``` , the server actually tries to find ```index.html``` , since it is a static file and , its declared that static files will reside in public folder , so server tries to find ```index.html``` in public folder and serves that file to the web browser . Thus our Hello World is rendered on the screen.
 
+<div class="ytVidContainer">
+<iframe class="ytVid" width="560" height="315" src="https://www.youtube.com/embed/8M-2AmwnS9g" frameborder="0" allowfullscreen></iframe>
+</div>
+<br />
 Thats it for this post folks!!!.You can also refer to my video on my [Youtube  channel](https://www.youtube.com/channel/UC5qMKRZgKizuz9JtztFijHQ),it will have the same name as blog .  In the next post I will add angular to our code , explain little bit about controllers ,and how to make a http get request from frontend , and send response for that request from our server. For comments , questions , and feedback send me an [email](mailto:me@rishabh1403.com) or leave a comment below . Thanks, Happy Coding !!!

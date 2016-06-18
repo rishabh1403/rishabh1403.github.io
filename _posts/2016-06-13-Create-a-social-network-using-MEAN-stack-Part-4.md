@@ -76,6 +76,10 @@ $scope.hello = "hello angular";
 
 ```
 
+<div class="ytVidContainer">
+<iframe class="ytVid" width="560" height="315" src="https://www.youtube.com/embed/R1qEEoU8mzE" frameborder="0" allowfullscreen></iframe>
+</div>
+<br />
 All done , now start the server , go to the link in web browser , you must see Hello Angular instead of Hello world . If You got it right go ahead and read the description on how it works , if not , please post your doubts in comments section below.
 Description :- $scope binds a variable with a value and we can access this in our view using the two curly braces syntax. We just have to use the same name here.
 
