@@ -73,6 +73,7 @@ Rest of the two works same way.The last part is providing an otherwise link i.e.
 Now you may notice that we do not have these three html files mentioned in our routes , neither are the controllers , so how will the browser render the page ? It will not , so what do we do ? Simple ... We create those files , so go ahead create three html files in **templates** folder and three controllers in **js/controllers** folder.
 
 **home.html**
+{% raw %}
 
 ```html
 
@@ -82,7 +83,7 @@ Now you may notice that we do not have these three html files mentioned in our r
 <a ui-sref="register">register</a>
 
 ```
-
+{% endraw %}
 **login.html**
 
 ```html
@@ -178,7 +179,7 @@ Now you may notice that we do not have these three html files mentioned in our r
 - [ ] Created files ? Well March ahead :zap:   
 
 Now Just one more thing , we need to add the routes file and other controller in our ```index.html``` . Go ahead and add the controllers and routes to the file , notice the change in body in the file
-
+{% raw %}
 ```html
 
 <!DOCTYPE html>
@@ -205,7 +206,7 @@ Now Just one more thing , we need to add the routes file and other controller in
 </html>
 
 ```
-
+{% endraw %}
 
 - [ ] Made all the changes ? You are halfway ... keep reading :relaxed:
 
