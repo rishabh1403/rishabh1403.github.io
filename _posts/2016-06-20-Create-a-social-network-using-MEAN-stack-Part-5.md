@@ -73,17 +73,17 @@ Rest of the two works same way.The last part is providing an otherwise link i.e.
 Now you may notice that we do not have these three html files mentioned in our routes , neither are the controllers , so how will the browser render the page ? It will not , so what do we do ? Simple ... We create those files , so go ahead create three html files in **templates** folder and three controllers in **js/controllers** folder.
 
 **home.html**
-
+{% raw %}
 
 ```html
-{% raw %}
+
 {{home}}
 
 <a ui-sref="login">login</a>
 <a ui-sref="register">register</a>
-{% endraw %}
-```
 
+```
+{% endraw %}
 **login.html**
 
 ```html
