@@ -179,7 +179,9 @@ Now you may notice that we do not have these three html files mentioned in our r
 <input type="checkbox"> Created files ? Well March ahead :zap:  <br/>
 
 Now Just one more thing , we need to add the routes file and other controller in our ```index.html``` . Go ahead and add the controllers and routes to the file , notice the change in body in the file
+
 {% raw %}
+
 ```html
 
 <!DOCTYPE html>
@@ -206,6 +208,7 @@ Now Just one more thing , we need to add the routes file and other controller in
 </html>
 
 ```
+
 {% endraw %}
 
 <input type="checkbox"> Made all the changes ? You are halfway ... keep reading :relaxed: <br />

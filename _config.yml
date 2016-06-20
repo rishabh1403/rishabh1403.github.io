@@ -14,6 +14,7 @@ permalink: /blog/:year/:month/:day/:title
 gems:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jemoji
 
 # compress_html:
 #   clippings: all
