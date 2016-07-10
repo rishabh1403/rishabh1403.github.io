@@ -84,8 +84,7 @@ Now we are requiring this file in our routes , so we can use the two functions i
 
 And at last we are requiring this file in ```server.js``` and passing the ```app``` instance so that it can access the pre-defined methods. To summarize , a user requests login api , request comes to server , server searches for that route , it is found in the ```auth.js``` route file , request goes there , it looks for the function that will handle this request the request goes to the ```authController.js``` , there the body of request is logged in console and a response is sent . Now we have to call these rest apis from our frontend and check that everything is working.
 
-Head over to our client login and register controllers and replace everything with following code .
-In  **loginController.js** paste the following.
+Head over to our client login and register controllers and replace everything with following code respectively .
 
 
  ```js
@@ -113,7 +112,6 @@ In  **loginController.js** paste the following.
 
 ```
 
-In **registerController.js** paste the following
 
 
 ```js
