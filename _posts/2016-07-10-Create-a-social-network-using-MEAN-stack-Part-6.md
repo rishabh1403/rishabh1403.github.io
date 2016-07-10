@@ -86,27 +86,29 @@ And at last we are requiring this file in ```server.js``` and passing the ```app
 
 Head over to our client login and register controllers and replace everything with following code respectively .
 
- ```js
+```js
 
- (function () {
-     angular.module('socialNetwork').controller('loginCtrl',['$scope','$http',function($scope,$http){
-         $scope.loginForm = {
-             "email" : "",
-             "username" : "",
-             "password" :""
-         }
-         $scope.login = function (data) {
-             console.log(data);
-             $http.post('/api/auth/login',data).success(function (response) {
-                 console.log(response);
-             }).error(function (err) {
-                 console.log(err);
-             })
-         }
-     }]);
- }());
+(function () {
+    angular.module('socialNetwork').controller('loginCtrl',['$scope','$http',function($scope,$http){
+        $scope.loginForm = {
+            "email" : "",
+            "username" : "",
+            "password" :""
+        }
+        $scope.login = function (data) {
+            console.log(data);
+            $http.post('/api/auth/login',data).success(function (response) {
+                console.log(response);
+            }).error(function (err) {
+                console.log(err);
+            })
+        }
+    }]);
+}());
 
 ```
+
+And
 
 ```js
 
@@ -129,8 +131,8 @@ Head over to our client login and register controllers and replace everything wi
     }]);
 }());
 
-
 ```
+
 
 The ```register``` and ```login``` function has changed in both the controllers , they are similar so I will explain just one of them . Lets look into register controller . We are injecting a new dependency ```$http``` like we injected ```$scope``` . It is used to make requests to the server . Here we are requesting the register api that we created in our server file , the **post** here should be same as declared in our server , and we are passing the data we recieved from our form to the server . This data will be sent as ```req.body``` and then there are two callbacks **success** and **error** as name suggests , they will run if the server request was successful or not respectively . In both the functions we are logging the response to the console. everything is set up , now start your server by ```nodemon server.js``` and fill login or register forms and hit submit , you should see the entered values in your terminal i.e. just printing out the request body and in browser console you should be seeing a message ***data received*** .
 If you get any error or have doubts watch my video of this post below , or on my [Youtube  channel](https://www.youtube.com/channel/UC5qMKRZgKizuz9JtztFijHQ) .
