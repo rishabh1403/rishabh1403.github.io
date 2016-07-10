@@ -3,7 +3,7 @@ layout: posts
 category: socialnetwork
 title: "Create a social network using MEAN stack - Part 6"
 comments: true
-excerpt: "In this post we will create routes for our authentication pages and create a simple register and login page"
+excerpt: "In this post we will start with mongoDB . We will create a database and establish connection to the db ."
 date: 2016-07-10
 ---
 
