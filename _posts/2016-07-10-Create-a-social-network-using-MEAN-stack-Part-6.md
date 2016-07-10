@@ -86,9 +86,7 @@ And at last we are requiring this file in ```server.js``` and passing the ```app
 
 Head over to our client login and register controllers and replace everything with following code respectively .
 
-
  ```js
- 
 
  (function () {
      angular.module('socialNetwork').controller('loginCtrl',['$scope','$http',function($scope,$http){
@@ -108,13 +106,9 @@ Head over to our client login and register controllers and replace everything wi
      }]);
  }());
 
-
 ```
 
-
-
 ```js
-
 
 (function () {
     angular.module('socialNetwork').controller('registerCtrl',['$scope','$http',function($scope,$http){
