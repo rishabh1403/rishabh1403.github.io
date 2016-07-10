@@ -103,8 +103,6 @@ Head over to our client login and register controllers and replace everything wi
              }).error(function (err) {
                  console.log(err);
              })
-
-             /////////
          }
      }]);
  }());
