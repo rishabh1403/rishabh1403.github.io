@@ -88,6 +88,7 @@ Head over to our client login and register controllers and replace everything wi
 
 
  ```js
+ 
 
  (function () {
      angular.module('socialNetwork').controller('loginCtrl',['$scope','$http',function($scope,$http){
@@ -113,6 +114,7 @@ Head over to our client login and register controllers and replace everything wi
 
 
 ```js
+
 
 (function () {
     angular.module('socialNetwork').controller('registerCtrl',['$scope','$http',function($scope,$http){
