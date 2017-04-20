@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Blog | Rishabh Jain 
+title: Rishabh Jain 
 subtitle: 
 description:
 author: Rishabh Jain
@@ -13,8 +13,8 @@ timezone:
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://rishabh1403.com
-root: /blog/
-permalink: :year/:month/:day/:title/
+root: /
+permalink: :title/
 permalink_defaults:
 
 # Directory
