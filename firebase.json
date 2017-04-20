@@ -1,5 +1,8 @@
 {
   "hosting": {
-    "public": "."
+    "public": ".",
+    "ignore": [
+        "blog_raw/"
+    ]
   }
 }
