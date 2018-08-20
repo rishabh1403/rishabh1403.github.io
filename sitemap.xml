@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rishabh1403.com/posts/life/2018/08/new-blog-new-beginnings/</loc>
+    <lastmod>2018-08-21T01:17:37+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rishabh1403.com/about/</loc>
   </url>
   
@@ -12,12 +17,32 @@
   </url>
   
   <url>
+    <loc>https://rishabh1403.com/tags/life/</loc>
+    <lastmod>2018-08-21T01:17:37+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rishabh1403.com/categories/life/</loc>
+    <lastmod>2018-08-21T01:17:37+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rishabh1403.com/posts/</loc>
+    <lastmod>2018-08-21T01:17:37+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rishabh1403.com/</loc>
+    <lastmod>2018-08-21T01:17:37+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rishabh1403.com/tags/</loc>
+    <lastmod>2018-08-21T01:17:37+05:30</lastmod>
     <priority>0</priority>
   </url>
   
