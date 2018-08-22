@@ -6,10 +6,21 @@
     <description>Recent content in Hackerrank on Rishabh Jain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Aug 2018 12:32:25 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 22 Aug 2018 12:32:09 +0530</lastBuildDate>
     
 	<atom:link href="https://rishabh1403.com/categories/hackerrank/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hackerrank Solve Me First Solution</title>
+      <link>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/</link>
+      <pubDate>Wed, 22 Aug 2018 12:32:09 +0530</pubDate>
+      
+      <guid>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/</guid>
+      <description>&lt;!--Solution for hackerrank warmup question solve me first in golang. In this blog I&#39;ll discuss my solution, what mistakes I initially made and what concepts I learned.--&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hackerrank Solutions in Golang</title>
