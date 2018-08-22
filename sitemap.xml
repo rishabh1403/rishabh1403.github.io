@@ -22,19 +22,13 @@
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/categories/coding/</loc>
-    <lastmod>2018-08-21T12:32:25+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://rishabh1403.com/tags/coding/</loc>
     <lastmod>2018-08-21T12:32:25+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/categories/golang/</loc>
+    <loc>https://rishabh1403.com/categories/coding/</loc>
     <lastmod>2018-08-21T12:32:25+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -46,7 +40,7 @@
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/categories/hackerrank/</loc>
+    <loc>https://rishabh1403.com/categories/golang/</loc>
     <lastmod>2018-08-21T12:32:25+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -58,13 +52,19 @@
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/categories/life/</loc>
-    <lastmod>2018-08-21T01:17:37+05:30</lastmod>
+    <loc>https://rishabh1403.com/categories/hackerrank/</loc>
+    <lastmod>2018-08-21T12:32:25+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rishabh1403.com/tags/life/</loc>
+    <lastmod>2018-08-21T01:17:37+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rishabh1403.com/categories/life/</loc>
     <lastmod>2018-08-21T01:17:37+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -84,7 +84,6 @@
   <url>
     <loc>https://rishabh1403.com/tags/</loc>
     <lastmod>2018-08-21T12:32:25+05:30</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>
