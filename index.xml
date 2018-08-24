@@ -6,10 +6,19 @@
     <description>Recent content on Rishabh Jain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Aug 2018 12:32:09 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 25 Aug 2018 00:55:09 +0530</lastBuildDate>
     
 	<atom:link href="https://rishabh1403.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hackerrank Solution of Simple Array Sum in Golang</title>
+      <link>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-simple-array-sum-in-golang/</link>
+      <pubDate>Sat, 25 Aug 2018 00:55:09 +0530</pubDate>
+      
+      <guid>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-simple-array-sum-in-golang/</guid>
+      <description>&lt;p&gt;Solution for hackerrank warmup question simple array sum in golang. In this blog I&amp;rsquo;ll discuss my solution, what mistakes I initially made and what concepts I learned.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hackerrank Solve Me First Solution</title>

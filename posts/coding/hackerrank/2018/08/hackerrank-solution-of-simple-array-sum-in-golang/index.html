@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Hackerrank Solve Me First Solution"/>
-  <meta name="twitter:description" content="Solution for hackerrank warmup question solve me first in golang. In this blog I&#39;ll discuss my solution, what mistakes I initially made and what concepts I learned."/>
+  <meta name="twitter:title" content="Hackerrank Solution of Simple Array Sum in Golang"/>
+  <meta name="twitter:description" content="Solution for hackerrank warmup question simple array sum in golang. In this blog I&#39;ll discuss my solution, what mistakes I initially made and what concepts I learned."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="Solution for hackerrank warmup question solve me first in golang. In this blog I&#39;ll discuss my solution, what mistakes I initially made and what concepts I learned.">
+                <meta name="description" content="Solution for hackerrank warmup question simple array sum in golang. In this blog I&#39;ll discuss my solution, what mistakes I initially made and what concepts I learned.">
                 
-	  <meta name="keywords" content="solve, me, first, rishabh1403, hackerrank, blog, golang, solution, learn, code">
+	  <meta name="keywords" content="simple, array, sum, rishabh1403, hackerrank, blog, golang, solution, learn, code">
 	
-                <title>Hackerrank Solve Me First Solution &middot; Rishabh Jain</title>
+                <title>Hackerrank Solution of Simple Array Sum in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -81,12 +81,12 @@
             <article>
                 <header>
                     <h1>
-                        Hackerrank Solve Me First Solution
+                        Hackerrank Solution of Simple Array Sum in Golang
                     </h1>
                     <h2 class="headline">
-                    Aug 22, 2018 12:32
-                    · 690 words
-                    · 4 minute read
+                    Aug 25, 2018 00:55
+                    · 900 words
+                    · 5 minute read
                       <span class="tags">
                       
                       
@@ -110,30 +110,31 @@
 <li><a href="#problem-statement">Problem Statement</a></li>
 <li><a href="#challenges">Challenges</a></li>
 <li><a href="#solution">Solution</a></li>
+<li><a href="#loops-in-golang">Loops in Golang</a></li>
 </ul>
 </nav>
                     </div>
                   
                 
                 <section id="post-body">
-                    <p>Solution for hackerrank warmup question solve me first in golang. In this blog I&rsquo;ll discuss my solution, what mistakes I initially made and what concepts I learned.
-</p>
+                    <p>Solution for hackerrank warmup question simple array sum in golang. In this blog I&rsquo;ll discuss my solution, what mistakes I initially made and what concepts I learned.</p>
 
 <h1 id="problem-statement">Problem Statement</h1>
 
-<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/solve-me-first/problem">link</a>. The question is pretty straight forward. We have to take two integers as input, and print their sum.
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/simple-array-sum/problem">link</a>. The problem statement basically states that we need to print the sum of an array of integers whose length is provided as input.
 Couple of things to note here is</p>
 
 <ul>
-<li>The inputs are separated by new line character</li>
-<li>we are solving this in <a href="https://golang.org/">golang</a> <strong>(assuming we have no or very little knowledge of <a href="https://golang.org/">golang</a>)</strong></li>
+<li>We need to take array length as input</li>
+<li>In the next line, we are provided with an array of numbers, whose sum we need to print</li>
+<li>we are solving this in <a href="https://golang.org/">golang</a> <strong>(assuming we know how to take input in <a href="https://golang.org/">golang</a>, refer to my <a href="https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/">last post</a> in case you need a refresher )</strong></li>
 </ul>
 
 <h1 id="challenges">Challenges</h1>
 
 <ul>
-<li>At first glance the platform opens up and we choose our preferred language as <a href="https://golang.org/">golang</a>. The moment we do that, we get some 10-15 lines of code which are very unfamiliar to someone who is new to language.</li>
-<li>To solve this problem only thing we need to know is how to take input, show output, and do a sum.</li>
+<li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
+<li>To solve this problem only thing we need to know is how to take input, show output, iterate over an array(<em>kind of</em>), and calculate sum.</li>
 </ul>
 
 <h1 id="solution">Solution</h1>
@@ -141,26 +142,80 @@ Couple of things to note here is</p>
 <p>This is the template you get on <a href="https://www.hackerrank.com/">hackerrank</a> for this problem statement.</p>
 
 <pre><code class="language-go">package main
-import &quot;fmt&quot;
 
-func solveMeFirst(a uint32,b uint32) uint32{
-  // Hint: Type return (a+b) below
+import (
+    &quot;bufio&quot;
+    &quot;fmt&quot;
+    &quot;io&quot;
+    &quot;os&quot;
+    &quot;strconv&quot;
+    &quot;strings&quot;
+)
+
+/*
+ * Complete the simpleArraySum function below.
+ */
+func simpleArraySum(ar []int32) int32 {
+    /*
+     * Write your code here.
+     */
+
 }
 
 func main() {
-    var a, b, res uint32
-    fmt.Scanf(&quot;%v\n%v&quot;, &amp;a,&amp;b)
-    res = solveMeFirst(a,b)
-    fmt.Println(res)
+    reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
+
+    stdout, err := os.Create(os.Getenv(&quot;OUTPUT_PATH&quot;))
+    checkError(err)
+
+    defer stdout.Close()
+
+    writer := bufio.NewWriterSize(stdout, 1024 * 1024)
+
+    arCount, err := strconv.ParseInt(readLine(reader), 10, 64)
+    checkError(err)
+
+    arTemp := strings.Split(readLine(reader), &quot; &quot;)
+
+    var ar []int32
+
+    for arItr := 0; arItr &lt; int(arCount); arItr++ {
+        arItemTemp, err := strconv.ParseInt(arTemp[arItr], 10, 64)
+        checkError(err)
+        arItem := int32(arItemTemp)
+        ar = append(ar, arItem)
+    }
+
+    result := simpleArraySum(ar)
+
+    fmt.Fprintf(writer, &quot;%d\n&quot;, result)
+
+    writer.Flush()
 }
+
+func readLine(reader *bufio.Reader) string {
+    str, _, err := reader.ReadLine()
+    if err == io.EOF {
+        return &quot;&quot;
+    }
+
+    return strings.TrimRight(string(str), &quot;\r\n&quot;)
+}
+
+func checkError(err error) {
+    if err != nil {
+        panic(err)
+    }
+}
+
 </code></pre>
 
 <ul>
 <li>First go ahead and delete everything in the pre-existing template.</li>
-<li>Now every Go code needs a package name, and if it is the main package it is supposed to named <em>main</em>  (more on that in later blogs)</li>
-<li>we need to import the <strong>fmt</strong> library for standard input output operations.</li>
-<li>Next thing we need is our <strong>main</strong> function which automatically gets called and is necessary if your program is supposed to be run.</li>
-<li>we declare functions with <strong>func</strong> keyword, it takes no argument and has no return type</li>
+<li>Add a package name <code>package main</code></li>
+<li>Import <strong>&ldquo;fmt&rdquo;</strong> library for input and output operations.</li>
+<li>Next add a empty main function below our import statement.</li>
+<li>If any of these steps seems unfamiliar to you, please refer to my <a href="https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/">last post</a><br /></li>
 </ul>
 
 <p>Up until now our code should look something like this</p>
@@ -173,34 +228,51 @@ func main() {
 }
 </code></pre>
 
-<p>Now it is time to write the program logic. First thing we need is declare three variables inside our main function. Two of them to hold the inputs and third for the sum. Add the declaration in side main function.</p>
+<p>Now it is time to write the program logic. First we need to declare a variable to take length of our array as input.
+Second, we need to take the <strong>whole</strong> array as input, or maybe not. We are only concerned with each single integer in array once, we don&rsquo;t need to store those numbers for any future use. We can very well take single numbers as inputs, keep them in temp variable, add that to sum and move ahead. Well that sums our logic. Next we need a sum variable to store our sum. Let&rsquo;s go ahead and add these variable declarations.</p>
 
-<pre><code class="language-go">var a,b,sum int;
+<pre><code class="language-go">var n,temp,sum int
 </code></pre>
 
-<p>This bit of weird syntax is declaring three variables of integer type. If you are coming from java or c background this might look a bit different, but you&rsquo;ll get the hang of it. The best part is many a times we don&rsquo;t need to declare variables with types in golang. We will see examples of that in later blogs, or refer to the video below for more detailed explanation. Next we will take in the inputs. For taking input we have two options. Either take formatted input using <strong>Scanf</strong> or simple input using <strong>Scan</strong>. I will show you both. Type the following lines of code below your variable declaration.</p>
+<p>Next step is taking the length of the array as input. We will just use our <strong>Scan</strong> as that is easier(no formatting required).</p>
 
-<pre><code class="language-go">fmt.Scanf(&quot;%d\n%d&quot;,&amp;a,&amp;b)
-//fmt.Scan(&amp;a,&amp;b)
+<pre><code class="language-go">fmt.Scan(&amp;n)
 </code></pre>
 
-<p>According to the problem statement we will be given two integers seperated by a new line, and that is exactly what <strong>&rdquo;%d\n%d&rdquo;</strong> is specifying here. <strong>%d</strong> means we want to take a integer input <strong>\n</strong> is the new line character followed by another integer. What follows next is not very staright forward to understand at first. It is saving those integers to memony where a and b is pointing to. It is related to the concept of pointers, which we will deal with in much greater detail in future.
-Second line which is commented is another way of taking input which directly takes the input as integers. Next we need to calculate the sum and   print out the result</p>
+<p>Now we need to iterate <strong><em>n</em></strong> times, take inputs and calculate their sum.</p>
 
-<pre><code class="language-go">sum = a+b
-fmt.Println(sum)
+<h1 id="loops-in-golang">Loops in Golang</h1>
+
+<p>If you are coming from other programming languages, you may find it weird that golang has only for loops. It does not have while or do while loops. However there are ways you can use golang&rsquo;s for loop to achieve the same behaviour that while and do while provides in any other programming languages. We will use a for loop to take inputs here and find their sum.</p>
+
+<pre><code class="language-go">for i:=0;i&lt;n;i++{
+    fmt.Scan(&amp;temp)
+    sum += temp
+}
 </code></pre>
 
-<p>I guess it is pretty straight forward. We are taking the sum, and printing it out. We use <strong>Println</strong> to print out the result.
-Now your complete code should look like</p>
+<p>Okay, so the for loop looks little weird. So if you watched my video along with last post, you already know what <code>:=</code> means. Basically it is declaring and initializing a variable <code>i</code> which is visible only in the scope of for loop. Next we have our loop conditions and increment operator. The parenthesis <code>()</code> around the whole thing is not required, however the <code>{}</code> are <strong>must</strong> even if you only have a single statement inside for loop.
+Then we are taking a integer input in temp. Next We are adding that to sum.</p>
 
-<pre><code class="language-go">import &quot;fmt&quot;
+<p>Hold on a minute, wouldn&rsquo;t <code>sum += temp</code> throw a error for the first time? You never initialized the value of sum to 0. In golang it wouldn&rsquo;t. In golang all variables are assigned <strong><em>zero</em></strong> values when they are declared. Integers have 0 as zero values, strings have empty strings &ldquo;&rdquo; etc. So when we declared sum it also got initialized with 0, hence <code>sum += temp</code> won&rsquo;t throw an error for the first time.</p>
 
-func main() {
-    var a,b,sum int;
-    fmt.Scanf(&quot;%d\n%d&quot;,&amp;a,&amp;b)
-    //fmt.Scan(&amp;a,&amp;b)
-    sum = a+b
+<p>Phew!!! All the heavy lifting has been done. Let&rsquo;s just the sum and get over with it.</p>
+
+<pre><code class="language-go">fmt.Println(sum)
+</code></pre>
+
+<p>Now Your final code should look something like this.</p>
+
+<pre><code class="language-go">package main
+import &quot;fmt&quot;
+
+func main(){
+    var n, temp,sum int
+    fmt.Scan(&amp;n)
+    for i:=0;i&lt;n;i++{
+        fmt.Scan(&amp;temp)
+        sum += temp
+    }
     fmt.Println(sum)
 }
 </code></pre>
@@ -210,14 +282,14 @@ func main() {
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/yNzVtH2xsfQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/lUftBPb2gx0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f08%2fhackerrank-solve-me-first-solution%2f - Hackerrank%20Solve%20Me%20First%20Solution by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f08%2fhackerrank-solution-of-simple-array-sum-in-golang%2f - Hackerrank%20Solution%20of%20Simple%20Array%20Sum%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -258,7 +330,7 @@ func main() {
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-simple-array-sum-in-golang/">Hackerrank Solution of Simple Array Sum in Golang<aside class="dates">Aug 25 2018</aside></a>
+            <a href="/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/">Hackerrank Solve Me First Solution<aside class="dates">Aug 22 2018</aside></a>
         </li>
     
         <li>
