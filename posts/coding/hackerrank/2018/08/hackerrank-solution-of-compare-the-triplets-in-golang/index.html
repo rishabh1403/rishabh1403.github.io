@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Hackerrank Solve Me First Solution"/>
-  <meta name="twitter:description" content="Solution for hackerrank warmup question solve me first in golang. In this blog I&#39;ll discuss my solution, what mistakes I initially made and what concepts I learned."/>
+  <meta name="twitter:title" content="Hackerrank Solution of Compare the Triplets in Golang"/>
+  <meta name="twitter:description" content="Solution for hackerrank warmup question compare the triplets in golang. In this question we will use if-else statement and arrays in golang for the first time along with for loops that we covered earlier."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="Solution for hackerrank warmup question solve me first in golang. In this blog I&#39;ll discuss my solution, what mistakes I initially made and what concepts I learned.">
+                <meta name="description" content="Solution for hackerrank warmup question compare the triplets in golang. In this question we will use if-else statement and arrays in golang for the first time along with for loops that we covered earlier.">
                 
-	  <meta name="keywords" content="solve, me, first, rishabh1403, hackerrank, blog, golang, solution, learn, code">
+	  <meta name="keywords" content="very, big, sum, rishabh1403, hackerrank, blog, golang, solution, learn, code">
 	
-                <title>Hackerrank Solve Me First Solution &middot; Rishabh Jain</title>
+                <title>Hackerrank Solution of Compare the Triplets in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -81,11 +81,11 @@
             <article>
                 <header>
                     <h1>
-                        Hackerrank Solve Me First Solution
+                        Hackerrank Solution of Compare the Triplets in Golang
                     </h1>
                     <h2 class="headline">
-                    Aug 22, 2018 12:32
-                    · 690 words
+                    Aug 25, 2018 23:00
+                    · 810 words
                     · 4 minute read
                       <span class="tags">
                       
@@ -110,30 +110,31 @@
 <li><a href="#problem-statement">Problem Statement</a></li>
 <li><a href="#challenges">Challenges</a></li>
 <li><a href="#solution">Solution</a></li>
+<li><a href="#if-else-in-golang">If-ELSE in Golang</a></li>
 </ul>
 </nav>
                     </div>
                   
                 
                 <section id="post-body">
-                    <p>Solution for hackerrank warmup question solve me first in golang. In this blog I&rsquo;ll discuss my solution, what mistakes I initially made and what concepts I learned.
+                    <p>Solution for hackerrank warmup question compare the triplets in golang. In this question we will use if-else statement and arrays in golang for the first time along with for loops that we covered earlier.
 </p>
 
 <h1 id="problem-statement">Problem Statement</h1>
 
-<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/solve-me-first/problem">link</a>. The question is pretty straight forward. We have to take two integers as input, and print their sum.
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/compare-the-triplets/problem">link</a>. The problem statement states that we need to compare two sets of inputs and provide a result based on the comparison.<br />
 Couple of things to note here is</p>
 
 <ul>
-<li>The inputs are separated by new line character</li>
-<li>we are solving this in <a href="https://golang.org/">golang</a> <strong>(assuming we have no or very little knowledge of <a href="https://golang.org/">golang</a>)</strong></li>
+<li>We need to take six inputs, 3 on each line</li>
+<li>we are solving this in <a href="https://golang.org/">golang</a> <strong>(assuming we understand basic for loops, input, output in <a href="https://golang.org/">golang</a>, refer to my <a href="https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-simple-array-sum-in-golang/">earlier posts</a> in case you need a refresher )</strong></li>
 </ul>
 
 <h1 id="challenges">Challenges</h1>
 
 <ul>
-<li>At first glance the platform opens up and we choose our preferred language as <a href="https://golang.org/">golang</a>. The moment we do that, we get some 10-15 lines of code which are very unfamiliar to someone who is new to language.</li>
-<li>To solve this problem only thing we need to know is how to take input, show output, and do a sum.</li>
+<li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
+<li>To solve this problem only thing we need to know is how to take input, show output, iterate over an array, use if-else statement and arrays in <a href="https://golang.org">golang</a></li>
 </ul>
 
 <h1 id="solution">Solution</h1>
@@ -141,83 +142,179 @@ Couple of things to note here is</p>
 <p>This is the template you get on <a href="https://www.hackerrank.com/">hackerrank</a> for this problem statement.</p>
 
 <pre><code class="language-go">package main
-import &quot;fmt&quot;
 
-func solveMeFirst(a uint32,b uint32) uint32{
-  // Hint: Type return (a+b) below
+import (
+    &quot;bufio&quot;
+    &quot;fmt&quot;
+    &quot;io&quot;
+    &quot;os&quot;
+    &quot;strconv&quot;
+    &quot;strings&quot;
+)
+
+// Complete the compareTriplets function below.
+func compareTriplets(a []int32, b []int32) []int32 {
+
+
 }
 
 func main() {
-    var a, b, res uint32
-    fmt.Scanf(&quot;%v\n%v&quot;, &amp;a,&amp;b)
-    res = solveMeFirst(a,b)
-    fmt.Println(res)
+    reader := bufio.NewReaderSize(os.Stdin, 16 * 1024 * 1024)
+
+    stdout, err := os.Create(os.Getenv(&quot;OUTPUT_PATH&quot;))
+    checkError(err)
+
+    defer stdout.Close()
+
+    writer := bufio.NewWriterSize(stdout, 16 * 1024 * 1024)
+
+    aTemp := strings.Split(strings.TrimSpace(readLine(reader)), &quot; &quot;)
+
+    var a []int32
+
+    for i := 0; i &lt; 3; i++ {
+        aItemTemp, err := strconv.ParseInt(aTemp[i], 10, 64)
+        checkError(err)
+        aItem := int32(aItemTemp)
+        a = append(a, aItem)
+    }
+
+    bTemp := strings.Split(strings.TrimSpace(readLine(reader)), &quot; &quot;)
+
+    var b []int32
+
+    for i := 0; i &lt; 3; i++ {
+        bItemTemp, err := strconv.ParseInt(bTemp[i], 10, 64)
+        checkError(err)
+        bItem := int32(bItemTemp)
+        b = append(b, bItem)
+    }
+
+    result := compareTriplets(a, b)
+
+    for i, resultItem := range result {
+        fmt.Fprintf(writer, &quot;%d&quot;, resultItem)
+
+        if i != len(result) - 1 {
+            fmt.Fprintf(writer, &quot; &quot;)
+        }
+    }
+
+    fmt.Fprintf(writer, &quot;\n&quot;)
+
+    writer.Flush()
+}
+
+    func readLine(reader *bufio.Reader) string {
+    str, _, err := reader.ReadLine()
+    if err == io.EOF {
+        return &quot;&quot;
+    }
+
+    return strings.TrimRight(string(str), &quot;\r\n&quot;)
+    }
+
+func checkError(err error) {
+    if err != nil {
+        panic(err)
+    }
 }
 </code></pre>
 
 <ul>
 <li>First go ahead and delete everything in the pre-existing template.</li>
-<li>Now every Go code needs a package name, and if it is the main package it is supposed to named <em>main</em>  (more on that in later blogs)</li>
-<li>we need to import the <strong>fmt</strong> library for standard input output operations.</li>
-<li>Next thing we need is our <strong>main</strong> function which automatically gets called and is necessary if your program is supposed to be run.</li>
-<li>we declare functions with <strong>func</strong> keyword, it takes no argument and has no return type</li>
+<li>Now as usual, create our outer program structure. This is not our final snippet, we will create a much optimized template in coming posts for fast I/O, but for now just go ahead and create a simple structure that we have been using this far.</li>
 </ul>
-
-<p>Up until now our code should look something like this</p>
 
 <pre><code class="language-go">package main
 import &quot;fmt&quot;
 
-func main() {
+func main(){
     
 }
 </code></pre>
 
-<p>Now it is time to write the program logic. First thing we need is declare three variables inside our main function. Two of them to hold the inputs and third for the sum. Add the declaration in side main function.</p>
+<p>If this seems unfamiliar, please refer to my <a href="https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/">earlier posts</a>.
+Next thing we need is to take 6 inputs. There are two options :-</p>
 
-<pre><code class="language-go">var a,b,sum int;
+<ul>
+<li>Take six variables</li>
+<li>Use arrays</li>
+</ul>
+
+<p>Lets learn arrays!!!. So now I will declare 2 arrays of length 3 each and take inputs in those arrays.</p>
+
+<pre><code class="language-go">    var a [3]int
+    var b [3]int
 </code></pre>
 
-<p>This bit of weird syntax is declaring three variables of integer type. If you are coming from java or c background this might look a bit different, but you&rsquo;ll get the hang of it. The best part is many a times we don&rsquo;t need to declare variables with types in golang. We will see examples of that in later blogs, or refer to the video below for more detailed explanation. Next we will take in the inputs. For taking input we have two options. Either take formatted input using <strong>Scanf</strong> or simple input using <strong>Scan</strong>. I will show you both. Type the following lines of code below your variable declaration.</p>
+<p>This is the syntax for declaring an array in golang. Like variable, type comes later and we provide the length of array in <code>[]</code>. <strong><em>Length of an array in golang is fixed</em></strong>. Since both a, b are of same type, we could have clubbed the declaration like we club variable declaration.
+Now we need to take our inputs, so ahead and add these lines of code.</p>
 
-<pre><code class="language-go">fmt.Scanf(&quot;%d\n%d&quot;,&amp;a,&amp;b)
-//fmt.Scan(&amp;a,&amp;b)
+<pre><code class="language-go">fmt.Scan(&amp;a[0],&amp;a[1],&amp;a[2])
+fmt.Scan(&amp;b[0],&amp;b[1],&amp;b[2])
 </code></pre>
 
-<p>According to the problem statement we will be given two integers seperated by a new line, and that is exactly what <strong>&rdquo;%d\n%d&rdquo;</strong> is specifying here. <strong>%d</strong> means we want to take a integer input <strong>\n</strong> is the new line character followed by another integer. What follows next is not very staright forward to understand at first. It is saving those integers to memony where a and b is pointing to. It is related to the concept of pointers, which we will deal with in much greater detail in future.
-Second line which is commented is another way of taking input which directly takes the input as integers. Next we need to calculate the sum and   print out the result</p>
+<p>Nothing unusual, referencing indexes 0,1,2 and taking inputs.
+Now we need to declare two more variables for storing result of the comparison, loop over the values and compare them.</p>
 
-<pre><code class="language-go">sum = a+b
-fmt.Println(sum)
+<pre><code class="language-go">    var ar,br int
+    for i:=0;i&lt;3;i++{
+        //compare here
+    }
 </code></pre>
 
-<p>I guess it is pretty straight forward. We are taking the sum, and printing it out. We use <strong>Println</strong> to print out the result.
-Now your complete code should look like</p>
+<p>We are looping three times, as that&rsquo;s the length of our arrays. Next we need to add our comparison logic in there and print the result.</p>
 
-<pre><code class="language-go">import &quot;fmt&quot;
+<pre><code class="language-go">        if a[i] &gt; b[i] {
+            ar++
+        }else if b[i] &gt; a[i] {
+            br++
+        }
+	//after for
+	fmt.Println(ar,br)
+</code></pre>
 
-func main() {
-    var a,b,sum int;
-    fmt.Scanf(&quot;%d\n%d&quot;,&amp;a,&amp;b)
-    //fmt.Scan(&amp;a,&amp;b)
-    sum = a+b
-    fmt.Println(sum)
+<h1 id="if-else-in-golang">If-ELSE in Golang</h1>
+
+<p>If-else in golang is also similar to for, <code>()</code> not mandatory , <code>{}</code> is must. rest is pretty much self explanatory. Notice the use of else if insted of else, we need to take care of case where <code>a[i]=b[i]</code> no value should be incremented there. That is the reason for using else if instead of just an else.</p>
+
+<p>Now your complete code should look like</p>
+
+<pre><code class="language-go">package main
+import &quot;fmt&quot;
+
+func main(){
+    var a [3]int
+    var b [3]int
+    fmt.Scan(&amp;a[0],&amp;a[1],&amp;a[2])
+    fmt.Scan(&amp;b[0],&amp;b[1],&amp;b[2])
+    var ar,br int
+    for i:=0;i&lt;3;i++{
+        //compare here
+        if a[i] &gt; b[i] {
+            ar++
+        }else if b[i] &gt; a[i] {
+            br++
+        }
+    }
+    fmt.Println(ar,br)
 }
 </code></pre>
 
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts, subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> for regular updates, follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a  comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts, subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> for regular updates, subcribe to my mailing list below, follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/yNzVtH2xsfQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/4y8ceyunvOQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f08%2fhackerrank-solve-me-first-solution%2f - Hackerrank%20Solve%20Me%20First%20Solution by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f08%2fhackerrank-solution-of-compare-the-triplets-in-golang%2f - Hackerrank%20Solution%20of%20Compare%20the%20Triplets%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -258,11 +355,11 @@ func main() {
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-compare-the-triplets-in-golang/">Hackerrank Solution of Compare the Triplets in Golang<aside class="dates">Aug 25 2018</aside></a>
+            <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-simple-array-sum-in-golang/">Hackerrank Solution of Simple Array Sum in Golang<aside class="dates">Aug 25 2018</aside></a>
         </li>
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-simple-array-sum-in-golang/">Hackerrank Solution of Simple Array Sum in Golang<aside class="dates">Aug 25 2018</aside></a>
+            <a href="/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/">Hackerrank Solve Me First Solution<aside class="dates">Aug 22 2018</aside></a>
         </li>
     
         <li>

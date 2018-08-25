@@ -6,10 +6,20 @@
     <description>Recent content in Hackerrank on Rishabh Jain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Aug 2018 00:55:09 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 25 Aug 2018 23:00:09 +0530</lastBuildDate>
     
 	<atom:link href="https://rishabh1403.com/categories/hackerrank/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hackerrank Solution of Compare the Triplets in Golang</title>
+      <link>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-compare-the-triplets-in-golang/</link>
+      <pubDate>Sat, 25 Aug 2018 23:00:09 +0530</pubDate>
+      
+      <guid>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-compare-the-triplets-in-golang/</guid>
+      <description>&lt;p&gt;Solution for hackerrank warmup question compare the triplets in golang. In this question we will use if-else statement and arrays in golang for the first time along with for loops that we covered earlier.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hackerrank Solution of Simple Array Sum in Golang</title>
