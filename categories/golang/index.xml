@@ -6,10 +6,20 @@
     <description>Recent content in Golang on Rishabh Jain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Aug 2018 23:00:09 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 26 Aug 2018 18:45:09 +0530</lastBuildDate>
     
 	<atom:link href="https://rishabh1403.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hackerrank Solution of A Very Big Sum in Golang</title>
+      <link>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-a-very-big-sum-in-golang/</link>
+      <pubDate>Sun, 26 Aug 2018 18:45:09 +0530</pubDate>
+      
+      <guid>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-a-very-big-sum-in-golang/</guid>
+      <description>&lt;p&gt;Solution for hackerrank warmup question a very big sum in golang. This question is very similar to simple array sum problem. The only difference being that the input array is huge. Let&amp;rsquo;s tackle that in this blog post.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hackerrank Solution of Compare the Triplets in Golang</title>

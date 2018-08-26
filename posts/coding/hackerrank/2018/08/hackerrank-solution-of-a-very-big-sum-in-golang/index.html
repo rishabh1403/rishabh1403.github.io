@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Hackerrank Solution of Compare the Triplets in Golang"/>
-  <meta name="twitter:description" content="Solution for hackerrank warmup question compare the triplets in golang. In this question we will use if-else statement and arrays in golang for the first time along with for loops that we covered earlier."/>
+  <meta name="twitter:title" content="Hackerrank Solution of A Very Big Sum in Golang"/>
+  <meta name="twitter:description" content="Solution for hackerrank warmup question a very big sum in golang. This question is very similar to simple array sum problem. The only difference being that the input array is huge. Let&#39;s tackle that in this blog post."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="Solution for hackerrank warmup question compare the triplets in golang. In this question we will use if-else statement and arrays in golang for the first time along with for loops that we covered earlier.">
+                <meta name="description" content="Solution for hackerrank warmup question a very big sum in golang. This question is very similar to simple array sum problem. The only difference being that the input array is huge. Let&#39;s tackle that in this blog post.">
                 
 	  <meta name="keywords" content="very, big, sum, rishabh1403, hackerrank, blog, golang, solution, learn, code">
 	
-                <title>Hackerrank Solution of Compare the Triplets in Golang &middot; Rishabh Jain</title>
+                <title>Hackerrank Solution of A Very Big Sum in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -81,11 +81,11 @@
             <article>
                 <header>
                     <h1>
-                        Hackerrank Solution of Compare the Triplets in Golang
+                        Hackerrank Solution of A Very Big Sum in Golang
                     </h1>
                     <h2 class="headline">
-                    Aug 25, 2018 23:00
-                    · 810 words
+                    Aug 26, 2018 18:45
+                    · 737 words
                     · 4 minute read
                       <span class="tags">
                       
@@ -110,31 +110,32 @@
 <li><a href="#problem-statement">Problem Statement</a></li>
 <li><a href="#challenges">Challenges</a></li>
 <li><a href="#solution">Solution</a></li>
-<li><a href="#if-else-in-golang">If-ELSE in Golang</a></li>
 </ul>
 </nav>
                     </div>
                   
                 
                 <section id="post-body">
-                    <p>Solution for hackerrank warmup question compare the triplets in golang. In this question we will use if-else statement and arrays in golang for the first time along with for loops that we covered earlier.
+                    <p>Solution for hackerrank warmup question a very big sum in golang. This question is very similar to simple array sum problem. The only difference being that the input array is huge. Let&rsquo;s tackle that in this blog post.
 </p>
 
 <h1 id="problem-statement">Problem Statement</h1>
 
-<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/compare-the-triplets/problem">link</a>. The problem statement states that we need to compare two sets of inputs and provide a result based on the comparison.<br />
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/a-very-big-sum/problem">link</a>. The problem statement basically states that we need to print the sum of an array of integers whose length is provided as input.
 Couple of things to note here is</p>
 
 <ul>
-<li>We need to take six inputs, 3 on each line</li>
-<li>we are solving this in <a href="https://golang.org/">golang</a> <strong>(assuming we understand basic for loops, input, output in <a href="https://golang.org/">golang</a>, refer to my <a href="https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-simple-array-sum-in-golang/">earlier posts</a> in case you need a refresher )</strong></li>
+<li>We need to take array length as input</li>
+<li>In the next line, we are provided with an array of numbers, whose sum we need to print</li>
+<li>The integers in the array are huge ( <code>0&lt;= i &lt;= 10^10</code> )</li>
+<li>we are solving this in <a href="https://golang.org/">golang</a> <strong>(assuming we know how to take input in <a href="https://golang.org/">golang</a>, refer to my <a href="https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/">last post</a> in case you need a refresher )</strong></li>
 </ul>
 
 <h1 id="challenges">Challenges</h1>
 
 <ul>
 <li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
-<li>To solve this problem only thing we need to know is how to take input, show output, iterate over an array, use if-else statement and arrays in <a href="https://golang.org">golang</a></li>
+<li>To solve this problem only thing we need to know is how to take input, show output, iterate over an array(<em>kind of</em>), and calculate sum.</li>
 </ul>
 
 <h1 id="solution">Solution</h1>
@@ -152,169 +153,120 @@ import (
     &quot;strings&quot;
 )
 
-// Complete the compareTriplets function below.
-func compareTriplets(a []int32, b []int32) []int32 {
+// Complete the aVeryBigSum function below.
+func aVeryBigSum(ar []int64) int64 {
 
 
 }
 
 func main() {
-    reader := bufio.NewReaderSize(os.Stdin, 16 * 1024 * 1024)
+    reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
 
     stdout, err := os.Create(os.Getenv(&quot;OUTPUT_PATH&quot;))
     checkError(err)
 
     defer stdout.Close()
 
-    writer := bufio.NewWriterSize(stdout, 16 * 1024 * 1024)
+    writer := bufio.NewWriterSize(stdout, 1024 * 1024)
 
-    aTemp := strings.Split(strings.TrimSpace(readLine(reader)), &quot; &quot;)
+    arCount, err := strconv.ParseInt(readLine(reader), 10, 64)
+    checkError(err)
 
-    var a []int32
+    arTemp := strings.Split(readLine(reader), &quot; &quot;)
 
-    for i := 0; i &lt; 3; i++ {
-        aItemTemp, err := strconv.ParseInt(aTemp[i], 10, 64)
+    var ar []int64
+
+    for i := 0; i &lt; int(arCount); i++ {
+        arItem, err := strconv.ParseInt(arTemp[i], 10, 64)
         checkError(err)
-        aItem := int32(aItemTemp)
-        a = append(a, aItem)
+        ar = append(ar, arItem)
     }
 
-    bTemp := strings.Split(strings.TrimSpace(readLine(reader)), &quot; &quot;)
+    result := aVeryBigSum(ar)
 
-    var b []int32
-
-    for i := 0; i &lt; 3; i++ {
-        bItemTemp, err := strconv.ParseInt(bTemp[i], 10, 64)
-        checkError(err)
-        bItem := int32(bItemTemp)
-        b = append(b, bItem)
-    }
-
-    result := compareTriplets(a, b)
-
-    for i, resultItem := range result {
-        fmt.Fprintf(writer, &quot;%d&quot;, resultItem)
-
-        if i != len(result) - 1 {
-            fmt.Fprintf(writer, &quot; &quot;)
-        }
-    }
-
-    fmt.Fprintf(writer, &quot;\n&quot;)
+    fmt.Fprintf(writer, &quot;%d\n&quot;, result)
 
     writer.Flush()
 }
 
-    func readLine(reader *bufio.Reader) string {
+func readLine(reader *bufio.Reader) string {
     str, _, err := reader.ReadLine()
     if err == io.EOF {
         return &quot;&quot;
     }
 
     return strings.TrimRight(string(str), &quot;\r\n&quot;)
-    }
+}
 
 func checkError(err error) {
     if err != nil {
         panic(err)
     }
 }
+
 </code></pre>
 
 <ul>
 <li>First go ahead and delete everything in the pre-existing template.</li>
-<li>Now as usual, create our outer program structure. This is not our final snippet, we will create a much optimized template in coming posts for fast I/O, but for now just go ahead and create a simple structure that we have been using this far.</li>
+<li>Since the question is very similar to one of the previos ones, same code works for this one too. Refer to <strong><a href="https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-simple-array-sum-in-golang/">Simple Array Sum</a></strong> post for complete explation of the solution.
+So your solution should look something like this.</li>
 </ul>
 
 <pre><code class="language-go">package main
 import &quot;fmt&quot;
 
 func main(){
-    
+    var n,temp,sum int
+    fmt.Scan(&amp;n)
+    for i:=0;i&lt;n;i++{
+        fmt.Scan(&amp;temp)
+        sum += temp
+    }
+    fmt.Println(sum)
 }
 </code></pre>
 
-<p>If this seems unfamiliar, please refer to my <a href="https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/">earlier posts</a>.
-Next thing we need is to take 6 inputs. There are two options :-</p>
+<p>The same code works here too, so what is all the fuss about long integers? Actually, although this code runs all well and good, the compiler is expecting a slightly different answer from you. An answer which would demonstrate that you understand that the concepts of memory and bits in a program. Now let me show you what I am talking about.</p>
+
+<pre><code class="language-go">package main
+import &quot;fmt&quot;
+
+func main(){
+    var n,temp,sum int64
+    fmt.Scan(&amp;n)
+    for i:=int64(0);i&lt;n;i++{
+        fmt.Scan(&amp;temp)
+        sum += temp
+    }
+    fmt.Println(sum)
+}
+</code></pre>
+
+<p>Notice in this code snippet I made two changes</p>
 
 <ul>
-<li>Take six variables</li>
-<li>Use arrays</li>
+<li>In the variable declaration line, the variables are declared as <strong>int64</strong> type</li>
+<li><code>i:=0</code> is type casted to int64 type</li>
 </ul>
 
-<p>Lets learn arrays!!!. So now I will declare 2 arrays of length 3 each and take inputs in those arrays.</p>
+<p>Basically this explicitly tells the compiler to allocate 64bits of memory for these variables. Technically the range of <strong>n</strong> (length of array) is  1 to 10, so we could have specified int type for <strong>n</strong> and no type casting would have been required, or even a smaller signed type would have worked, with a type casting while initializing <strong>i</strong>.</p>
 
-<pre><code class="language-go">    var a [3]int
-    var b [3]int
-</code></pre>
+<p>Now the bigger question is why did the code with declaration of variables with <code>int</code> type work? The way golang works is int takes 32bit or 64bit depending on the platform. So if your platform running the code supported 64bit, int would have handled 64bit values and code would run just fine else it would fall back to 32bit. However if your platform doesn&rsquo;t support 64bit, int64 <strong>won&rsquo;t</strong> work either.
+So that is the reason both of the code snippets work and pass all the test cases.</p>
 
-<p>This is the syntax for declaring an array in golang. Like variable, type comes later and we provide the length of array in <code>[]</code>. <strong><em>Length of an array in golang is fixed</em></strong>. Since both a, b are of same type, we could have clubbed the declaration like we club variable declaration.
-Now we need to take our inputs, so ahead and add these lines of code.</p>
-
-<pre><code class="language-go">fmt.Scan(&amp;a[0],&amp;a[1],&amp;a[2])
-fmt.Scan(&amp;b[0],&amp;b[1],&amp;b[2])
-</code></pre>
-
-<p>Nothing unusual, referencing indexes 0,1,2 and taking inputs.
-Now we need to declare two more variables for storing result of the comparison, loop over the values and compare them.</p>
-
-<pre><code class="language-go">    var ar,br int
-    for i:=0;i&lt;3;i++{
-        //compare here
-    }
-</code></pre>
-
-<p>We are looping three times, as that&rsquo;s the length of our arrays. Next we need to add our comparison logic in there and print the result.</p>
-
-<pre><code class="language-go">        if a[i] &gt; b[i] {
-            ar++
-        }else if b[i] &gt; a[i] {
-            br++
-        }
-	//after for
-	fmt.Println(ar,br)
-</code></pre>
-
-<h1 id="if-else-in-golang">If-ELSE in Golang</h1>
-
-<p>If-else in golang is also similar to for, <code>()</code> not mandatory , <code>{}</code> is must. rest is pretty much self explanatory. Notice the use of else if insted of else, we need to take care of case where <code>a[i]=b[i]</code> no value should be incremented there. That is the reason for using else if instead of just an else.</p>
-
-<p>Now your complete code should look like</p>
-
-<pre><code class="language-go">package main
-import &quot;fmt&quot;
-
-func main(){
-    var a [3]int
-    var b [3]int
-    fmt.Scan(&amp;a[0],&amp;a[1],&amp;a[2])
-    fmt.Scan(&amp;b[0],&amp;b[1],&amp;b[2])
-    var ar,br int
-    for i:=0;i&lt;3;i++{
-        //compare here
-        if a[i] &gt; b[i] {
-            ar++
-        }else if b[i] &gt; a[i] {
-            br++
-        }
-    }
-    fmt.Println(ar,br)
-}
-</code></pre>
-
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts, subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> for regular updates, subcribe to my mailing list below, follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts, subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> for regular updates, subcribe to my mailing list below, follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a  comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/4y8ceyunvOQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/LhgqF1vzkGc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f08%2fhackerrank-solution-of-compare-the-triplets-in-golang%2f - Hackerrank%20Solution%20of%20Compare%20the%20Triplets%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f08%2fhackerrank-solution-of-a-very-big-sum-in-golang%2f - Hackerrank%20Solution%20of%20A%20Very%20Big%20Sum%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -355,7 +307,7 @@ func main(){
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-a-very-big-sum-in-golang/">Hackerrank Solution of A Very Big Sum in Golang<aside class="dates">Aug 26 2018</aside></a>
+            <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-compare-the-triplets-in-golang/">Hackerrank Solution of Compare the Triplets in Golang<aside class="dates">Aug 25 2018</aside></a>
         </li>
     
         <li>
