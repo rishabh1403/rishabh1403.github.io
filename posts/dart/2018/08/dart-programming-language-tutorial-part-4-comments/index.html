@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Dart Programming Language Tutorial Part 2 | Variables"/>
-  <meta name="twitter:description" content="In this post we will look into various ways in which we can declare and use variable. We will also learn some syntax of dart and how to print values of variables. Let&#39;s dive right into it."/>
+  <meta name="twitter:title" content="Dart Programming Language Tutorial Part 4 | Comments"/>
+  <meta name="twitter:description" content="In this post we will look into various ways in which we can write comments in dart. Let&#39;s get started."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="In this post we will look into various ways in which we can declare and use variable. We will also learn some syntax of dart and how to print values of variables. Let&#39;s dive right into it.">
+                <meta name="description" content="In this post we will look into various ways in which we can write comments in dart. Let&#39;s get started.">
                 
-	  <meta name="keywords" content="rishabh, rishabh jain, rishabh1403, blog, dart, variables, declaration, initialization, dynamic, var, int">
+	  <meta name="keywords" content="rishabh, rishabh jain, rishabh1403, blog, comments, dart, dartlang, tutorial, programming, language, solution">
 	
-                <title>Dart Programming Language Tutorial Part 2 | Variables &middot; Rishabh Jain</title>
+                <title>Dart Programming Language Tutorial Part 4 | Comments &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,12 +87,12 @@
             <article>
                 <header>
                     <h1>
-                        Dart Programming Language Tutorial Part 2 | Variables
+                        Dart Programming Language Tutorial Part 4 | Comments
                     </h1>
                     <h2 class="headline">
-                    Aug 28, 2018 20:00
-                    · 695 words
-                    · 4 minute read
+                    Aug 30, 2018 01:15
+                    · 532 words
+                    · 3 minute read
                       <span class="tags">
                       
                       
@@ -111,112 +111,87 @@
                     <div id="toc">
                       <nav id="TableOfContents">
 <ul>
-<li><a href="#the-main-function">The main function</a></li>
-<li><a href="#declaration-and-initialization-of-variables">Declaration and Initialization of Variables</a></li>
-<li><a href="#different-types-of-declaration-in-dart">Different types of declaration in dart</a></li>
-<li><a href="#printing-values">Printing Values</a></li>
+<li><a href="#quick-note">Quick Note</a></li>
+<li><a href="#comments">Comments</a>
+<ul>
+<li><a href="#single-line-comments">Single line comments</a></li>
+<li><a href="#multi-line-comments">Multi line comments</a></li>
+<li><a href="#documentation-comments">Documentation comments</a></li>
+</ul></li>
 </ul>
 </nav>
                     </div>
                   
                 
                 <section id="post-body">
-                    <p>In this post we will look into various ways in which we can declare and use variable. We will also learn some syntax of dart and how to print values of variables. Let&rsquo;s dive right into it.
+                    <p>In this post we will look into various ways in which we can write comments in dart. Let&rsquo;s get started.
 </p>
 
-<h1 id="the-main-function">The main function</h1>
+<h1 id="quick-note">Quick Note</h1>
 
-<p>Every dart program starts executing from a main function. What is a function? How do we use it? Weren&rsquo;t we going to learn about variables? Hold on, just bear with me for couple of posts till we will write all our code inside a wrapper. So open <a href="https://dartpad.dartlang.org/">dartpad</a> and let&rsquo;s start coding.</p>
+<p>If you notice our original road map, we had data types before comments. Comments were the third topic in the list, but we are taking it just after variables. There are two reasons for this quick diversion</p>
 
-<pre><code class="language-dart">void main(){
-    // code starts here
+<ul>
+<li>Comments are a very small and easy topic, let&rsquo;s get it out of the way</li>
+<li>We are already using it from the very first post!!!</li>
+</ul>
 
+<h1 id="comments">Comments</h1>
 
-    // code ends here
-}
+<p>There are many times when our long, complex code becomes cryptic and putting in some help text in there becomes necessary, so that someone else looking at the code or even the one who wrote it, looking at it later in time can understand it well. These help text are generally in plain text, strings, that can be simple plain English or any other language that you might be comfortable with. These comments can be small (adjusted in single line), big explanations (multi line), and can used for formally documenting your code. Now we need some way for our dart compiler to ignore these comments, because these do not wrap program logic, they don&rsquo;t affect output or behaviour of the program. Comments are just for our ease, to help us understand our own code or others code better.</p>
+
+<p>We have three types of comments in dart. Let&rsquo;s look into then one by one.</p>
+
+<h2 id="single-line-comments">Single line comments</h2>
+
+<p>Single line comments are, well comments that fit in a single line. To write a single line comment we start the line with <code>//</code>  and write our comment. If you remember our two lines <code>code starts here</code> and <code>code ends here</code> used to start with <code>//</code>. Those two lines were single line comments.</p>
+
+<pre><code class="language-dart">
+    // this is a single line comment
+
 </code></pre>
 
-<p>For now just paste the above code snippet in your <a href="https://dartpad.dartlang.org/">dartpad</a> workspace, and we will write all our code between those two <code>code starts here</code> and <code>code
-ends here</code> lines.</p>
+<h2 id="multi-line-comments">Multi line comments</h2>
 
-<h1 id="declaration-and-initialization-of-variables">Declaration and Initialization of Variables</h1>
+<p>Multi line comments are comments that can be written in multiple lines. They start with <code>/*</code> and end with <code>*/</code>. Basically, everything that these two wraps become comments. Multi-line comments are very useful to describe complex program logic. Let&rsquo;s see an example</p>
 
-<p>What is a variable? Well a variable is a container, which just holds some value in your program. Let&rsquo;s say you want to store the value of <code>pi</code> in
-your program, you need some place, a container to store that number <code>3.14</code>. That container is a variable.</p>
+<pre><code class="language-dart">
+    /* 
 
-<p>To use a variable in your program you must declare and initialize it. So what is declaring and initializing a variable?</p>
+    This is a multi-line comment.
+    I can go to next line too.
+    I can write code here.
+    int a =0;
+    this code won't run.
 
-<p>Declaring a variable is nothing but notifying everyone that a particular character or word will be used as a container to store something in the program. Initializing a variable is putting a initial value in that container i.e. giving a value to a variable for the first time. Let&rsquo;s look at some code.</p>
+    */
 
-<pre><code class="language-dart">    void main(){
-        // code starts here
-
-        int a = 3;
-
-        int b;
-        b = 4;
-
-        // code ends here;
-
-    }
 </code></pre>
 
-<p>In the code snippet above <code>int a = 3</code> is a variable declaration as well as initialization, a is declared that it will hold integer type of value, and is assigned a value of 3 for the first time. In the second case <code>int b;</code> is just a declaration where b is declared to be of integer type, and <code>b=3</code> is an initialization, since it is assigned a value for the first time.</p>
+<h2 id="documentation-comments">Documentation comments</h2>
 
-<h1 id="different-types-of-declaration-in-dart">Different types of declaration in dart</h1>
+<p>Documentation comments are used to write documentation inside code. It can be single line using <code>///</code> or multiline <code>/**</code> . The difference between a normal comment and a documentation comment is compiler ignores the documentation comments except for the text inside <code>[]</code> . It creates a link when passed through a documentation generation tool.</p>
 
-<p>Now we will look into different ways by which we can declare a variable in dart and their differences.</p>
+<pre><code class="language-dart">
+    /// variable [alpha] holds the value of the result from the complex calculation
 
-<pre><code class="language-dart">    void main(){
-        // code starts here
-
-        int a = 3;
-        var b = 3;
-        dynamic c = 3;
-
-        // code starts here
-
-    }
 </code></pre>
 
-<p>We have already looked into first one here, it declares a integer variable. We will look into other data types in greater detail in later posts, for now let&rsquo;s stick to integers. Second one is very similar to the first. It auto infers the data type from the initialization, so b will become an integer type automatically. Declaring local variables using var is recommended in dart. These two variable declaration are static declaration i.e. their type cannot be changed, we cannot put a string value into them later on in the program.</p>
+<p>Here <code>[alpha]</code> will become a link to the original variable alpha where it was declared.</p>
 
-<p>The third type is a interesting one, it is as the name suggests dynamic declaration. Even though the variable is assigned a integer value, we can put any type of value in the variable later on in the program.</p>
-
-<h1 id="printing-values">Printing Values</h1>
-
-<p>Now that we have three variables in our program, let&rsquo;s go ahead and print them.</p>
-
-<pre><code class="language-dart">    void mian(){
-        // code starts here
-
-        int a = 3;
-        var b = 3;
-        dynamic c = 3;
-
-        c = &quot;stuart&quot;;
-
-        print(a);
-        print(b);
-        print(c);
-    }
-</code></pre>
-
-<p>Notice two things here, I changed the value of <code>c</code> to a string, I cannot do the same thing with <code>a</code> and <code>b</code> . Second, semicolons in dart are <strong><em>required</em></strong>. Next is a simple print statement to print the values of our variables to screen.</p>
-
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts, subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> for regular updates, subscribe to my mailing list below, follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/gL7hifdjsoY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/REP2btkSM7k" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fdart%2f2018%2f08%2fdart-programming-language-tutorial-part-2-variables%2f - Dart%20Programming%20Language%20Tutorial%20Part%202%20%7c%20Variables by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fdart%2f2018%2f08%2fdart-programming-language-tutorial-part-4-comments%2f - Dart%20Programming%20Language%20Tutorial%20Part%204%20%7c%20Comments by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -257,11 +232,11 @@ your program, you need some place, a container to store that number <code>3.14</
     
     
         <li>
-            <a href="/posts/dart/2018/08/dart-programming-language-tutorial-part-4-comments/">Dart Programming Language Tutorial Part 4 | Comments<aside class="dates">Aug 30 2018</aside></a>
+            <a href="/posts/dart/2018/08/dart-programming-language-tutorial-part-3-final-const-default-values/">Dart Programming Language Tutorial Part 3 | Final,Const, and Default Values<aside class="dates">Aug 29 2018</aside></a>
         </li>
     
         <li>
-            <a href="/posts/dart/2018/08/dart-programming-language-tutorial-part-3-final-const-default-values/">Dart Programming Language Tutorial Part 3 | Final,Const, and Default Values<aside class="dates">Aug 29 2018</aside></a>
+            <a href="/posts/dart/2018/08/dart-programming-language-tutorial-part-2-variables/">Dart Programming Language Tutorial Part 2 | Variables<aside class="dates">Aug 28 2018</aside></a>
         </li>
     
         <li>
