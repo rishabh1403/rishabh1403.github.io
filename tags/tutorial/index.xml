@@ -6,10 +6,20 @@
     <description>Recent content in Tutorial on Rishabh Jain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Aug 2018 20:00:01 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 29 Aug 2018 21:45:47 +0530</lastBuildDate>
     
 	<atom:link href="https://rishabh1403.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dart Programming Language Tutorial Part 3 | Final,Const, and Default Values</title>
+      <link>https://rishabh1403.com/posts/dart/2018/08/dart-programming-language-tutorial-part-3-final-const-default-values/</link>
+      <pubDate>Wed, 29 Aug 2018 21:45:47 +0530</pubDate>
+      
+      <guid>https://rishabh1403.com/posts/dart/2018/08/dart-programming-language-tutorial-part-3-final-const-default-values/</guid>
+      <description>&lt;p&gt;In the last post we looked into how to declare and print variables. In this post we will conclude the section on variables by discussing about final and const keywords and default values.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Dart Programming Language Tutorial Part 2 | Variables</title>
