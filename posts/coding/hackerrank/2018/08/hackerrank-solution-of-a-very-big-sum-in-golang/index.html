@@ -91,7 +91,7 @@
                     </h1>
                     <h2 class="headline">
                     Aug 26, 2018 18:45
-                    · 737 words
+                    · 747 words
                     · 4 minute read
                       <span class="tags">
                       
@@ -123,25 +123,26 @@
                 
                 <section id="post-body">
                     <p>Solution for hackerrank warmup question a very big sum in golang. This question is very similar to simple array sum problem. The only difference being that the input array is huge. Let&rsquo;s tackle that in this blog post.
-</p>
+
+<div>&nbsp;</div></p>
 
 <h1 id="problem-statement">Problem Statement</h1>
 
 <p>The question can be found at this <a href="https://www.hackerrank.com/challenges/a-very-big-sum/problem">link</a>. The problem statement basically states that we need to print the sum of an array of integers whose length is provided as input.
-Couple of things to note here is</p>
-
-<ul>
-<li>We need to take array length as input</li>
-<li>In the next line, we are provided with an array of numbers, whose sum we need to print</li>
-<li>The integers in the array are huge ( <code>0&lt;= i &lt;= 10^10</code> )</li>
-<li>we are solving this in <a href="https://golang.org/">golang</a> <strong>(assuming we know how to take input in <a href="https://golang.org/">golang</a>, refer to my <a href="https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/">last post</a> in case you need a refresher )</strong></li>
-</ul>
+Couple of things to note here is
+<div>&nbsp;</div>
+* We need to take array length as input
+* In the next line, we are provided with an array of numbers, whose sum we need to print
+* The integers in the array are huge ( <code>0&lt;= i &lt;= 10^10</code> )
+* we are solving this in <a href="https://golang.org/">golang</a> <strong>(assuming we know how to take input in <a href="https://golang.org/">golang</a>, refer to my <a href="https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/">last post</a> in case you need a refresher )</strong>
+<div>&nbsp;</div></p>
 
 <h1 id="challenges">Challenges</h1>
 
 <ul>
 <li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
-<li>To solve this problem only thing we need to know is how to take input, show output, iterate over an array(<em>kind of</em>), and calculate sum.</li>
+<li>To solve this problem only thing we need to know is how to take input, show output, iterate over an array(<em>kind of</em>), and calculate sum.
+<div>&nbsp;</div></li>
 </ul>
 
 <h1 id="solution">Solution</h1>
@@ -232,7 +233,8 @@ func main(){
 }
 </code></pre>
 
-<p>The same code works here too, so what is all the fuss about long integers? Actually, although this code runs all well and good, the compiler is expecting a slightly different answer from you. An answer which would demonstrate that you understand that the concepts of memory and bits in a program. Now let me show you what I am talking about.</p>
+<p>The same code works here too, so what is all the fuss about long integers? Actually, although this code runs all well and good, the compiler is expecting a slightly different answer from you. An answer which would demonstrate that you understand that the concepts of memory and bits in a program. Now let me show you what I am talking about.
+<div>&nbsp;</div></p>
 
 <pre><code class="language-go">package main
 import &quot;fmt&quot;
@@ -255,7 +257,8 @@ func main(){
 <li><code>i:=0</code> is type casted to int64 type</li>
 </ul>
 
-<p>Basically this explicitly tells the compiler to allocate 64bits of memory for these variables. Technically the range of <strong>n</strong> (length of array) is  1 to 10, so we could have specified int type for <strong>n</strong> and no type casting would have been required, or even a smaller signed type would have worked, with a type casting while initializing <strong>i</strong>.</p>
+<p>Basically this explicitly tells the compiler to allocate 64bits of memory for these variables. Technically the range of <strong>n</strong> (length of array) is  1 to 10, so we could have specified int type for <strong>n</strong> and no type casting would have been required, or even a smaller signed type would have worked, with a type casting while initializing <strong>i</strong>.
+<div>&nbsp;</div></p>
 
 <p>Now the bigger question is why did the code with declaration of variables with <code>int</code> type work? The way golang works is int takes 32bit or 64bit depending on the platform. So if your platform running the code supported 64bit, int would have handled 64bit values and code would run just fine else it would fall back to 32bit. However if your platform doesn&rsquo;t support 64bit, int64 <strong>won&rsquo;t</strong> work either.
 So that is the reason both of the code snippets work and pass all the test cases.</p>
