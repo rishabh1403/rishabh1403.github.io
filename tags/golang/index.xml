@@ -6,10 +6,20 @@
     <description>Recent content in Golang on Rishabh Jain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Aug 2018 18:45:09 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 30 Aug 2018 19:05:56 +0530</lastBuildDate>
     
 	<atom:link href="https://rishabh1403.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hackerrank | Solution of Diagonal Difference in Golang</title>
+      <link>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-diagonal-difference-in-golang/</link>
+      <pubDate>Thu, 30 Aug 2018 19:05:56 +0530</pubDate>
+      
+      <guid>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-diagonal-difference-in-golang/</guid>
+      <description>&lt;p&gt;In this post we will solve the question diagonal difference from hackerrank in golang. We will learn how to create and use a 2-D matrix in Golang and how to traverse over it. Let&amp;rsquo;s get started.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hackerrank Solution of A Very Big Sum in Golang</title>
