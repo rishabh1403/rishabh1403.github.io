@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Hackerrank Solve Me First Solution"/>
-  <meta name="twitter:description" content="Solution for hackerrank warmup question solve me first in golang. In this blog I&#39;ll discuss my solution, what mistakes I initially made and what concepts I learned."/>
+  <meta name="twitter:title" content="Hackerrank | Solution of Plus Minus in Golang"/>
+  <meta name="twitter:description" content="In this post we will solve question plus minus from hackerrank. An easy one which only requires some type casting and formatted printing. Let&#39;s get started."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="Solution for hackerrank warmup question solve me first in golang. In this blog I&#39;ll discuss my solution, what mistakes I initially made and what concepts I learned.">
+                <meta name="description" content="In this post we will solve question plus minus from hackerrank. An easy one which only requires some type casting and formatted printing. Let&#39;s get started.">
                 
-	  <meta name="keywords" content="rishabh, rishabh jain, solve, me, first, rishabh1403, hackerrank, blog, golang, solution, learn, code">
+	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, blog, hackerrank, coding, golang, competitive, programming, tech, technology, plus, minus">
 	
-                <title>Hackerrank Solve Me First Solution &middot; Rishabh Jain</title>
+                <title>Hackerrank | Solution of Plus Minus in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,12 +87,12 @@
             <article>
                 <header>
                     <h1>
-                        Hackerrank Solve Me First Solution
+                        Hackerrank | Solution of Plus Minus in Golang
                     </h1>
                     <h2 class="headline">
-                    Aug 22, 2018 12:32
-                    · 690 words
-                    · 4 minute read
+                    Aug 31, 2018 20:10
+                    · 1102 words
+                    · 6 minute read
                       <span class="tags">
                       
                       
@@ -122,108 +122,203 @@
                   
                 
                 <section id="post-body">
-                    <p>Solution for hackerrank warmup question solve me first in golang. In this blog I&rsquo;ll discuss my solution, what mistakes I initially made and what concepts I learned.
+                    <p>In this post we will solve question plus minus from hackerrank. An easy one which only requires some type casting and formatted printing. Let&rsquo;s get started.
 </p>
 
 <h1 id="problem-statement">Problem Statement</h1>
 
-<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/solve-me-first/problem">link</a>. The question is pretty straight forward. We have to take two integers as input, and print their sum.
-Couple of things to note here is</p>
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/plus-minus/problem">link</a>. The problem statement states that we are given an array of elements, and we need to print the fraction of positive, negative and zero numbers from the list.</p>
+
+<p>Couple of things to note here is</p>
 
 <ul>
-<li>The inputs are separated by new line character</li>
-<li>we are solving this in <a href="https://golang.org/">golang</a> <strong>(assuming we have no or very little knowledge of <a href="https://golang.org/">golang</a>)</strong></li>
+<li>We need to take array length as input</li>
+<li>In the next line, we are provided with an array of numbers</li>
+<li>We need not store the array elements itself, but we need to store the count of positive, negative and zero values.</li>
+<li>We are solving this in <a href="https://golang.org/">golang</a> <strong>(If you have been following along my posts, we will only be using concepts that we have already seen previously, so please refer to my older posts in case you need a refresher)</strong></li>
 </ul>
 
 <h1 id="challenges">Challenges</h1>
 
 <ul>
-<li>At first glance the platform opens up and we choose our preferred language as <a href="https://golang.org/">golang</a>. The moment we do that, we get some 10-15 lines of code which are very unfamiliar to someone who is new to language.</li>
-<li>To solve this problem only thing we need to know is how to take input, show output, and do a sum.</li>
+<li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
+<li>Since we need to print the fractions and input are integers, we need some type casting.</li>
+<li>We need to print the fractions to six decimal places, we would need some formatting while printing the values.</li>
 </ul>
 
 <h1 id="solution">Solution</h1>
 
 <p>This is the template you get on <a href="https://www.hackerrank.com/">hackerrank</a> for this problem statement.</p>
 
-<pre><code class="language-go">package main
-import &quot;fmt&quot;
+<pre><code class="language-go">    package main
 
-func solveMeFirst(a uint32,b uint32) uint32{
-  // Hint: Type return (a+b) below
-}
+    import (
+        &quot;bufio&quot;
+        &quot;fmt&quot;
+        &quot;io&quot;
+        &quot;os&quot;
+        &quot;strconv&quot;
+        &quot;strings&quot;
+    )
 
-func main() {
-    var a, b, res uint32
-    fmt.Scanf(&quot;%v\n%v&quot;, &amp;a,&amp;b)
-    res = solveMeFirst(a,b)
-    fmt.Println(res)
-}
+    // Complete the plusMinus function below.
+    func plusMinus(arr []int32) {
+
+
+    }
+
+    func main() {
+        reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
+
+        nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+        checkError(err)
+        n := int32(nTemp)
+
+        arrTemp := strings.Split(readLine(reader), &quot; &quot;)
+
+        var arr []int32
+
+        for i := 0; i &lt; int(n); i++ {
+            arrItemTemp, err := strconv.ParseInt(arrTemp[i], 10, 64)
+            checkError(err)
+            arrItem := int32(arrItemTemp)
+            arr = append(arr, arrItem)
+        }
+
+        plusMinus(arr)
+    }
+
+    func readLine(reader *bufio.Reader) string {
+        str, _, err := reader.ReadLine()
+        if err == io.EOF {
+            return &quot;&quot;
+        }
+
+        return strings.TrimRight(string(str), &quot;\r\n&quot;)
+    }
+
+    func checkError(err error) {
+        if err != nil {
+            panic(err)
+        }
+    }
+
 </code></pre>
 
 <ul>
 <li>First go ahead and delete everything in the pre-existing template.</li>
-<li>Now every Go code needs a package name, and if it is the main package it is supposed to named <em>main</em>  (more on that in later blogs)</li>
-<li>we need to import the <strong>fmt</strong> library for standard input output operations.</li>
-<li>Next thing we need is our <strong>main</strong> function which automatically gets called and is necessary if your program is supposed to be run.</li>
-<li>we declare functions with <strong>func</strong> keyword, it takes no argument and has no return type</li>
+<li>Replace it with our template, a basic empty main function.
+So your code should look something like this.</li>
 </ul>
 
-<p>Up until now our code should look something like this</p>
+<pre><code class="language-go">    package main
+    import &quot;fmt&quot;
 
-<pre><code class="language-go">package main
-import &quot;fmt&quot;
-
-func main() {
-    
-}
+    func main(){
+        
+    }
 </code></pre>
 
-<p>Now it is time to write the program logic. First thing we need is declare three variables inside our main function. Two of them to hold the inputs and third for the sum. Add the declaration in side main function.</p>
+<p>Now we need to think through about the number of variables we need. Let&rsquo;s see, we need one for the length of array, another for the array elements itself. We won&rsquo;t be declaring an array rather we will just take inputs in a temporary variable. Next we need to store count of positive, negative, and zeroes, so three more. To sum it all we need five integer type variables. Let&rsquo;s go ahead and declare them, and also take our array length as input.</p>
 
-<pre><code class="language-go">var a,b,sum int;
+<pre><code class="language-go">    ...
+    var l,t,p,n,z int
+    fmt.Scan(&amp;l)
+
 </code></pre>
 
-<p>This bit of weird syntax is declaring three variables of integer type. If you are coming from java or c background this might look a bit different, but you&rsquo;ll get the hang of it. The best part is many a times we don&rsquo;t need to declare variables with types in golang. We will see examples of that in later blogs, or refer to the video below for more detailed explanation. Next we will take in the inputs. For taking input we have two options. Either take formatted input using <strong>Scanf</strong> or simple input using <strong>Scan</strong>. I will show you both. Type the following lines of code below your variable declaration.</p>
+<p>Next thing is to take our array values as inputs. We will loop <code>l</code> i.e. the length of input array times and take our temporary inputs in there. In the same loop, after we have taken our inputs, we can also check for our positive, negative and zeroes. We could also have declared an array , keep the inputs in the array and counted our numbers in a different loop, but that&rsquo;s just waste of memory and time. We don&rsquo;t need to store our array elements for any future use. So this approach, small concise and clear. Let&rsquo;s add the logic in our code.</p>
 
-<pre><code class="language-go">fmt.Scanf(&quot;%d\n%d&quot;,&amp;a,&amp;b)
-//fmt.Scan(&amp;a,&amp;b)
+<pre><code class="language-go">
+    ...
+    for i:=0;i&lt;l;i++{
+        fmt.Scan(&amp;t)
+        if t &gt;0 {
+            p++
+        }else if t &lt; 0{
+            n++    
+        }else{
+            z++    
+        }
+    }
+
 </code></pre>
 
-<p>According to the problem statement we will be given two integers seperated by a new line, and that is exactly what <strong>&rdquo;%d\n%d&rdquo;</strong> is specifying here. <strong>%d</strong> means we want to take a integer input <strong>\n</strong> is the new line character followed by another integer. What follows next is not very staright forward to understand at first. It is saving those integers to memony where a and b is pointing to. It is related to the concept of pointers, which we will deal with in much greater detail in future.
-Second line which is commented is another way of taking input which directly takes the input as integers. Next we need to calculate the sum and   print out the result</p>
+<p>So let&rsquo;s see what we are doing here. A simple for loop, looping <code>l</code> i.e. the length of array times and taking input for array elements. Next we are checking if the input is greater than zero, less than zero or equal to zero. Based on these conditions, we are increasing the counter of each variable.</p>
 
-<pre><code class="language-go">sum = a+b
-fmt.Println(sum)
+<p>Next we need to find the fraction of these numbers. The thing to note here is both the counters i.e. number of positive, negative and zeroes as well as the total number of input elements are integers, so if we just go ahead and do something like <code>p/l</code> it will either give zero if <code>p&lt;l</code> or one if <code>p==l</code>. Since both the numerator and denominator are integers, the output will round off and print <strong><em>zero or one</em></strong>. So we need to type cast both the values to floats before doing the calculation. This would ensure that output is a decimal floating point number. So let&rsquo;s go ahead and calculate fraction of positive, negative and zeroes .</p>
+
+<pre><code class="language-go">
+    ...
+    pf := float64(p)/float64(l)
+    nf := float64(n)/float64(l)
+    zf := float64(z)/float64(l)
+
 </code></pre>
 
-<p>I guess it is pretty straight forward. We are taking the sum, and printing it out. We use <strong>Println</strong> to print out the result.
-Now your complete code should look like</p>
+<p>Above written code snippet is pretty much self explanatory. Type casting all my variables and calculating the fractions. We are using <code>:=</code> syntax to declare and assign variables here, you could have very well declared those before, but make sure not to make it int type, we need it to be a floating type number. Next we need to print our numbers. We need to take care of two things</p>
 
-<pre><code class="language-go">import &quot;fmt&quot;
+<ul>
+<li>Precision of <strong><em>six</em></strong> decimal places</li>
+<li>Every result in new line</li>
+</ul>
 
-func main() {
-    var a,b,sum int;
-    fmt.Scanf(&quot;%d\n%d&quot;,&amp;a,&amp;b)
-    //fmt.Scan(&amp;a,&amp;b)
-    sum = a+b
-    fmt.Println(sum)
-}
+<p>We will use <code>Printf</code> so that we can format and print our result. Let&rsquo;s see how that goes.</p>
+
+<pre><code class="language-go">
+    ...
+    fmt.Printf(&quot;%.6f\n&quot;,pf)
+    fmt.Printf(&quot;%.6f\n&quot;,nf)
+    fmt.Printf(&quot;%.6f\n&quot;,zf)
+
 </code></pre>
 
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts, subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> for regular updates, follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a  comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+<p>All the three lines are similar, so we will just look at one and rest will become clear. In the <code>Printf</code> we are formatting using <code>&quot;%.6f\n&quot;</code>. It states that first print the floating point number that would be supplied after the comma, the floating point number should have six digits after decimal. It will auto pad it with zeroes if necessary. Next we adding a <code>\n</code> i.e newline after the number. This would print the result in the desired format. Now your complete code should look something like this</p>
+
+<pre><code class="language-go">    package main
+    import &quot;fmt&quot;
+
+    func main(){
+        var l,p,n,z,t int
+        fmt.Scan(&amp;l)
+
+        for i:=0;i&lt;l;i++{
+            fmt.Scan(&amp;t)
+            if t &gt; 0 {
+                p++
+            }else if t &lt;0 {
+                n++
+            }else {
+                z++
+            }
+        }
+
+        pf := float64(p)/float64(l)
+        nf := float64(n)/float64(l)
+        zf := float64(z)/float64(l)
+
+        fmt.Printf(&quot;%.6f\n&quot;,pf)
+        fmt.Printf(&quot;%.6f\n&quot;,nf)
+        fmt.Printf(&quot;%.6f\n&quot;,zf)
+
+    }
+</code></pre>
+
+<p>So this is it for this one, we learned some type casting and formatted printing in golang. Will see you in the next one.</p>
+
+<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/yNzVtH2xsfQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/7996I_bqVmk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f08%2fhackerrank-solve-me-first-solution%2f - Hackerrank%20Solve%20Me%20First%20Solution by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f08%2fhackerrank-solution-of-plus-minus-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Plus%20Minus%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -264,10 +359,6 @@ func main() {
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-plus-minus-in-golang/">Hackerrank | Solution of Plus Minus in Golang<aside class="dates">Aug 31 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-diagonal-difference-in-golang/">Hackerrank | Solution of Diagonal Difference in Golang<aside class="dates">Aug 30 2018</aside></a>
         </li>
     
@@ -297,6 +388,10 @@ func main() {
     
         <li>
             <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-simple-array-sum-in-golang/">Hackerrank Solution of Simple Array Sum in Golang<aside class="dates">Aug 25 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/">Hackerrank Solve Me First Solution<aside class="dates">Aug 22 2018</aside></a>
         </li>
     
         <li>
