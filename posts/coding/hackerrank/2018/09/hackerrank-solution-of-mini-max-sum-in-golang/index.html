@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Dart Programming Language Tutorial Part 1 | Series Introduction"/>
-  <meta name="twitter:description" content="A general introduction to my dart programming language tutorial series. The post contains what dart is, which topics I am going to cover here and future plans. So let&#39;s dive right into the post."/>
+  <meta name="twitter:title" content="Hackerrank | Solution of Mini-Max Sum in Golang"/>
+  <meta name="twitter:description" content="In this post we will solve question mini-max sum from hackerrank. Here we will learn a bit about make in golang along with a new golang package called sort. Let&#39;s get started."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="A general introduction to my dart programming language tutorial series. The post contains what dart is, which topics I am going to cover here and future plans. So let&#39;s dive right into the post.">
+                <meta name="description" content="In this post we will solve question mini-max sum from hackerrank. Here we will learn a bit about make in golang along with a new golang package called sort. Let&#39;s get started.">
                 
-	  <meta name="keywords" content="rishabh, rishabh jain, rishabh1403, blog, dart, series, programming, language, intro, introduction">
+	  <meta name="keywords" content="solution, hackerrank, go, golang, mini-max sum, sorting, rishabh, jain, rishabh jain, rishabh1403, blog, competitive, coding, programming, tech, technology">
 	
-                <title>Dart Programming Language Tutorial Part 1 | Series Introduction &middot; Rishabh Jain</title>
+                <title>Hackerrank | Solution of Mini-Max Sum in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,19 +87,21 @@
             <article>
                 <header>
                     <h1>
-                        Dart Programming Language Tutorial Part 1 | Series Introduction
+                        Hackerrank | Solution of Mini-Max Sum in Golang
                     </h1>
                     <h2 class="headline">
-                    Aug 27, 2018 20:15
-                    · 436 words
-                    · 3 minute read
+                    Sep 2, 2018 18:35
+                    · 777 words
+                    · 4 minute read
                       <span class="tags">
                       
                       
                           
-                              <a href="https://rishabh1403.com/tags/dart">dart</a>
+                              <a href="https://rishabh1403.com/tags/hackerrank">hackerrank</a>
                           
-                              <a href="https://rishabh1403.com/tags/tutorial">tutorial</a>
+                              <a href="https://rishabh1403.com/tags/coding">coding</a>
+                          
+                              <a href="https://rishabh1403.com/tags/golang">golang</a>
                           
                       
                       
@@ -111,52 +113,187 @@
                     <div id="toc">
                       <nav id="TableOfContents">
 <ul>
-<li><a href="#a-gentle-introduction-to-dart">A Gentle Introduction to Dart</a></li>
-<li><a href="#so-what-are-we-going-to-cover-in-this-series">So what are we going to cover in this series?</a></li>
-<li><a href="#local-setup">Local setup</a></li>
+<li><a href="#problem-statement">Problem Statement</a></li>
+<li><a href="#challenges">Challenges</a></li>
+<li><a href="#solution">Solution</a></li>
 </ul>
 </nav>
                     </div>
                   
                 
                 <section id="post-body">
-                    <p>A general introduction to my dart programming language tutorial series. The post contains what dart is, which topics I am going to cover here and future plans. So let&rsquo;s dive right into the post.
+                    <p>In this post we will solve question mini-max sum from hackerrank. Here we will learn a bit about make in golang along with a new golang package called sort. Let&rsquo;s get started.
 </p>
 
-<h1 id="a-gentle-introduction-to-dart">A Gentle Introduction to Dart</h1>
+<h1 id="problem-statement">Problem Statement</h1>
 
-<p><img src="/posts/dart/2018/08/dart1.png" alt="dart1.png" /></p>
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/mini-max-sum/problem">link</a>. The problem statement basically states that we are given an array of five integers, and we need to print maximum possible sum of any four numbers and minimum possible sum of any four numbers.
+Couple of things to note here is</p>
 
-<p>I am starting a new series on <a href="https://dartlang.org">dart</a> programming language. In this series I would be covering everything about dart from scratch to advanced concepts. Dart is an object oriented programming language by google that came around 2011. If you are here, then most probably you want to learn dart to write <a href="https://flutter.io">flutter</a> apps. In that case, I have got you covered. After this series, I will start a flutter series, however if you just wanted to learn dart as a programming language, I have got you covered too. Dart can be used to write web apps, server apps, cli apps etc and we will do some standalone dart projects too.</p>
+<ul>
+<li>We need to take an array as input.</li>
+<li>Array length is fixed to be <strong><em>five</em></strong></li>
+<li>we are solving this in <a href="https://golang.org/">golang</a>, and we will be using <code>make</code> to create our array. So if you are unfamiliar with this please refer to my previous posts, however I&rsquo;ll try to explain it again in this article.</li>
+</ul>
 
-<p>So what is dart? Dart is a object oriented programming language i.e. everything in dart is an object, it&rsquo;s syntax is very similar to c++, java and I would also say javascript. It has reactive programming, async programming, concept of futures and streams inbuilt in it and is very fast and optimized.</p>
+<h1 id="challenges">Challenges</h1>
 
-<h1 id="so-what-are-we-going-to-cover-in-this-series">So what are we going to cover in this series?</h1>
+<ul>
+<li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
+<li>Some Golang constraints that we will see in a couple of minutes.</li>
+</ul>
 
-<p><img src="/posts/dart/2018/08/dart2.png" alt="dart2.png" />
-We are going to start with variables, comments, functions, operators, control flow etc which are basic building blocks of any program. Function will have some sub-topics of its own.</p>
+<h1 id="solution">Solution</h1>
 
-<p><img src="/posts/dart/2018/08/dart3.png" alt="dart3.png" />
-Then we will move on to some advanced topics such as classes, generics, async programming etc. Classes will have sub-topics such as constructors, inheritance etc, while constructors will in turn have some sub-topics. Then we will branch out and do some dart projects and start a flutter series.
-We have a long road ahead.</p>
+<p>This is the template you get on <a href="https://www.hackerrank.com/">hackerrank</a> for this problem statement.</p>
 
-<h1 id="local-setup">Local setup</h1>
+<pre><code class="language-go">    package main
 
-<p>We won&rsquo;t be doing any local setup in this series. For our use case, we will use dartpad. That is a good enough online text editor for learning and practicing dart (<strong><em>i mean the dart lang</em></strong>). However we will setup our local development environment when we are getting into projects, and then we will download and install our local copy of dart.</p>
+    import (
+        &quot;bufio&quot;
+        &quot;fmt&quot;
+        &quot;io&quot;
+        &quot;os&quot;
+        &quot;strconv&quot;
+        &quot;strings&quot;
+    )
 
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts, subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> for regular updates, subscribe to my mailing list below, follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+    // Complete the miniMaxSum function below.
+    func miniMaxSum(arr []int32) {
+
+
+    }
+
+    func main() {
+        reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
+
+        arrTemp := strings.Split(readLine(reader), &quot; &quot;)
+
+        var arr []int32
+
+        for i := 0; i &lt; 5; i++ {
+            arrItemTemp, err := strconv.ParseInt(arrTemp[i], 10, 64)
+            checkError(err)
+            arrItem := int32(arrItemTemp)
+            arr = append(arr, arrItem)
+        }
+
+        miniMaxSum(arr)
+    }
+
+    func readLine(reader *bufio.Reader) string {
+        str, _, err := reader.ReadLine()
+        if err == io.EOF {
+            return &quot;&quot;
+        }
+
+        return strings.TrimRight(string(str), &quot;\r\n&quot;)
+    }
+
+    func checkError(err error) {
+        if err != nil {
+            panic(err)
+        }
+    }
+
+</code></pre>
+
+<ul>
+<li>First go ahead and delete everything in the pre-existing template.</li>
+<li>Let&rsquo;s write down our main wrapper function.</li>
+</ul>
+
+<pre><code class="language-go">package main
+import &quot;fmt&quot;
+
+func main(){
+
+}
+</code></pre>
+
+<p>First thing we need is an array to store our elements. We won&rsquo;t be taking inputs in a temporary variable, since we need to do some sorting operation on the array later on. If you remember from the earlier posts we used <code>var a [3]int</code> to declare an array, and we have also seen why this approach only works for constants. This time we have a constant length i.e. 5 for the array, still we are going to use <code>make</code> to allocate the memory for array and will not use <code>[]int</code> declaration. Please bear with me for sometime, and I&rsquo;ll explain the reason behind the decision. So let&rsquo;s go ahead declare our array.</p>
+
+<pre><code class="language-go">
+    ...
+    a := make([]int, 5)
+
+}
+</code></pre>
+
+<p>Here we are creating an array that will hold integer type of data and will be of length 5. Next we need to take inputs for this array. Let&rsquo;s go ahead and do that.</p>
+
+<pre><code class="language-go">
+    ...
+    fmt.Scan(&amp;a[0],&amp;a[1],&amp;a[2],&amp;a[3],&amp;a[4])
+
+</code></pre>
+
+<p>Now that we have our array ready let&rsquo;s think about the operations, we need to do. If we think through it, max sum of 4 elements and min sum of four elements can be easily calculated once we sort the array in increasing order. The sum of first four elements will be the min sum, and sum of last four elements will be max sum. So now the task at hand is to sort the array we have. To sort an array we will make use of <code>sort</code> package from golang, and to be precise <code>Ints</code> function from sort package. So let&rsquo;s change our import statement to add sort package</p>
+
+<pre><code class="language-go">
+    ...
+    import (
+        &quot;fmt&quot;
+        &quot;sort&quot;
+    )
+    ...
+</code></pre>
+
+<p>Now let&rsquo;s sort the array after the input statement.</p>
+
+<pre><code class="language-go">
+    ...
+    sort.Ints(a)
+
+</code></pre>
+
+<p>Now that we have our array sorted, we need to calculate minimum and maximum sum and print it. Let&rsquo;s do that and wrap up this post.</p>
+
+<pre><code class="language-go">    ...
+    min := a[0]+a[1]+a[2]+a[3]
+    max := a[1]+a[2]+a[3]+a[4]
+    fmt.Println(min,max)
+
+</code></pre>
+
+<p>Pretty straight forward, calculating min sum, max sum and printing it. Now our complete code should look something like</p>
+
+<pre><code class="language-go">
+    package main
+
+    import (
+        &quot;fmt&quot;
+        &quot;sort&quot;
+    )
+
+    func main(){
+
+        a := make([]int, 5)
+
+        fmt.Scan(&amp;a[0],&amp;a[1],&amp;a[2],&amp;a[3],&amp;a[4]) 
+        sort.Ints(a) 
+        min := a[0]+a[1]+a[2]+a[3]
+        max := a[1]+a[2]+a[3]+a[4]
+        fmt.Println(min,max)
+    }
+
+</code></pre>
+
+<p>This is it for this one, complete source code for this post can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions/blob/master/practice/algorithms/warmup/mini-max-sum.go">Github Repo</a>. Will see you in the next one.</p>
+
+<p>There you go guys, you made it to end of the post. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/lhoU89vGapE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/-LlUwKzx-0k" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fdart%2f2018%2f08%2fdart-programming-language-tutorial-part-1-series-introduction%2f - Dart%20Programming%20Language%20Tutorial%20Part%201%20%7c%20Series%20Introduction by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f09%2fhackerrank-solution-of-mini-max-sum-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Mini-Max%20Sum%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -197,10 +334,6 @@ We have a long road ahead.</p>
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-mini-max-sum-in-golang/">Hackerrank | Solution of Mini-Max Sum in Golang<aside class="dates">Sep 2 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-staircase-in-golang/">Hackerrank | Solution of Staircase in Golang<aside class="dates">Sep 1 2018</aside></a>
         </li>
     
@@ -222,6 +355,10 @@ We have a long road ahead.</p>
     
         <li>
             <a href="/posts/dart/2018/08/dart-programming-language-tutorial-part-2-variables/">Dart Programming Language Tutorial Part 2 | Variables<aside class="dates">Aug 28 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/dart/2018/08/dart-programming-language-tutorial-part-1-series-introduction/">Dart Programming Language Tutorial Part 1 | Series Introduction<aside class="dates">Aug 27 2018</aside></a>
         </li>
     
         <li>
