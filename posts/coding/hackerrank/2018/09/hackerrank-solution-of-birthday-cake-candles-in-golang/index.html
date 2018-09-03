@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Hackerrank | Solution of Staircase in Golang"/>
-  <meta name="twitter:description" content="In this post we will solve question staircase from Hackerrank. A simple one, only requires to decode the logic for pattern. Will need if-else and a nested for loop. Let&#39;s get started."/>
+  <meta name="twitter:title" content="Hackerrank | Solution of Birthday Cake Candles in Golang"/>
+  <meta name="twitter:description" content="In this post we will solve question Birthday Cake Candles from hackerrank. This is one of those questions, which packs a fancy description but in the end needs a simple logic to solve. Let&#39;s dive right into it."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="In this post we will solve question staircase from Hackerrank. A simple one, only requires to decode the logic for pattern. Will need if-else and a nested for loop. Let&#39;s get started.">
+                <meta name="description" content="In this post we will solve question Birthday Cake Candles from hackerrank. This is one of those questions, which packs a fancy description but in the end needs a simple logic to solve. Let&#39;s dive right into it.">
                 
-	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, blog, competitive, coding, programming, tech, technology, go, golang, hackerrank, solution, tutorial, staircase">
+	  <meta name="keywords" content="rishabh, jain, rishabh jain, hackerrank, solution, go, golang, birthday, cake, candles, birthday cake candles, rishabh1403, blog, competitive, coding, programming, tech, technology">
 	
-                <title>Hackerrank | Solution of Staircase in Golang &middot; Rishabh Jain</title>
+                <title>Hackerrank | Solution of Birthday Cake Candles in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,12 +87,12 @@
             <article>
                 <header>
                     <h1>
-                        Hackerrank | Solution of Staircase in Golang
+                        Hackerrank | Solution of Birthday Cake Candles in Golang
                     </h1>
                     <h2 class="headline">
-                    Sep 1, 2018 16:45
-                    · 683 words
-                    · 4 minute read
+                    Sep 3, 2018 19:35
+                    · 1325 words
+                    · 7 minute read
                       <span class="tags">
                       
                       
@@ -122,26 +122,25 @@
                   
                 
                 <section id="post-body">
-                    <p>In this post we will solve question staircase from Hackerrank. A simple one, only requires to decode the logic for pattern. Will need if-else and a nested for loop. Let&rsquo;s get started.
+                    <p>In this post we will solve question Birthday Cake Candles from hackerrank. This is one of those questions, which packs a fancy description but in the end needs a simple logic to solve. Let&rsquo;s dive right into it.
 </p>
 
 <h1 id="problem-statement">Problem Statement</h1>
 
-<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/staircase/problem">link</a>. The problem statement basically states that we need to print the given pattern for any given number as input.
-Couple of things to note here is</p>
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/birthday-cake-candles/problem">link</a>. The problem statement states something about birthday and candles. In simple terms it wants us to calculate the number of times the maxiumum element in a given list of numbers occurred. We will need an array, then we will find which is the maximum element in the array, and then we will traverse the array and count the number of times the maximum element is present in the array.</p>
+
+<p>Couple of things to note here is</p>
 
 <ul>
-<li>We need to take a single integer as input.</li>
-<li>Print the given pattern.</li>
-<li>we are solving this in <a href="https://golang.org/">golang</a>.</li>
+<li>We will use Golang slices here, we could have gone with arrays too, but let&rsquo;s introduce slices more formally.</li>
+<li>The number of elements in array is huge, so we need to be careful of how many loops we use.</li>
 </ul>
 
 <h1 id="challenges">Challenges</h1>
 
 <ul>
 <li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
-<li>To solve this problem only thing we need to decode the logic for the pattern.</li>
-<li>Formatted printing required.</li>
+<li>Working with slices in Golang.</li>
 </ul>
 
 <h1 id="solution">Solution</h1>
@@ -159,8 +158,8 @@ Couple of things to note here is</p>
         &quot;strings&quot;
     )
 
-    // Complete the staircase function below.
-    func staircase(n int32) {
+    // Complete the birthdayCakeCandles function below.
+    func birthdayCakeCandles(ar []int32) int32 {
 
 
     }
@@ -168,11 +167,32 @@ Couple of things to note here is</p>
     func main() {
         reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
 
-        nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+        stdout, err := os.Create(os.Getenv(&quot;OUTPUT_PATH&quot;))
         checkError(err)
-        n := int32(nTemp)
 
-        staircase(n)
+        defer stdout.Close()
+
+        writer := bufio.NewWriterSize(stdout, 1024 * 1024)
+
+        arCount, err := strconv.ParseInt(readLine(reader), 10, 64)
+        checkError(err)
+
+        arTemp := strings.Split(readLine(reader), &quot; &quot;)
+
+        var ar []int32
+
+        for i := 0; i &lt; int(arCount); i++ {
+            arItemTemp, err := strconv.ParseInt(arTemp[i], 10, 64)
+            checkError(err)
+            arItem := int32(arItemTemp)
+            ar = append(ar, arItem)
+        }
+
+        result := birthdayCakeCandles(ar)
+
+        fmt.Fprintf(writer, &quot;%d\n&quot;, result)
+
+        writer.Flush()
     }
 
     func readLine(reader *bufio.Reader) string {
@@ -205,88 +225,95 @@ func main(){
 }
 </code></pre>
 
-<p>Next we need to take an input, so let&rsquo;s go ahead declare a variable and take an input for our program.</p>
+<p>Now let&rsquo;s think about how many variables we need to declare. We need to take length of the array as input, we need a variable to store the maximum element in array, we need one for keeping the count of maximum element, we also need a <strong><em>temporary</em></strong> variable to take input for slices. The way slices work is when you initially declare an empty slice, it has no element, and length is zero. So, if we try to take input like <code>fmt.Scan(&amp;a[index])</code> it will throw an error, since that would be out of bounds of slice length. The length of a slice is variable in Golang, so we can append and remove values to and from it, but we cannot reference an index which doesn&rsquo;t exist yet. When we did <code>make([]int, 5)</code>, we were creating a slice of length 5, specifically allocating memory for all five indexes. It was initialized with zero, and thus we were able to refer with <code>a[index]</code>. In the current scenario, we will create a slice without using make, and take input in temporary variable. Then, we will keep on appending that value to our slice. Let&rsquo;s take our variables as input, create a slice and take input for slice.</p>
 
 <pre><code class="language-go">
-    ...
-    var n int
-    fmt.Scan(&amp;n)
+    package main
+    import &quot;fmt&quot;
 
-</code></pre>
+    func main(){
+        var n,t,max,occ int
+        fmt.Scan(&amp;n)
 
-<p>Now let&rsquo;s look at the pattern and try to uunderstand the logic required to print it.</p>
-
-<pre><code class="language-go">
-    for an input 4
-       #
-      ##
-     ###
-    ####
-    
-</code></pre>
-
-<p>Now let&rsquo;s start noting down the points that would help us in printing this pattern</p>
-
-<ul>
-<li>The pattern has 4 rows, i.e. equal to input number. So we would need a loop which loops over input times</li>
-<li>It has four columns in every row. We would need inner nested loop, which would also loop over input times</li>
-<li>There are two types of output, either an <strong><em>space</em></strong> or an <strong><em>#</em></strong>. So we need two inner loops instead of one.</li>
-<li>In the first line spaces are 3, # is 1, in second line spaces are 2 and # are 2. If we notice the index of outer loop for the first and second case it is 0,1. So we need to print <strong><em>#</em></strong> <code>i+i</code> times. For the spaces, we need to print it <code>input-index-1</code> times.</li>
-</ul>
-
-<p>Now that we have figured out the logic of the pattern, let&rsquo;s see how the code goes.</p>
-
-<pre><code class="language-go">
-    ...
-    for i:=0;i&lt;n;i++{
-        for j:=0;j&lt;n-i-1;j++{
-            fmt.Print(&quot; &quot;)
+        a := []int{}
+        for i:=0;i&lt;n;i++{
+            fmt.Scan(&amp;t)
+            a = append(a,t)
+            // Calculate max		           
         }
-        for j:=0;j&lt;=i;j++{
-            fmt.Print(&quot;#&quot;)
-        }
-        fmt.Println()
     }
 
 </code></pre>
 
-<p>So we have a outer loop which runs <code>n</code> times. This to make sure our pattern has <code>n</code> rows. Next we have two inner loops, one to print spaces, other for the hash. The first one is running <code>n-i-i</code> times and second one <code>i+1</code> times. Notice the use of <code>Print</code> instead of <code>Println</code> , because we need everything to print in one line. Next after the inner loops we print a new line, to move the cursor to next line. This completes our program, and your complete code should look like</p>
+<p>So in the snippet above, we are declaring variables as we planned, taking length of slice as input, and creating a slice. This <code>a:=[]int{}</code> is another way to create an empty slice. Next we are looping over <code>n</code> times, taking a input for our slice and appending it to the slice. Basically adding the taken input to the slice. Now we need to write the logic for calculation of maximum in the slice. So, when we declared our <code>max</code> variable it was assigned a value i.e. zero, because that is how Golang works. When ever you declare a variable, a default <strong><em>zero value (not zero)</em></strong> gets assigned to it. This is very important, the question states that the array in input will have a lower bound of one. That is the reason we will get our max for sure, max i.e. zero will always be smaller than all of the array elements. Now inside the loop, when we are getting an input, we need to compare that input with our max, if the provided input is greater than max, assign that input&rsquo;s value to max. By the time we reach to the end of loop, we will have the maximum element in array/ slice. Let&rsquo;s remove the <code>// calculate max</code> comment and replace it with our logic.</p>
 
-<pre><code class="language-go">package main
-
-import &quot;fmt&quot;
-
-func main(){
-    var n int
-    fmt.Scan(&amp;n)
-    
-    for i:=0;i&lt;n;i++{
-        for j:=0;j&lt;n-i-1;j++{
-            fmt.Print(&quot; &quot;)
-        }
-        for j:=0;j&lt;=i;j++{
-            fmt.Print(&quot;#&quot;)
-        }
-        fmt.Println()
-    }
-}
+<pre><code class="language-go">
+	...
+	if t &gt; max {
+		max = t
+	}
+	...
 </code></pre>
 
-<p>So this is it for this one guys, complete source code for this one can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions/blob/master/practice/algorithms/warmup/staircase.go">Github Repo</a>. Will see you in the next one.</p>
+<p>Now we have our maximum element in array and we have the array. How do we count the number of times <code>max</code> occurred in the array? We loop over the array and increase the count if the number is same as max. Again the counter is auto assigned a value zero, when we declared it. This time we can either use length of slice to loop over the slice and reference an element based on index or we can use something called <code>range</code>. Let&rsquo;s learn something new. <code>Range</code> is used to range over a slice and it gives us the index and the value at that index for every iteration in the loop. Now if you remember in Golang we cannot have an used variable in our code, and we don&rsquo;t need index here, we just need to use the value at that index to compare it with our max. How do we instruct the compiler to ignore the variable which stores index from range, and not throw an error? We will assign the value to an special variable <code>underscore(_)</code>. Compiler ignores anything assigned to an underscore. Let&rsquo;s see how does the code like for counting the occurence. Use the following snippet below the for-loop we already wrote.</p>
 
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+<pre><code class="language-go">        ...
+        for _,num := range a{
+            if num == max{
+                occ++
+            }
+        }
+
+        fmt.Println(occ)
+
+</code></pre>
+
+<p>We have already discussed the explanation of above code snippet, and the only thing we are adding extra over here is a print statement to print our count. Now you complete code should look something like</p>
+
+<pre><code class="language-go">
+    package main
+    import &quot;fmt&quot;
+
+    func main(){
+        var n,t,max,occ int
+        fmt.Scan(&amp;n)
+
+        a := []int{}
+        for i:=0;i&lt;n;i++{
+            fmt.Scan(&amp;t)
+            a = append(a,t)
+            if t &gt; max {
+                max = t
+            }
+        }
+
+        for _,num := range a{
+            if num == max{
+                occ++
+            }
+        }
+
+        fmt.Println(occ)
+
+    }
+
+</code></pre>
+
+<p>Let&rsquo;s review what are the highlights to take away from this question. We can use slices instead of an array, which gives us a greater flexibility on some operations like adding and removing elements to and from an slice. We discussed how to add a value to slice, and we also learned how to loop over a slice using <code>range</code>. We also covered how to ignore a variable in Golang, so that it doesn&rsquo;t throw an error on compilation if the variable is not used. Range gives us two vaalues i.e. the index and the value of the index, represented here using <code>_, num</code>. This is it for this one, complete source code for this post can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions/blob/master/practice/algorithms/warmup/birthday-cake-candles.go">Github Repo</a>. Will see you in the next one.</p>
+
+<p>There you go guys, you made it to end of the post. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/f9hHJSxUfX4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/3iT1akTZzqU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f09%2fhackerrank-solution-of-staircase-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Staircase%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f09%2fhackerrank-solution-of-birthday-cake-candles-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Birthday%20Cake%20Candles%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -327,11 +354,11 @@ func main(){
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-birthday-cake-candles-in-golang/">Hackerrank | Solution of Birthday Cake Candles in Golang<aside class="dates">Sep 3 2018</aside></a>
+            <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-mini-max-sum-in-golang/">Hackerrank | Solution of Mini-Max Sum in Golang<aside class="dates">Sep 2 2018</aside></a>
         </li>
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-mini-max-sum-in-golang/">Hackerrank | Solution of Mini-Max Sum in Golang<aside class="dates">Sep 2 2018</aside></a>
+            <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-staircase-in-golang/">Hackerrank | Solution of Staircase in Golang<aside class="dates">Sep 1 2018</aside></a>
         </li>
     
         <li>

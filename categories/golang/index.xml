@@ -6,10 +6,20 @@
     <description>Recent content in Golang on Rishabh Jain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Sep 2018 18:35:00 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 03 Sep 2018 19:35:03 +0530</lastBuildDate>
     
 	<atom:link href="https://rishabh1403.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hackerrank | Solution of Birthday Cake Candles in Golang</title>
+      <link>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-birthday-cake-candles-in-golang/</link>
+      <pubDate>Mon, 03 Sep 2018 19:35:03 +0530</pubDate>
+      
+      <guid>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-birthday-cake-candles-in-golang/</guid>
+      <description>&lt;p&gt;In this post we will solve question Birthday Cake Candles from hackerrank. This is one of those questions, which packs a fancy description but in the end needs a simple logic to solve. Let&amp;rsquo;s dive right into it.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hackerrank | Solution of Mini-Max Sum in Golang</title>
