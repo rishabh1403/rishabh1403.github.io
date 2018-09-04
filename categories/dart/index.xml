@@ -6,10 +6,20 @@
     <description>Recent content in Dart on Rishabh Jain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Aug 2018 01:15:14 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 04 Sep 2018 21:30:59 +0530</lastBuildDate>
     
 	<atom:link href="https://rishabh1403.com/categories/dart/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dart Programming Language Tutorial Part 5 | Built-In Types Part 1</title>
+      <link>https://rishabh1403.com/posts/dart/2018/09/dart-programming-language-tutorial-part-5-built-in-types-part-1/</link>
+      <pubDate>Tue, 04 Sep 2018 21:30:59 +0530</pubDate>
+      
+      <guid>https://rishabh1403.com/posts/dart/2018/09/dart-programming-language-tutorial-part-5-built-in-types-part-1/</guid>
+      <description>&lt;p&gt;In this post we will discuss some of the built-in types in dart. We will cover numbers, strings, and booleans. Let&amp;rsquo;s get started.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Dart Programming Language Tutorial Part 4 | Comments</title>

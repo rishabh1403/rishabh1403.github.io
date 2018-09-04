@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Dart Programming Language Tutorial Part 1 | Series Introduction"/>
-  <meta name="twitter:description" content="A general introduction to my dart programming language tutorial series. The post contains what dart is, which topics I am going to cover here and future plans. So let&#39;s dive right into the post."/>
+  <meta name="twitter:title" content="Dart Programming Language Tutorial Part 5 | Built-In Types Part 1"/>
+  <meta name="twitter:description" content="In this post we will discuss some of the built-in types in dart. We will cover numbers, strings, and booleans. Let&#39;s get started."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="A general introduction to my dart programming language tutorial series. The post contains what dart is, which topics I am going to cover here and future plans. So let&#39;s dive right into the post.">
+                <meta name="description" content="In this post we will discuss some of the built-in types in dart. We will cover numbers, strings, and booleans. Let&#39;s get started.">
                 
-	  <meta name="keywords" content="rishabh, rishabh jain, rishabh1403, blog, dart, series, programming, language, intro, introduction">
+	  <meta name="keywords" content="rishabh, dart, dartlang, built-in types, numbers, strings, booleans, jain, rishabh jain, rishabh1403, blog, competitive, coding, programming, tech, technology">
 	
-                <title>Dart Programming Language Tutorial Part 1 | Series Introduction &middot; Rishabh Jain</title>
+                <title>Dart Programming Language Tutorial Part 5 | Built-In Types Part 1 &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,12 +87,12 @@
             <article>
                 <header>
                     <h1>
-                        Dart Programming Language Tutorial Part 1 | Series Introduction
+                        Dart Programming Language Tutorial Part 5 | Built-In Types Part 1
                     </h1>
                     <h2 class="headline">
-                    Aug 27, 2018 20:15
-                    · 436 words
-                    · 3 minute read
+                    Sep 4, 2018 21:30
+                    · 710 words
+                    · 4 minute read
                       <span class="tags">
                       
                       
@@ -111,52 +111,84 @@
                     <div id="toc">
                       <nav id="TableOfContents">
 <ul>
-<li><a href="#a-gentle-introduction-to-dart">A Gentle Introduction to Dart</a></li>
-<li><a href="#so-what-are-we-going-to-cover-in-this-series">So what are we going to cover in this series?</a></li>
-<li><a href="#local-setup">Local setup</a></li>
+<li><a href="#built-in-types">Built-in Types</a></li>
+<li><a href="#numbers">Numbers</a></li>
+<li><a href="#booleans">Booleans</a></li>
+<li><a href="#string">String</a></li>
 </ul>
 </nav>
                     </div>
                   
                 
                 <section id="post-body">
-                    <p>A general introduction to my dart programming language tutorial series. The post contains what dart is, which topics I am going to cover here and future plans. So let&rsquo;s dive right into the post.
+                    <p>In this post we will discuss some of the built-in types in dart. We will cover numbers, strings, and booleans. Let&rsquo;s get started.
 </p>
 
-<h1 id="a-gentle-introduction-to-dart">A Gentle Introduction to Dart</h1>
+<h1 id="built-in-types">Built-in Types</h1>
 
-<p><img src="/posts/dart/2018/08/dart1.png" alt="dart1.png" /></p>
+<p>What are built-in types? These are the types that a variable can be of and are already defined in dart i.e. built into dart programming language by default. Does that mean we can have our own custom types too ? Yes, we can. So dart is an object oriented programming language, and everything is an object. Every variable in Dart refers to an object i.e. it is an instance of a class. To make our custom type we just need to make sure the variable is an object, an instance of a class that we wrote, and that is how we can have our own type of variables. Pretty cool ha..!!!. We will look into creating classes and objects later on, for now let&rsquo;s stick to these built-in types and discuss these in detail. There are two parts of this post, in this one we will discuss about <strong><em>numbers, strings, and booleans</em></strong> and we will conclude the rest of them in the next one.</p>
 
-<p>I am starting a new series on <a href="https://dartlang.org">dart</a> programming language. In this series I would be covering everything about dart from scratch to advanced concepts. Dart is an object oriented programming language by google that came around 2011. If you are here, then most probably you want to learn dart to write <a href="https://flutter.io">flutter</a> apps. In that case, I have got you covered. After this series, I will start a flutter series, however if you just wanted to learn dart as a programming language, I have got you covered too. Dart can be used to write web apps, server apps, cli apps etc and we will do some standalone dart projects too.</p>
+<h1 id="numbers">Numbers</h1>
 
-<p>So what is dart? Dart is a object oriented programming language i.e. everything in dart is an object, it&rsquo;s syntax is very similar to c++, java and I would also say javascript. It has reactive programming, async programming, concept of futures and streams inbuilt in it and is very fast and optimized.</p>
+<p>Numbers are used to store umm&hellip; numbers. Numbers can be any positive, negative or zero number. In Dart numbers are represented by either <code>int</code> or <code>double</code>. <strong><em>Int</em></strong> is to integers i.e. numbers without decimals while <strong><em>Double</em></strong> is to store decimal numbers or floating point numbers. Let&rsquo;s see an example</p>
 
-<h1 id="so-what-are-we-going-to-cover-in-this-series">So what are we going to cover in this series?</h1>
+<pre><code class="language-dart">
+    int a = -2;
+    int b = 3;
+    int c = 0;
+    
+    double e = -2.5;
+    double f = 0.0;
+    double g = 1.5;
+    
+</code></pre>
 
-<p><img src="/posts/dart/2018/08/dart2.png" alt="dart2.png" />
-We are going to start with variables, comments, functions, operators, control flow etc which are basic building blocks of any program. Function will have some sub-topics of its own.</p>
+<p>So this is how we use <code>int</code> and <code>double</code> in our Dart code. We have already used <code>int</code> before and will be using <code>double</code> in coming posts.</p>
 
-<p><img src="/posts/dart/2018/08/dart3.png" alt="dart3.png" />
-Then we will move on to some advanced topics such as classes, generics, async programming etc. Classes will have sub-topics such as constructors, inheritance etc, while constructors will in turn have some sub-topics. Then we will branch out and do some dart projects and start a flutter series.
-We have a long road ahead.</p>
+<h1 id="booleans">Booleans</h1>
 
-<h1 id="local-setup">Local setup</h1>
+<p>Booleans are as straight forward as it can be. If you need to store a <code>true</code> or <code>false</code> flag in your variable, you would use a boolean type of variable. To declare a variable boolean we would use <code>bool</code>. We will revisit bool again while dealing with <code>if-else</code>, but for the scope of this artice, I guess that is all to know about booleans.</p>
 
-<p>We won&rsquo;t be doing any local setup in this series. For our use case, we will use dartpad. That is a good enough online text editor for learning and practicing dart (<strong><em>i mean the dart lang</em></strong>). However we will setup our local development environment when we are getting into projects, and then we will download and install our local copy of dart.</p>
+<pre><code class="language-dart">    bool isItRaining = true;
+    bool isItSunny = false;
+</code></pre>
 
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts, subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> for regular updates, subscribe to my mailing list below, follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+<h1 id="string">String</h1>
+
+<p>Next on list, and the last one for this post is <strong><em>Strings</em></strong>. Strings are a single or group of characters. It can be a letter or a number or group of combination of both. It can also include symbols like <code>!@#$%^&amp;*</code> . Strings are very useful to store text data. To declare a string you would use <code>String</code> to declare a variable <strong><em>(notice the use of capital S)</em></strong>. The text that is assigned to a string variable has to be wrapped in <strong><em>quotes</em></strong> . It can be either single quote, double quote or triple quotes. Let&rsquo;s look at those declarations</p>
+
+<pre><code class="language-dart">
+    String str = 'This is a string';
+    String str1 = &quot;This is another string&quot;;
+    String str2 = ''' This is a multi line string
+                        which I can continue in different lines
+                        which provides easy formatting''';
+
+</code></pre>
+
+<p>Over here we see all three types of string declarations. The declaration with single quotes and double quotes are pretty much the same. We would wrap the text in single or double quotes and that is it. The declaration with triple quotes are interesting because here we can write in multiline. We can use line breaks, put spaces whereevr and however we want. This becomes really handy when you are writting long database queries. Multi-line strings can also be declared using <code>&quot;&quot;&quot;</code>, using three single quotes is not mandatory. So we can also do something like this</p>
+
+<pre><code class="language-dart">
+    String str = &quot;&quot;&quot; This
+                    is also a valid multi line string &quot;&quot;&quot;;
+
+</code></pre>
+
+<p>That&rsquo;s it for this one, there are some more things to cover in Strings which we will cover shortly. See you in the next one.</p>
+
+<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/lhoU89vGapE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/WCNVPQ1sB6o" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fdart%2f2018%2f08%2fdart-programming-language-tutorial-part-1-series-introduction%2f - Dart%20Programming%20Language%20Tutorial%20Part%201%20%7c%20Series%20Introduction by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fdart%2f2018%2f09%2fdart-programming-language-tutorial-part-5-built-in-types-part-1%2f - Dart%20Programming%20Language%20Tutorial%20Part%205%20%7c%20Built-In%20Types%20Part%201 by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -197,10 +229,6 @@ We have a long road ahead.</p>
     
     
         <li>
-            <a href="/posts/dart/2018/09/dart-programming-language-tutorial-part-5-built-in-types-part-1/">Dart Programming Language Tutorial Part 5 | Built-In Types Part 1<aside class="dates">Sep 4 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-birthday-cake-candles-in-golang/">Hackerrank | Solution of Birthday Cake Candles in Golang<aside class="dates">Sep 3 2018</aside></a>
         </li>
     
@@ -230,6 +258,10 @@ We have a long road ahead.</p>
     
         <li>
             <a href="/posts/dart/2018/08/dart-programming-language-tutorial-part-2-variables/">Dart Programming Language Tutorial Part 2 | Variables<aside class="dates">Aug 28 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/dart/2018/08/dart-programming-language-tutorial-part-1-series-introduction/">Dart Programming Language Tutorial Part 1 | Series Introduction<aside class="dates">Aug 27 2018</aside></a>
         </li>
     
         <li>
