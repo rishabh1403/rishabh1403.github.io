@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Dart Programming Language Tutorial Part 4 | Comments"/>
-  <meta name="twitter:description" content="In this post we will look into various ways in which we can write comments in dart. Let&#39;s get started."/>
+  <meta name="twitter:title" content="Dart Programming Language Tutorial Part 5 | Built-In Types Part 2"/>
+  <meta name="twitter:description" content="In the last post we discussed numbers, strings and booleans. In this one, we will conclude built-in types by discussing lists and maps. Let&#39;s get started."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="In this post we will look into various ways in which we can write comments in dart. Let&#39;s get started.">
+                <meta name="description" content="In the last post we discussed numbers, strings and booleans. In this one, we will conclude built-in types by discussing lists and maps. Let&#39;s get started.">
                 
-	  <meta name="keywords" content="rishabh, rishabh jain, rishabh1403, blog, comments, dart, dartlang, tutorial, programming, language, solution">
+	  <meta name="keywords" content="dart, dartlang, built-in types, list, maps, rishabh, jain, rishabh jain, rishabh1403, blog, competitive, coding, programming, tech, technology">
 	
-                <title>Dart Programming Language Tutorial Part 4 | Comments &middot; Rishabh Jain</title>
+                <title>Dart Programming Language Tutorial Part 5 | Built-In Types Part 2 &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,12 +87,12 @@
             <article>
                 <header>
                     <h1>
-                        Dart Programming Language Tutorial Part 4 | Comments
+                        Dart Programming Language Tutorial Part 5 | Built-In Types Part 2
                     </h1>
                     <h2 class="headline">
-                    Aug 30, 2018 01:15
-                    · 532 words
-                    · 3 minute read
+                    Sep 7, 2018 19:45
+                    · 1120 words
+                    · 6 minute read
                       <span class="tags">
                       
                       
@@ -111,87 +111,135 @@
                     <div id="toc">
                       <nav id="TableOfContents">
 <ul>
-<li><a href="#quick-note">Quick Note</a></li>
-<li><a href="#comments">Comments</a>
-<ul>
-<li><a href="#single-line-comments">Single line comments</a></li>
-<li><a href="#multi-line-comments">Multi line comments</a></li>
-<li><a href="#documentation-comments">Documentation comments</a></li>
-</ul></li>
+<li><a href="#lists-in-dart">Lists in Dart</a></li>
+<li><a href="#maps-in-dart">Maps in Dart</a></li>
 </ul>
 </nav>
                     </div>
                   
                 
                 <section id="post-body">
-                    <p>In this post we will look into various ways in which we can write comments in dart. Let&rsquo;s get started.
+                    <p>In the last post we discussed numbers, strings and booleans. In this one, we will conclude built-in types by discussing lists and maps. Let&rsquo;s get started.
 </p>
 
-<h1 id="quick-note">Quick Note</h1>
+<h1 id="lists-in-dart">Lists in Dart</h1>
 
-<p>If you notice our original road map, we had data types before comments. Comments were the third topic in the list, but we are taking it just after variables. There are two reasons for this quick diversion</p>
-
-<ul>
-<li>Comments are a very small and easy topic, let&rsquo;s get it out of the way</li>
-<li>We are already using it from the very first post!!!</li>
-</ul>
-
-<h1 id="comments">Comments</h1>
-
-<p>There are many times when our long, complex code becomes cryptic and putting in some help text in there becomes necessary, so that someone else looking at the code or even the one who wrote it, looking at it later in time can understand it well. These help text are generally in plain text, strings, that can be simple plain English or any other language that you might be comfortable with. These comments can be small (adjusted in single line), big explanations (multi line), and can used for formally documenting your code. Now we need some way for our dart compiler to ignore these comments, because these do not wrap program logic, they don&rsquo;t affect output or behaviour of the program. Comments are just for our ease, to help us understand our own code or others code better.</p>
-
-<p>We have three types of comments in dart. Let&rsquo;s look into then one by one.</p>
-
-<h2 id="single-line-comments">Single line comments</h2>
-
-<p>Single line comments are, well comments that fit in a single line. To write a single line comment we start the line with <code>//</code>  and write our comment. If you remember our two lines <code>code starts here</code> and <code>code ends here</code> used to start with <code>//</code>. Those two lines were single line comments.</p>
+<p>Lists are basically a list of numbers or words or both. Let&rsquo;s say you want to store age of all the students in a class. You would need a list. Let&rsquo;s say you need to store list of names of all cities in the world, you would need a List. Just like variables, there are multiple ways to declare a list, let&rsquo;s have a look at them.</p>
 
 <pre><code class="language-dart">
-    // this is a single line comment
+    var a = [1,2,3];
+    var b = [&quot;abc&quot;,&quot;sdf&quot;];
+    var c = [1,2,&quot;abc&quot;];
+
+    List&lt;int&gt; e = [1,2,3];
+    List&lt;String&gt; f = [&quot;def&quot;,&quot;abc&quot;];
+    List&lt;dynamic&gt;  g = [1,2,&quot;abc&quot;];
 
 </code></pre>
 
-<h2 id="multi-line-comments">Multi line comments</h2>
-
-<p>Multi line comments are comments that can be written in multiple lines. They start with <code>/*</code> and end with <code>*/</code>. Basically, everything that these two wraps become comments. Multi-line comments are very useful to describe complex program logic. Let&rsquo;s see an example</p>
+<p>If you remember from the section on variables, <code>var</code> auto infers the type of varoiable. In the case of list too, var auto infers the type of list. In case of <code>a</code>, we are creating a list of integers, in case of <code>b</code>, we are creating a list of strings. In these cases, it is pretty clear for <code>var</code> to infer the type of list, however in case of <code>c</code> we have put integers as well as string in list and var can&rsquo;t decide for sure what the type should be, thus the list is assigned a dynamic type. Other method of declaring a list is using <code>List&lt;type&gt;</code> instead of <code>var</code>. When we use this type of syntax, we are locking the list of some particular type, and hence list can take only that type of data. However if we lock it to <code>dynamic</code> type we can put any type of data we like. Now let&rsquo;s look at how we can get values stored in list, and how many values are stored in list.</p>
 
 <pre><code class="language-dart">
-    /* 
+    var a = [12,13,14];
 
-    This is a multi-line comment.
-    I can go to next line too.
-    I can write code here.
-    int a =0;
-    this code won't run.
+    print(a[0]); // 12
 
-    */
+    print(a.length); // 3
 
 </code></pre>
 
-<h2 id="documentation-comments">Documentation comments</h2>
-
-<p>Documentation comments are used to write documentation inside code. It can be single line using <code>///</code> or multiline <code>/**</code> . The difference between a normal comment and a documentation comment is compiler ignores the documentation comments except for the text inside <code>[]</code> . It creates a link when passed through a documentation generation tool.</p>
+<p>So we can access values in the list using their index. The index is the position os an elemnet in a list. In many programming language positions in a list start with <code>zero</code>. So in our case <code>12</code> is at position <code>zero</code>, <code>13</code> is at position <code>one</code> and so on. To access these elements, we use square brackets syntax to reference elements at a particular index. Next to get the total number of elements in list, or the length of the list, we use a method ( will cover in later sections) called <code>length</code>. It gives the total number of elements in the list. Next let&rsquo;s see how we can change elements in a list and create a constant list, so that it&rsquo;s values can&rsquo;t be changed in a program.</p>
 
 <pre><code class="language-dart">
-    /// variable [alpha] holds the value of the result from the complex calculation
+    var a [1,2,3];
+
+    a[1] = 12;
+
+    print(a[1]);  // 12 -&gt; value changed
+
+    var b = const [1,2,3]; // we can't use final here
+
+    b[1] = 12;  // error
 
 </code></pre>
 
-<p>Here <code>[alpha]</code> will become a link to the original variable alpha where it was declared.</p>
+<p>Let&rsquo;s discuss the above code snippet. First we are creating a list, next we are changing the element at a particular index and printing it. All well and good till here. Next if we want to create a constant list, we use <code>const</code> just before the list assignment. If you remember from our previous discussion <code>final</code> creates a constant variable and <code>cosnt</code> creates a constant value. In our case we are looking at a specific use case of constant value. We can&rsquo;t use <code>final</code> over here. In the next line we can see that changing a value at a particular index gives us an error. We will revist lists and some of it&rsquo;s methods later, but for the built-in section sake of it, we are done with lists. Let&rsquo;s move to maps.</p>
 
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+<h1 id="maps-in-dart">Maps in Dart</h1>
+
+<p>Maps in dart are some kay-value pair. If you are coming from <strong><em>java</em></strong>, it is very similar to hashmaps. Let&rsquo;s say, you wanted to store the marks of all the students in a class, you would you a list, but if you wanted to store it along with their name in a way where when asked for marks of a particular student, you should be able to tell it instantly without looking through all the items, you would use a Map. You would use names as a key and marks as values to those keys. Let&rsquo;s look at different ways in which you can declare a map.</p>
+
+<pre><code class="language-dart">
+    var a = {
+        &quot;abc&quot; : 1,
+        &quot;sdf&quot; : 2    
+    };
+    
+    var b = {
+        2 : &quot;de&quot;,
+        3 : &quot;eff&quot;    
+    };
+    
+    var c = {
+        1 : &quot;de&quot;,
+        2 : &quot;rr&quot;,
+        &quot;Dede&quot; : 22,
+            
+    } ;
+
+   Map&lt;String,int&gt; d = {
+        &quot;abc&quot; : 1,
+        &quot;sdf&quot; : 2    
+    };
+    
+    Map&lt;int,String&gt; e = {
+        2 : &quot;de&quot;,
+        3 : &quot;eff&quot;    
+    };
+    
+    Map&lt;dynamic, dynamic&gt; f = {
+        1 : &quot;de&quot;,
+        2 : &quot;rr&quot;,
+        &quot;Dede&quot; : 22,
+            
+    } ;
+
+</code></pre>
+
+<p>We have six maps declared above. Let&rsquo;s look at them one by one. First let me point it to you that as always <code>var</code> will auto infer the type during declaration. Now In case of <code>a</code> the key&rsquo;s are always string and values are always integers, so the type of maps become <code>Map&lt;String,int&gt;</code>. In second case the key is an integer, and the value is an string so the type of map is <code>Map&lt;int,String&gt;</code>. Now since these were well defined, the types were locked and you cannot assign a new value to map which doesn&rsquo;t adhere to the inferred type here, however in the third type, durin assignment we have dynamic key type as well as dynamic value type, hence <code>var</code> auto infers it to <code>Map&lt;dynamic,dynamic&gt;</code> and any type of key-value pair can be put in the map. We have another way of declaring a map, i.e. by using <code>Map&lt;type,type&gt;</code>, here we specifically lock the type of map. Let&rsquo;s how we can change and reference a key-value pair in a map and how to create a constant map.</p>
+
+<pre><code class="language-dart">
+    var a = {
+        &quot;abs&quot; : 12    
+    };
+
+    print(a[&quot;abs&quot;]);  // 12
+
+    a[&quot;abs&quot;] = 13;
+
+    print(a[&quot;abs&quot;]);  // 13
+
+    var b = const {
+        &quot;abs&quot; : 12
+    };
+
+    b[&quot;abs&quot;] = 13;    // error
+
+</code></pre>
+
+<p>We reference maps just like lists, using <code>[]</code>. We can change or add the values using the square bracket too. Declaring a map constant is very similar to list as well. We can also find length of a map just like a list too. This is it for this one. Will see you in the next one. There you go guys, you made it to end of the post. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/REP2btkSM7k" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/CkDwBHWnopU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fdart%2f2018%2f08%2fdart-programming-language-tutorial-part-4-comments%2f - Dart%20Programming%20Language%20Tutorial%20Part%204%20%7c%20Comments by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fdart%2f2018%2f09%2fdart-programming-language-tutorial-part-5-built-in-types-part-2%2f - Dart%20Programming%20Language%20Tutorial%20Part%205%20%7c%20Built-In%20Types%20Part%202 by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -232,10 +280,6 @@
     
     
         <li>
-            <a href="/posts/dart/2018/09/dart-programming-language-tutorial-part-5-built-in-types-part-2/">Dart Programming Language Tutorial Part 5 | Built-In Types Part 2<aside class="dates">Sep 7 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/dart/2018/09/dart-programming-language-tutorial-part-5-built-in-types-part-1/">Dart Programming Language Tutorial Part 5 | Built-In Types Part 1<aside class="dates">Sep 4 2018</aside></a>
         </li>
     
@@ -257,6 +301,10 @@
     
         <li>
             <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-diagonal-difference-in-golang/">Hackerrank | Solution of Diagonal Difference in Golang<aside class="dates">Aug 30 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/dart/2018/08/dart-programming-language-tutorial-part-4-comments/">Dart Programming Language Tutorial Part 4 | Comments<aside class="dates">Aug 30 2018</aside></a>
         </li>
     
         <li>
