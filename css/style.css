@@ -798,7 +798,7 @@ h2.month {
 
 .archive .post-item {
     padding: 10px 0px;
-    overflow-x: hidden;
+    overflow-x: visible;
     white-space:nowrap;
 }
 
