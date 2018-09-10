@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Dart Programming Language Tutorial Part 4 | Comments"/>
-  <meta name="twitter:description" content="In this post we will look into various ways in which we can write comments in dart. Let&#39;s get started."/>
+  <meta name="twitter:title" content="Dart Programming Language Tutorial Part 7 | If Else and Ternary Operators in Dart"/>
+  <meta name="twitter:description" content="In this post we will cover the if-else statement in Dart. If-else block is one of the basic building blocks of many programming languages, let&#39;s look into it right away."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="In this post we will look into various ways in which we can write comments in dart. Let&#39;s get started.">
+                <meta name="description" content="In this post we will cover the if-else statement in Dart. If-else block is one of the basic building blocks of many programming languages, let&#39;s look into it right away.">
                 
-	  <meta name="keywords" content="rishabh, rishabh jain, rishabh1403, blog, comments, dart, dartlang, tutorial, programming, language, solution">
+	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, blog, competitive, coding, programming, tech, technology, dart, dartlang, if-else, ternary, operators, syntax">
 	
-                <title>Dart Programming Language Tutorial Part 4 | Comments &middot; Rishabh Jain</title>
+                <title>Dart Programming Language Tutorial Part 7 | If Else and Ternary Operators in Dart &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,12 +87,12 @@
             <article>
                 <header>
                     <h1>
-                        Dart Programming Language Tutorial Part 4 | Comments
+                        Dart Programming Language Tutorial Part 7 | If Else and Ternary Operators in Dart
                     </h1>
                     <h2 class="headline">
-                    Aug 30, 2018 01:15
-                    · 532 words
-                    · 3 minute read
+                    Sep 10, 2018 19:45
+                    · 722 words
+                    · 4 minute read
                       <span class="tags">
                       
                       
@@ -111,87 +111,116 @@
                     <div id="toc">
                       <nav id="TableOfContents">
 <ul>
-<li><a href="#quick-note">Quick Note</a></li>
-<li><a href="#comments">Comments</a>
-<ul>
-<li><a href="#single-line-comments">Single line comments</a></li>
-<li><a href="#multi-line-comments">Multi line comments</a></li>
-<li><a href="#documentation-comments">Documentation comments</a></li>
-</ul></li>
+<li><a href="#conditions-in-a-program">Conditions in a Program</a></li>
+<li><a href="#if-else-in-dart">If-Else in Dart</a></li>
+<li><a href="#ternary-operators-in-dart">Ternary Operators in Dart</a></li>
 </ul>
 </nav>
                     </div>
                   
                 
                 <section id="post-body">
-                    <p>In this post we will look into various ways in which we can write comments in dart. Let&rsquo;s get started.
+                    <p>In this post we will cover the if-else statement in Dart. If-else block is one of the basic building blocks of many programming languages, let&rsquo;s look into it right away.
 </p>
 
-<h1 id="quick-note">Quick Note</h1>
+<h1 id="conditions-in-a-program">Conditions in a Program</h1>
 
-<p>If you notice our original road map, we had data types before comments. Comments were the third topic in the list, but we are taking it just after variables. There are two reasons for this quick diversion</p>
+<p>Many a times in a program we are required to check for a particular condition. Based on the truth of condition i.e. if the condition is either is true or false we execute a set of instructions. In Dart <code>If-Else</code> is one of the few ways to check for conditions in our program. On it&rsquo;s own, <strong><em>if-else</em></strong> is pretty simple to write and understand, it really shines when it is combined with other powerful concepts of the language and can be used to write some pretty complex logic. Let&rsquo;s look into <strong><em>if-else</em></strong> syntax and some examples.</p>
 
-<ul>
-<li>Comments are a very small and easy topic, let&rsquo;s get it out of the way</li>
-<li>We are already using it from the very first post!!!</li>
-</ul>
+<h1 id="if-else-in-dart">If-Else in Dart</h1>
 
-<h1 id="comments">Comments</h1>
-
-<p>There are many times when our long, complex code becomes cryptic and putting in some help text in there becomes necessary, so that someone else looking at the code or even the one who wrote it, looking at it later in time can understand it well. These help text are generally in plain text, strings, that can be simple plain English or any other language that you might be comfortable with. These comments can be small (adjusted in single line), big explanations (multi line), and can used for formally documenting your code. Now we need some way for our dart compiler to ignore these comments, because these do not wrap program logic, they don&rsquo;t affect output or behaviour of the program. Comments are just for our ease, to help us understand our own code or others code better.</p>
-
-<p>We have three types of comments in dart. Let&rsquo;s look into then one by one.</p>
-
-<h2 id="single-line-comments">Single line comments</h2>
-
-<p>Single line comments are, well comments that fit in a single line. To write a single line comment we start the line with <code>//</code>  and write our comment. If you remember our two lines <code>code starts here</code> and <code>code ends here</code> used to start with <code>//</code>. Those two lines were single line comments.</p>
+<p>The syntax of an <strong><em>if-else</em></strong> statement is very simple. Let&rsquo;s first start with only an <strong><em>if</em></strong> statement.</p>
 
 <pre><code class="language-dart">
-    // this is a single line comment
+    if(condition){
+     // code to execute when condition is true
+    }
 
 </code></pre>
 
-<h2 id="multi-line-comments">Multi line comments</h2>
-
-<p>Multi line comments are comments that can be written in multiple lines. They start with <code>/*</code> and end with <code>*/</code>. Basically, everything that these two wraps become comments. Multi-line comments are very useful to describe complex program logic. Let&rsquo;s see an example</p>
+<p>So above is a syntax of a simple if block. We write the condition in the paranthesis and if the condition evaluates to <code>true</code> the code inside the <code>{}</code> will be run. Pretty simple ha..!!!. Now Let&rsquo;s look at the syntax of an if-else block.</p>
 
 <pre><code class="language-dart">
-    /* 
-
-    This is a multi-line comment.
-    I can go to next line too.
-    I can write code here.
-    int a =0;
-    this code won't run.
-
-    */
+    if(condition){
+        // run when condition is true
+    }else{
+        // run when condition is false    
+    }
 
 </code></pre>
 
-<h2 id="documentation-comments">Documentation comments</h2>
-
-<p>Documentation comments are used to write documentation inside code. It can be single line using <code>///</code> or multiline <code>/**</code> . The difference between a normal comment and a documentation comment is compiler ignores the documentation comments except for the text inside <code>[]</code> . It creates a link when passed through a documentation generation tool.</p>
+<p>Now we have a <code>if-else</code> syntax here. We condition in the paranthesis as before and if the condition evaluates to <code>true</code> the code inside the <strong><em>if</em></strong> block runs however if some unfortunate reason the condition evaluates to false, the code inside <code>else</code> block runs. We can also combine multiple if-else blocks to create a chain of <code>if-elseif-else</code> block. Let&rsquo;s look at some examples.</p>
 
 <pre><code class="language-dart">
-    /// variable [alpha] holds the value of the result from the complex calculation
+    var a = 3;
+
+    if(a&lt;4){
+        print(&quot;condition is true&quot;);   // prints this line   
+    }else{
+        print(&quot;condition is false&quot;);    // skips this line
+    }
+
+
+    var b = 5;
+
+    if(b&lt;4){
+        print(&quot;condition is true&quot;);  // skips this line   
+    }else{
+        print(&quot;condition is false&quot;);    // prints this line
+    }
 
 </code></pre>
 
-<p>Here <code>[alpha]</code> will become a link to the original variable alpha where it was declared.</p>
+<p>Here we have two examples, in one of them the condition is true, while the condition evaluates to false in the other one. In the case where condition evaluates to true, print in the if block is run, while in case where condition evaluates to false, print in the else block is run. Let&rsquo;s look at another example where we can chain multiple if-else.</p>
 
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+<pre><code class="language-dart">
+    // marks 80-100 A+
+    // marks 60-80 A
+    // marks 40-60 B
+    // marks &lt; 40 C
+
+    var marks = 90;
+
+    if ( marks &gt; 80 &amp;&amp; marks &lt;= 100 ){
+        print(&quot;A+&quot;);  // Prints A+    
+    }else if( marks &gt;60 &amp;&amp; marks &lt;= 80){
+        print(&quot;A&quot;);
+    }else if(marks &gt; 40 &amp;&amp; marks &lt;= 60){
+        print(&quot;B&quot;);
+    }else{
+        print(&quot;C&quot;);
+    }
+
+</code></pre>
+
+<p>Another example where we demonstrate chaining of <code>if-else</code> . Here the first if block&rsquo;s condition evaluates to true so the print is run and rest of code is skipped. Now let&rsquo;s move on to ternary operators.</p>
+
+<h1 id="ternary-operators-in-dart">Ternary Operators in Dart</h1>
+
+<p>Ternary operators are nothing but another way to write an if-else block in a single line. It is well-and-good if you want to write quick and small conditions but we shouldn&rsquo;t use this for complex logical checks as this might get messy. Let&rsquo;s look into the syntax.</p>
+
+<pre><code class="language-dart">
+    var a = 3;
+
+    print((a&lt;4) ? &quot;condition is true&quot; : &quot;condition is false&quot; );
+
+</code></pre>
+
+<p>Okay so everything we have inside the print is part of our ternary operator. Ternary operators start with a condition, usually it&rsquo;s good to wrap ur condition in a paranthesis , but it is not required. Next we have a <code>?</code>. Anything we write between <code>?</code> and <code>:</code> is run if the condition is true, and anything we write after the <code>:</code> is run id the condition was false. In our case since the condition was true, it will return <code>&quot;condtion is true&quot;</code> and that would be printed. This is it for this one. Will see you in the next one.</p>
+
+<p>There you go guys, you made it to end of the post. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/REP2btkSM7k" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/zOyVj81gYnw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fdart%2f2018%2f08%2fdart-programming-language-tutorial-part-4-comments%2f - Dart%20Programming%20Language%20Tutorial%20Part%204%20%7c%20Comments by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fdart%2f2018%2f09%2fdart-programming-language-tutorial-part-7-if-else-and-ternary-operators-in-dart%2f - Dart%20Programming%20Language%20Tutorial%20Part%207%20%7c%20If%20Else%20and%20Ternary%20Operators%20in%20Dart by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -232,10 +261,6 @@
     
     
         <li>
-            <a href="/posts/dart/2018/09/dart-programming-language-tutorial-part-7-if-else-and-ternary-operators-in-dart/">Dart Programming Language Tutorial Part 7 | If Else and Ternary Operators in Dart<aside class="dates">Sep 10 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/dart/2018/09/dart-programming-language-tutorial-part-6-built-in-types-part-2/">Dart Programming Language Tutorial Part 6 | Built-In Types Part 2<aside class="dates">Sep 7 2018</aside></a>
         </li>
     
@@ -261,6 +286,10 @@
     
         <li>
             <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-diagonal-difference-in-golang/">Hackerrank | Solution of Diagonal Difference in Golang<aside class="dates">Aug 30 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/dart/2018/08/dart-programming-language-tutorial-part-4-comments/">Dart Programming Language Tutorial Part 4 | Comments<aside class="dates">Aug 30 2018</aside></a>
         </li>
     
         <li>

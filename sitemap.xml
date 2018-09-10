@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rishabh1403.com/posts/dart/2018/09/dart-programming-language-tutorial-part-7-if-else-and-ternary-operators-in-dart/</loc>
+    <lastmod>2018-09-10T19:45:19+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rishabh1403.com/posts/dart/2018/09/dart-programming-language-tutorial-part-6-built-in-types-part-2/</loc>
     <lastmod>2018-09-07T19:45:11+05:30</lastmod>
   </url>
@@ -97,32 +102,26 @@
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/tags/coding/</loc>
-    <lastmod>2018-09-03T19:35:03+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://rishabh1403.com/categories/coding/</loc>
     <lastmod>2018-09-03T19:35:03+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/tags/dart/</loc>
-    <lastmod>2018-09-07T19:45:11+05:30</lastmod>
+    <loc>https://rishabh1403.com/tags/coding/</loc>
+    <lastmod>2018-09-03T19:35:03+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rishabh1403.com/categories/dart/</loc>
-    <lastmod>2018-09-07T19:45:11+05:30</lastmod>
+    <lastmod>2018-09-10T19:45:19+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/tags/golang/</loc>
-    <lastmod>2018-09-03T19:35:03+05:30</lastmod>
+    <loc>https://rishabh1403.com/tags/dart/</loc>
+    <lastmod>2018-09-10T19:45:19+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -133,7 +132,7 @@
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/tags/hackerrank/</loc>
+    <loc>https://rishabh1403.com/tags/golang/</loc>
     <lastmod>2018-09-03T19:35:03+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -145,8 +144,8 @@
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/tags/life/</loc>
-    <lastmod>2018-08-21T01:17:37+05:30</lastmod>
+    <loc>https://rishabh1403.com/tags/hackerrank/</loc>
+    <lastmod>2018-09-03T19:35:03+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -157,14 +156,20 @@
   </url>
   
   <url>
+    <loc>https://rishabh1403.com/tags/life/</loc>
+    <lastmod>2018-08-21T01:17:37+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rishabh1403.com/posts/</loc>
-    <lastmod>2018-09-07T19:45:11+05:30</lastmod>
+    <lastmod>2018-09-10T19:45:19+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rishabh1403.com/</loc>
-    <lastmod>2018-09-07T19:45:11+05:30</lastmod>
+    <lastmod>2018-09-10T19:45:19+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -175,7 +180,7 @@
   
   <url>
     <loc>https://rishabh1403.com/tags/tutorial/</loc>
-    <lastmod>2018-09-07T19:45:11+05:30</lastmod>
+    <lastmod>2018-09-10T19:45:19+05:30</lastmod>
     <priority>0</priority>
   </url>
   
