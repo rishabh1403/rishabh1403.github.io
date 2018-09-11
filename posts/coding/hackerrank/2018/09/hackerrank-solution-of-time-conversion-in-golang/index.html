@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Dart Programming Language Tutorial Part 4 | Comments"/>
-  <meta name="twitter:description" content="In this post we will look into various ways in which we can write comments in dart. Let&#39;s get started."/>
+  <meta name="twitter:title" content="Hackerrank | Solution of Time Conversion in Golang"/>
+  <meta name="twitter:description" content="In this one we will solve the last question from warmup section from hackerrank. Time Conversion. A quick and easy one, which only requires some formatting. Let&#39;s dive right into it."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="In this post we will look into various ways in which we can write comments in dart. Let&#39;s get started.">
+                <meta name="description" content="In this one we will solve the last question from warmup section from hackerrank. Time Conversion. A quick and easy one, which only requires some formatting. Let&#39;s dive right into it.">
                 
-	  <meta name="keywords" content="rishabh, rishabh jain, rishabh1403, blog, comments, dart, dartlang, tutorial, programming, language, solution">
+	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, blog, competitive, coding, programming, tech, technology, hackerrank, go, golang, solutions in golang, hackerrank solutions, time conversion hackerrank solution">
 	
-                <title>Dart Programming Language Tutorial Part 4 | Comments &middot; Rishabh Jain</title>
+                <title>Hackerrank | Solution of Time Conversion in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,19 +87,21 @@
             <article>
                 <header>
                     <h1>
-                        Dart Programming Language Tutorial Part 4 | Comments
+                        Hackerrank | Solution of Time Conversion in Golang
                     </h1>
                     <h2 class="headline">
-                    Aug 30, 2018 01:15
-                    · 532 words
-                    · 3 minute read
+                    Sep 11, 2018 21:55
+                    · 895 words
+                    · 5 minute read
                       <span class="tags">
                       
                       
                           
-                              <a href="https://rishabh1403.com/tags/dart">dart</a>
+                              <a href="https://rishabh1403.com/tags/hackerrank">hackerrank</a>
                           
-                              <a href="https://rishabh1403.com/tags/tutorial">tutorial</a>
+                              <a href="https://rishabh1403.com/tags/coding">coding</a>
+                          
+                              <a href="https://rishabh1403.com/tags/golang">golang</a>
                           
                       
                       
@@ -111,87 +113,173 @@
                     <div id="toc">
                       <nav id="TableOfContents">
 <ul>
-<li><a href="#quick-note">Quick Note</a></li>
-<li><a href="#comments">Comments</a>
-<ul>
-<li><a href="#single-line-comments">Single line comments</a></li>
-<li><a href="#multi-line-comments">Multi line comments</a></li>
-<li><a href="#documentation-comments">Documentation comments</a></li>
-</ul></li>
+<li><a href="#problem-statement">Problem Statement</a></li>
+<li><a href="#challenges">Challenges</a></li>
+<li><a href="#solution">Solution</a></li>
 </ul>
 </nav>
                     </div>
                   
                 
                 <section id="post-body">
-                    <p>In this post we will look into various ways in which we can write comments in dart. Let&rsquo;s get started.
+                    <p>In this one we will solve the last question from warmup section from hackerrank. Time Conversion. A quick and easy one, which only requires some formatting. Let&rsquo;s dive right into it.
 </p>
 
-<h1 id="quick-note">Quick Note</h1>
+<h1 id="problem-statement">Problem Statement</h1>
 
-<p>If you notice our original road map, we had data types before comments. Comments were the third topic in the list, but we are taking it just after variables. There are two reasons for this quick diversion</p>
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/time-conversion/problem">link</a>. The problem statement states that we are given a time in 12-hour format i.e. AM-PM format and we have to convert it into military (24 hour) time format.
+Couple of things to note here is</p>
 
 <ul>
-<li>Comments are a very small and easy topic, let&rsquo;s get it out of the way</li>
-<li>We are already using it from the very first post!!!</li>
+<li>This problem can be solved in two ways, either using some string manipulation or some formatted input and printing. We will use the second way here, it&rsquo;s easier and smaller.</li>
+<li>There are two edge case i.e. when clock hits 12.</li>
 </ul>
 
-<h1 id="comments">Comments</h1>
+<h1 id="challenges">Challenges</h1>
 
-<p>There are many times when our long, complex code becomes cryptic and putting in some help text in there becomes necessary, so that someone else looking at the code or even the one who wrote it, looking at it later in time can understand it well. These help text are generally in plain text, strings, that can be simple plain English or any other language that you might be comfortable with. These comments can be small (adjusted in single line), big explanations (multi line), and can used for formally documenting your code. Now we need some way for our dart compiler to ignore these comments, because these do not wrap program logic, they don&rsquo;t affect output or behaviour of the program. Comments are just for our ease, to help us understand our own code or others code better.</p>
+<ul>
+<li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
+<li>Handling the edge cases.</li>
+</ul>
 
-<p>We have three types of comments in dart. Let&rsquo;s look into then one by one.</p>
+<h1 id="solution">Solution</h1>
 
-<h2 id="single-line-comments">Single line comments</h2>
+<p>This is the template you get on <a href="https://www.hackerrank.com/">hackerrank</a> for this problem statement.</p>
 
-<p>Single line comments are, well comments that fit in a single line. To write a single line comment we start the line with <code>//</code>  and write our comment. If you remember our two lines <code>code starts here</code> and <code>code ends here</code> used to start with <code>//</code>. Those two lines were single line comments.</p>
+<pre><code class="language-go">    package main
 
-<pre><code class="language-dart">
-    // this is a single line comment
+    import (
+        &quot;bufio&quot;
+        &quot;fmt&quot;
+        &quot;io&quot;
+        &quot;os&quot;
+        &quot;strings&quot;
+    )
+
+    /*
+     * Complete the timeConversion function below.
+     */
+    func timeConversion(s string) string {
+        /*
+         * Write your code here.
+         */
+
+    }
+
+    func main() {
+        reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
+
+        outputFile, err := os.Create(os.Getenv(&quot;OUTPUT_PATH&quot;))
+        checkError(err)
+
+        defer outputFile.Close()
+
+        writer := bufio.NewWriterSize(outputFile, 1024 * 1024)
+
+        s := readLine(reader)
+
+        result := timeConversion(s)
+
+        fmt.Fprintf(writer, &quot;%s\n&quot;, result)
+
+        writer.Flush()
+    }
+
+    func readLine(reader *bufio.Reader) string {
+        str, _, err := reader.ReadLine()
+        if err == io.EOF {
+            return &quot;&quot;
+        }
+
+        return strings.TrimRight(string(str), &quot;\r\n&quot;)
+    }
+
+    func checkError(err error) {
+        if err != nil {
+            panic(err)
+        }
+    }
+
 
 </code></pre>
 
-<h2 id="multi-line-comments">Multi line comments</h2>
+<ul>
+<li>First go ahead and delete everything in the pre-existing template.</li>
+<li>Let&rsquo;s write down our main wrapper function.</li>
+</ul>
 
-<p>Multi line comments are comments that can be written in multiple lines. They start with <code>/*</code> and end with <code>*/</code>. Basically, everything that these two wraps become comments. Multi-line comments are very useful to describe complex program logic. Let&rsquo;s see an example</p>
+<pre><code class="language-go">package main
+import &quot;fmt&quot;
 
-<pre><code class="language-dart">
-    /* 
+func main(){
 
-    This is a multi-line comment.
-    I can go to next line too.
-    I can write code here.
-    int a =0;
-    this code won't run.
+}
+</code></pre>
 
-    */
+<p>Before jumping into any of the code logic, let&rsquo;s first discuss how are going to take input, and how many variables we need. So looking closely at the input <code>xx:xx:xxAM or xx:xx:xxPM</code>, xx is an integer , we have three of those, which are separated by <code>:</code> and the last one has a suffix attached to it. So we need <strong><em>three</em></strong> integers, and <strong><em>one</em></strong> string variable to hold our input, and take our input in a formatted fashion. Let&rsquo;s go ahead and handle that.</p>
+
+<pre><code class="language-go">
+    ...
+    var h,m,s int
+    var suffix string
+    
+    fmt.Scanf(&quot;%d:%d:%d%s&quot;,&amp;h,&amp;m,&amp;s,&amp;suffix)
 
 </code></pre>
 
-<h2 id="documentation-comments">Documentation comments</h2>
+<p>Here we declare three integers and one string variable. Next we take one line of input. <code>%d</code> specifies an integer, three integers separated by colons and then followed by a string, that would take our suffix i.e. AM or PM. Now let&rsquo;s discuss the logic. First let&rsquo;s agree that the minute and second part of the time will always be the same no matter what the time is, it&rsquo;s only the hour part that will change. So we have two cases here. First is AM and second is PM. In case of AM if the hour is 12, it will become <code>00</code> else it will be same, for example, 2 o&rsquo;clock in the morning is same in both the clock formats. Now for the case of PM, if the hour is not equal to 12, we will add 12 to it. For an example, 2 o&rsquo;clock in the after noon is 14 o&rsquo;clock in military clock format. Those are all the logic we need to solve this problem, next we will just format and print the results. Let&rsquo;s look at the code now.</p>
 
-<p>Documentation comments are used to write documentation inside code. It can be single line using <code>///</code> or multiline <code>/**</code> . The difference between a normal comment and a documentation comment is compiler ignores the documentation comments except for the text inside <code>[]</code> . It creates a link when passed through a documentation generation tool.</p>
-
-<pre><code class="language-dart">
-    /// variable [alpha] holds the value of the result from the complex calculation
+<pre><code class="language-go">
+	...
+    if suffix == &quot;AM&quot; &amp;&amp; h == 12 {
+        h = 0
+    }
+    if suffix == &quot;PM&quot; &amp;&amp; h != 12 {
+        h += 12
+    }
+    fmt.Printf(&quot;%02d:%02d:%02d&quot;,h,m,s)
 
 </code></pre>
 
-<p>Here <code>[alpha]</code> will become a link to the original variable alpha where it was declared.</p>
+<p>So here we have our logical blocks, and the formatted print. <code>%02d</code> represents that it will be an integer in length 2, if the length is less than 2, prefix it with a zero. So That is all we need. Now your complete code should look like</p>
 
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+<pre><code class="language-go">
+package main
+import &quot;fmt&quot;
+
+func main(){
+    var h,m,s int
+    var suffix string
+    
+    fmt.Scanf(&quot;%d:%d:%d%s&quot;,&amp;h,&amp;m,&amp;s,&amp;suffix)
+    
+    if suffix == &quot;AM&quot; &amp;&amp; h == 12 {
+        h = 0
+    }
+    if suffix == &quot;PM&quot; &amp;&amp; h != 12 {
+        h += 12
+    }
+    fmt.Printf(&quot;%02d:%02d:%02d&quot;,h,m,s)
+    
+}
+
+</code></pre>
+
+<p>let&rsquo;s review what are the highlights to take away from this question. We could have solved this question using string manipulation as well as using formatted input and output methods. We went for the latter because as you can see, it made the code much smaller and simpler. Once we got the inputs in the desired formats we wanted, it was just a matter of simple logic and formatted printing. This was the last question from hackerrank warmup section, if hackerrank adds anymore question to this section, I will add a solution on my blog and upload a video for it, but for now, we are done with this section and will move to implementation section. This is it for this one, complete source code for this post can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions/blob/master/practice/algorithms/warmup/time-conversion.go">Github Repo</a>. Will see you in the next one.</p>
+
+<p>There you go guys, you made it to end of the post. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/REP2btkSM7k" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/jX8hNDV7P9o" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fdart%2f2018%2f08%2fdart-programming-language-tutorial-part-4-comments%2f - Dart%20Programming%20Language%20Tutorial%20Part%204%20%7c%20Comments by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f09%2fhackerrank-solution-of-time-conversion-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Time%20Conversion%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -232,10 +320,6 @@
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-time-conversion-in-golang/">Hackerrank | Solution of Time Conversion in Golang<aside class="dates">Sep 11 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/dart/2018/09/dart-programming-language-tutorial-part-7-if-else-and-ternary-operators-in-dart/">Dart Programming Language Tutorial Part 7 | If Else and Ternary Operators in Dart<aside class="dates">Sep 10 2018</aside></a>
         </li>
     
@@ -265,6 +349,10 @@
     
         <li>
             <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-diagonal-difference-in-golang/">Hackerrank | Solution of Diagonal Difference in Golang<aside class="dates">Aug 30 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/dart/2018/08/dart-programming-language-tutorial-part-4-comments/">Dart Programming Language Tutorial Part 4 | Comments<aside class="dates">Aug 30 2018</aside></a>
         </li>
     
         <li>

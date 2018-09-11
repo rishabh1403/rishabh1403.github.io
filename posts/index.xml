@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Rishabh Jain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Sep 2018 19:45:19 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 11 Sep 2018 21:55:09 +0530</lastBuildDate>
     
 	<atom:link href="https://rishabh1403.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hackerrank | Solution of Time Conversion in Golang</title>
+      <link>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-time-conversion-in-golang/</link>
+      <pubDate>Tue, 11 Sep 2018 21:55:09 +0530</pubDate>
+      
+      <guid>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-time-conversion-in-golang/</guid>
+      <description>&lt;p&gt;In this one we will solve the last question from warmup section from hackerrank. Time Conversion. A quick and easy one, which only requires some formatting. Let&amp;rsquo;s dive right into it.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Dart Programming Language Tutorial Part 7 | If Else and Ternary Operators in Dart</title>
