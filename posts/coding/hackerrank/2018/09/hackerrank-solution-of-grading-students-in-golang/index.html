@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Hackerrank Solve Me First Solution"/>
-  <meta name="twitter:description" content="Solution for hackerrank warmup question solve me first in golang. In this blog I&#39;ll discuss my solution, what mistakes I initially made and what concepts I learned."/>
+  <meta name="twitter:title" content="Hackerrank | Solution of Grading Students in Golang"/>
+  <meta name="twitter:description" content="In this post we will solve question grading students from hackerrank in golang. Let&#39;s dive right into it."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="Solution for hackerrank warmup question solve me first in golang. In this blog I&#39;ll discuss my solution, what mistakes I initially made and what concepts I learned.">
+                <meta name="description" content="In this post we will solve question grading students from hackerrank in golang. Let&#39;s dive right into it.">
                 
-	  <meta name="keywords" content="rishabh, rishabh jain, solve, me, first, rishabh1403, hackerrank, blog, golang, solution, learn, code">
+	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, blog, competitive, coding, programming, tech, technology, go, golang, hackerrank, grading students, multiple of five">
 	
-                <title>Hackerrank Solve Me First Solution &middot; Rishabh Jain</title>
+                <title>Hackerrank | Solution of Grading Students in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,12 +87,12 @@
             <article>
                 <header>
                     <h1>
-                        Hackerrank Solve Me First Solution
+                        Hackerrank | Solution of Grading Students in Golang
                     </h1>
                     <h2 class="headline">
-                    Aug 22, 2018 12:32
-                    · 690 words
-                    · 4 minute read
+                    Sep 16, 2018 23:35
+                    · 1026 words
+                    · 5 minute read
                       <span class="tags">
                       
                       
@@ -122,108 +122,206 @@
                   
                 
                 <section id="post-body">
-                    <p>Solution for hackerrank warmup question solve me first in golang. In this blog I&rsquo;ll discuss my solution, what mistakes I initially made and what concepts I learned.
+                    <p>In this post we will solve question grading students from hackerrank in golang. Let&rsquo;s dive right into it.
 </p>
 
 <h1 id="problem-statement">Problem Statement</h1>
 
-<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/solve-me-first/problem">link</a>. The question is pretty straight forward. We have to take two integers as input, and print their sum.
-Couple of things to note here is</p>
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/grading/problem">link</a>. The problem statement states that we need to round up grades of students in a class based on some given conditions.</p>
+
+<p>Couple of things to note here is</p>
 
 <ul>
-<li>The inputs are separated by new line character</li>
-<li>we are solving this in <a href="https://golang.org/">golang</a> <strong>(assuming we have no or very little knowledge of <a href="https://golang.org/">golang</a>)</strong></li>
+<li>We have to round up the grade to next higher multiple of 5.</li>
+<li>For the rounding, the difference between the number and next higher multiple should be less than 3.</li>
+<li>If the marks is less than 38, no rounding will occur, as the student will still fail, given the condition that 40 is passing marks.</li>
 </ul>
 
 <h1 id="challenges">Challenges</h1>
 
 <ul>
-<li>At first glance the platform opens up and we choose our preferred language as <a href="https://golang.org/">golang</a>. The moment we do that, we get some 10-15 lines of code which are very unfamiliar to someone who is new to language.</li>
-<li>To solve this problem only thing we need to know is how to take input, show output, and do a sum.</li>
+<li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
+<li>Working with multiple. Little bit of maths, nothing very tough.</li>
 </ul>
 
 <h1 id="solution">Solution</h1>
 
 <p>This is the template you get on <a href="https://www.hackerrank.com/">hackerrank</a> for this problem statement.</p>
 
-<pre><code class="language-go">package main
-import &quot;fmt&quot;
+<pre><code class="language-go">    package main
 
-func solveMeFirst(a uint32,b uint32) uint32{
-  // Hint: Type return (a+b) below
-}
+    import (
+        &quot;bufio&quot;
+        &quot;fmt&quot;
+        &quot;io&quot;
+        &quot;os&quot;
+        &quot;strconv&quot;
+        &quot;strings&quot;
+    )
 
-func main() {
-    var a, b, res uint32
-    fmt.Scanf(&quot;%v\n%v&quot;, &amp;a,&amp;b)
-    res = solveMeFirst(a,b)
-    fmt.Println(res)
-}
+    /*
+     * Complete the gradingStudents function below.
+     */
+    func gradingStudents(grades []int32) []int32 {
+        /*
+         * Write your code here.
+         */
+
+    }
+
+    func main() {
+        reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
+
+        outputFile, err := os.Create(os.Getenv(&quot;OUTPUT_PATH&quot;))
+        checkError(err)
+
+        defer outputFile.Close()
+
+        writer := bufio.NewWriterSize(outputFile, 1024 * 1024)
+
+        nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+        checkError(err)
+        n := int32(nTemp)
+
+        var grades []int32
+
+        for gradesItr := 0; gradesItr &lt; int(n); gradesItr++ {
+            gradesItemTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+            checkError(err)
+            gradesItem := int32(gradesItemTemp)
+            grades = append(grades, gradesItem)
+        }
+
+        result := gradingStudents(grades)
+
+        for resultItr, resultItem := range result {
+            fmt.Fprintf(writer, &quot;%d&quot;, resultItem)
+
+            if resultItr != len(result) - 1 {
+                fmt.Fprintf(writer, &quot;\n&quot;)
+            }
+        }
+
+        fmt.Fprintf(writer, &quot;\n&quot;)
+
+        writer.Flush()
+    }
+
+    func readLine(reader *bufio.Reader) string {
+        str, _, err := reader.ReadLine()
+        if err == io.EOF {
+            return &quot;&quot;
+        }
+
+        return strings.TrimRight(string(str), &quot;\r\n&quot;)
+    }
+
+    func checkError(err error) {
+        if err != nil {
+            panic(err)
+        }
+    }
+
+
 </code></pre>
 
 <ul>
 <li>First go ahead and delete everything in the pre-existing template.</li>
-<li>Now every Go code needs a package name, and if it is the main package it is supposed to named <em>main</em>  (more on that in later blogs)</li>
-<li>we need to import the <strong>fmt</strong> library for standard input output operations.</li>
-<li>Next thing we need is our <strong>main</strong> function which automatically gets called and is necessary if your program is supposed to be run.</li>
-<li>we declare functions with <strong>func</strong> keyword, it takes no argument and has no return type</li>
+<li>Let&rsquo;s write down our main wrapper function.</li>
 </ul>
-
-<p>Up until now our code should look something like this</p>
 
 <pre><code class="language-go">package main
 import &quot;fmt&quot;
 
-func main() {
+func main(){
+
+}
+</code></pre>
+
+<p>In this question we will be given the length of the array of marks and the array it self. However we don&rsquo;t need to store array values for any future reference, we can safely store it in a temporary variable. Let&rsquo;s go ahead and declare our variables and take the array length as input.</p>
+
+<pre><code class="language-go">
+    ...
+    var n,t int
+    fmt.Scan(&amp;n)
+
+</code></pre>
+
+<p>Now we need to loop over the length of array times and take our inputs.</p>
+
+<pre><code class="language-go">
+    ...
+	for i:=0;i&lt;n;i++{
+		fmt.Scan(&amp;t)
+
+	// write logic here
+
+	}
+</code></pre>
+
+<p>Now it&rsquo;s time for the real thing, the logic. So there are two parts to it. First one being if the marks is less than 38, second everything else. In the case where marks are less than 38, it is pretty simple no rounding up is required and we will just print the value as it is. Then we have the second case, unfortunately this one has two cases too. I promise these two are the last. So if the number and next higher multiple of five has a difference less than 3 then we will round up the number, else we will just print the number as it is. If we rephrase the last statement a bit, if the difference between the number and the lower multiple of five is greater than 2 we will round up the number, else print as it is. So now the conditions are decided, how would we calculate the difference between the number and lower multiple of five. Just take a remainder from five. If we think a bit about it, <code>81</code> gives a remainder <code>1</code>, which is difference of <code>81-80</code>, and so on. So let&rsquo;s fill in our logic.</p>
+
+<pre><code class="language-go">
+	...
+
+        if t&lt;38{
+            fmt.Println(t)
+        }else{
+            if t % 5 &gt; 2 {
+                // round our number
+                fmt.Println(((t/5)+1)*5)
+            }else {
+                fmt.Println(t)
+            }
+        }
+
+	...
+
+</code></pre>
+
+<p>The block above replaces the code comment that we put earlier inside for loop. The <code>if</code> block is straight forward, if the number is less than 38, we print the number as it is. In the else we are calculating the difference as discussed and if the difference is greater than 2, we are rounding up else printing it as it is. The only alien here is the line below <code>// round our number</code> comment. There we are actually rounding our number and printing it. Let&rsquo;s discuss it. So first we divide the number by 5. It gives the number which when multiplied by five will produce the lower multiple of five. Now we add one to it and at last we multiply five to get the actual number. Allow me to explain with an example. Let&rsquo;s take <code>84</code>. <code>84/5</code> will give <code>16</code> and not <code>16.something</code> because both numerator and denominator are integers. Now we add One to it. <code>16+1 = 17</code> and multiply it by 5, <code>17*5 = 85</code>. Hurray!!! we have our rounded number. I hope I was able to clear it up. So now our complete code should look like</p>
+
+<pre><code class="language-go">
+package main
+
+import &quot;fmt&quot;
+
+func main(){
+    var n,t int
+    fmt.Scan(&amp;n)
     
+    for i:=0;i&lt;n;i++{
+        fmt.Scan(&amp;t)
+        if t&lt;38{
+            fmt.Println(t)
+        }else{
+            if t % 5 &gt; 2 {
+                // round our number
+                fmt.Println(((t/5)+1)*5)
+            }else {
+                fmt.Println(t)
+            }
+        }
+    }
 }
+
 </code></pre>
 
-<p>Now it is time to write the program logic. First thing we need is declare three variables inside our main function. Two of them to hold the inputs and third for the sum. Add the declaration in side main function.</p>
+<p>Let&rsquo;s review what are the highlights to take away from this question. To get a lower multiple of five of a particular number just divide that number by five and again multiply it by five. If you think about this and this alone, every thing was based on this logic. This is it for this one, complete source code for this post can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions/blob/master/practice/algorithms/implementation/grading-students.go">Github Repo</a>. Will see you in the next one.</p>
 
-<pre><code class="language-go">var a,b,sum int;
-</code></pre>
-
-<p>This bit of weird syntax is declaring three variables of integer type. If you are coming from java or c background this might look a bit different, but you&rsquo;ll get the hang of it. The best part is many a times we don&rsquo;t need to declare variables with types in golang. We will see examples of that in later blogs, or refer to the video below for more detailed explanation. Next we will take in the inputs. For taking input we have two options. Either take formatted input using <strong>Scanf</strong> or simple input using <strong>Scan</strong>. I will show you both. Type the following lines of code below your variable declaration.</p>
-
-<pre><code class="language-go">fmt.Scanf(&quot;%d\n%d&quot;,&amp;a,&amp;b)
-//fmt.Scan(&amp;a,&amp;b)
-</code></pre>
-
-<p>According to the problem statement we will be given two integers seperated by a new line, and that is exactly what <strong>&rdquo;%d\n%d&rdquo;</strong> is specifying here. <strong>%d</strong> means we want to take a integer input <strong>\n</strong> is the new line character followed by another integer. What follows next is not very staright forward to understand at first. It is saving those integers to memony where a and b is pointing to. It is related to the concept of pointers, which we will deal with in much greater detail in future.
-Second line which is commented is another way of taking input which directly takes the input as integers. Next we need to calculate the sum and   print out the result</p>
-
-<pre><code class="language-go">sum = a+b
-fmt.Println(sum)
-</code></pre>
-
-<p>I guess it is pretty straight forward. We are taking the sum, and printing it out. We use <strong>Println</strong> to print out the result.
-Now your complete code should look like</p>
-
-<pre><code class="language-go">import &quot;fmt&quot;
-
-func main() {
-    var a,b,sum int;
-    fmt.Scanf(&quot;%d\n%d&quot;,&amp;a,&amp;b)
-    //fmt.Scan(&amp;a,&amp;b)
-    sum = a+b
-    fmt.Println(sum)
-}
-</code></pre>
-
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts, subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> for regular updates, follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a  comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+<p>There you go guys, you made it to end of the post. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/yNzVtH2xsfQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/Dk7QrcfYBjE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f08%2fhackerrank-solve-me-first-solution%2f - Hackerrank%20Solve%20Me%20First%20Solution by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f09%2fhackerrank-solution-of-grading-students-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Grading%20Students%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -264,10 +362,6 @@ func main() {
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-grading-students-in-golang/">Hackerrank | Solution of Grading Students in Golang<aside class="dates">Sep 16 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-time-conversion-in-golang/">Hackerrank | Solution of Time Conversion in Golang<aside class="dates">Sep 11 2018</aside></a>
         </li>
     
@@ -301,6 +395,10 @@ func main() {
     
         <li>
             <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-diagonal-difference-in-golang/">Hackerrank | Solution of Diagonal Difference in Golang<aside class="dates">Aug 30 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/dart/2018/08/dart-programming-language-tutorial-part-4-comments/">Dart Programming Language Tutorial Part 4 | Comments<aside class="dates">Aug 30 2018</aside></a>
         </li>
     
 </ul>
