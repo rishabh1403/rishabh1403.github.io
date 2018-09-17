@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Dart Programming Language Tutorial Part 2 | Variables"/>
-  <meta name="twitter:description" content="In this post we will look into various ways in which we can declare and use variable. We will also learn some syntax of dart and how to print values of variables. Let&#39;s dive right into it."/>
+  <meta name="twitter:title" content="A Brief Introduction to Docker"/>
+  <meta name="twitter:description" content="In this post we will introduce dockers a bit, just a bit of preparation for what is to come in near future on my blog."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="In this post we will look into various ways in which we can declare and use variable. We will also learn some syntax of dart and how to print values of variables. Let&#39;s dive right into it.">
+                <meta name="description" content="In this post we will introduce dockers a bit, just a bit of preparation for what is to come in near future on my blog.">
                 
-	  <meta name="keywords" content="rishabh, rishabh jain, rishabh1403, blog, dart, variables, declaration, initialization, dynamic, var, int">
+	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, blog, programming, tech, technology, docker, introduction">
 	
-                <title>Dart Programming Language Tutorial Part 2 | Variables &middot; Rishabh Jain</title>
+                <title>A Brief Introduction to Docker &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,19 +87,17 @@
             <article>
                 <header>
                     <h1>
-                        Dart Programming Language Tutorial Part 2 | Variables
+                        A Brief Introduction to Docker
                     </h1>
                     <h2 class="headline">
-                    Aug 28, 2018 20:00
-                    · 695 words
-                    · 4 minute read
+                    Sep 17, 2018 23:01
+                    · 615 words
+                    · 3 minute read
                       <span class="tags">
                       
                       
                           
-                              <a href="https://rishabh1403.com/tags/dart">dart</a>
-                          
-                              <a href="https://rishabh1403.com/tags/tutorial">tutorial</a>
+                              <a href="https://rishabh1403.com/tags/docker">docker</a>
                           
                       
                       
@@ -111,112 +109,77 @@
                     <div id="toc">
                       <nav id="TableOfContents">
 <ul>
-<li><a href="#the-main-function">The main function</a></li>
-<li><a href="#declaration-and-initialization-of-variables">Declaration and Initialization of Variables</a></li>
-<li><a href="#different-types-of-declaration-in-dart">Different types of declaration in dart</a></li>
-<li><a href="#printing-values">Printing Values</a></li>
+<li>
+<ul>
+<li><a href="#the-origins">The Origins</a></li>
+<li><a href="#what-s-the-hype-about">What&rsquo;s the hype about?</a></li>
+<li><a href="#how-does-it-work">How does it work?</a>
+<ul>
+<li>
+<ul>
+<li><a href="#container">Container</a></li>
+<li><a href="#image">Image</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#until-next-time">Until Next Time</a></li>
+</ul></li>
 </ul>
 </nav>
                     </div>
                   
                 
                 <section id="post-body">
-                    <p>In this post we will look into various ways in which we can declare and use variable. We will also learn some syntax of dart and how to print values of variables. Let&rsquo;s dive right into it.
+                    <p>In this post we will introduce dockers a bit, just a bit of preparation for what is to come in near future on my blog.
 </p>
 
-<h1 id="the-main-function">The main function</h1>
+<p><img src="https://c1.staticflickr.com/1/778/22947137613_69a88cb94b_b.jpg" alt="Docker" /></p>
 
-<p>Every dart program starts executing from a main function. What is a function? How do we use it? Weren&rsquo;t we going to learn about variables? Hold on, just bear with me for couple of posts till we will write all our code inside a wrapper. So open <a href="https://dartpad.dartlang.org/">dartpad</a> and let&rsquo;s start coding.</p>
+<h2 id="the-origins">The Origins</h2>
 
-<pre><code class="language-dart">void main(){
-    // code starts here
+<p>The foundation for Docker was laid by Solomon Hykes, as an in-house project at dotCloud. <a href="www.docker.com">Docker</a> was made open source in March 2013, but the hype really began around June when Docker Inc. announced the release of Docker 1.0 and the rest is history.</p>
 
+<p>According to Docker, the number of applications containerized in the past years is somewhere in the vicinity of a whopping 3.5 million. Not only that, over 37 billion &ldquo;dockerized&rdquo; applications have been downloaded, thus far, and the number is growing by the minute.</p>
 
-    // code ends here
-}
-</code></pre>
+<h2 id="what-s-the-hype-about">What&rsquo;s the hype about?</h2>
 
-<p>For now just paste the above code snippet in your <a href="https://dartpad.dartlang.org/">dartpad</a> workspace, and we will write all our code between those two <code>code starts here</code> and <code>code
-ends here</code> lines.</p>
+<p>Containerization is not a recent technology. It&rsquo;s been around for quite some time (e.g. LXC, in its rudimentary form) and yet it wasn&rsquo;t doing rounds over the Internet&hellip; until the inception of Docker.</p>
 
-<h1 id="declaration-and-initialization-of-variables">Declaration and Initialization of Variables</h1>
+<p>Basically, Docker makes life a whole lot simpler. It&rsquo;s appeal mainly lies in its ability to provision the delivery of lightweight, portable and isolated bundle of applications without the need of running multiple OS instances on a Hypervisor. It saves a ton of resources, thus <a href="https://www.docker.com/why-docker">&ldquo;reducing the infrastructure and maintenance costs of supporting an existing application portfolio&rdquo;</a>. Not to mention, the degree of ease which docker brings to the table helps a great deal in expediting the process of continuous integration, delivery, and deployment.</p>
 
-<p>What is a variable? Well a variable is a container, which just holds some value in your program. Let&rsquo;s say you want to store the value of <code>pi</code> in
-your program, you need some place, a container to store that number <code>3.14</code>. That container is a variable.</p>
+<h2 id="how-does-it-work">How does it work?</h2>
 
-<p>To use a variable in your program you must declare and initialize it. So what is declaring and initializing a variable?</p>
+<p>Docker is primarily developed for Linux and relies on its key component <strong>libcontainer</strong>, which enables direct leveraging of the virtualization facilities provisioned by the Linux kernel. Formerly, Docker relied on LXC as its default execution environment but it was dropped since the release of version <strong>0.9</strong>.</p>
 
-<p>Declaring a variable is nothing but notifying everyone that a particular character or word will be used as a container to store something in the program. Initializing a variable is putting a initial value in that container i.e. giving a value to a variable for the first time. Let&rsquo;s look at some code.</p>
+<p><img src="https://docs.docker.com/v17.09/engine/userguide/storagedriver/images/sharing-layers.jpg" alt="Layers of a container based on the Ubuntu image" title="Courtesy - https://docs.docker.com" /></p>
 
-<pre><code class="language-dart">    void main(){
-        // code starts here
+<h4 id="container">Container</h4>
 
-        int a = 3;
+<blockquote>
+<p>A docker <strong>container</strong> runs natively on Linux and shares the kernel of the host machine with other containers. It runs a discrete process, taking no more memory than any other executable, making it lightweight.</p>
+</blockquote>
 
-        int b;
-        b = 4;
+<p>So basically, Docker abstracts out the kernel and runs a very lightweight containerized instance of an application on top of it. These containers, by themselves, add very little overhead and are optimized to make use of already existing information by usage of a <a href="https://en.wikipedia.org/wiki/Union_mount">union mount</a> filesystem, e.g. <a href="https://en.wikipedia.org/wiki/Aufs">aufs</a> and <a href="https://en.wikipedia.org/wiki/OverlayFS" title="OverlayFS">overlay</a>.</p>
 
-        // code ends here;
+<h4 id="image">Image</h4>
 
-    }
-</code></pre>
+<blockquote>
+<p>A container is launched by running an <strong>image</strong>. An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files.</p>
+</blockquote>
 
-<p>In the code snippet above <code>int a = 3</code> is a variable declaration as well as initialization, a is declared that it will hold integer type of value, and is assigned a value of 3 for the first time. In the second case <code>int b;</code> is just a declaration where b is declared to be of integer type, and <code>b=3</code> is an initialization, since it is assigned a value for the first time.</p>
+<p>In other words, a container is just the running instance of an image. Images can be built using a <a href="https://docs.docker.com/engine/reference/builder/#usage">Dockerfile</a>.</p>
 
-<h1 id="different-types-of-declaration-in-dart">Different types of declaration in dart</h1>
+<p>A Dockerfile contains all the instructions required to put together an image. Once created, multiple container instances can be spawned using a single base image, which will be shared across all the containers. It is important to note that an image is <strong>read-only</strong> with a <strong>mutable layer</strong>, to which a container can write. An image once built cannot be manipulated during the course of its execution. You can find an in-depth explanation of how images and containers work in the <a href="https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/">official documentation</a>.</p>
 
-<p>Now we will look into different ways by which we can declare a variable in dart and their differences.</p>
+<h2 id="until-next-time">Until Next Time</h2>
 
-<pre><code class="language-dart">    void main(){
-        // code starts here
+<p>This has been a short introduction to Docker. In conclusion, Docker <em>is</em> what can be termed as a &ldquo;disruptive technology&rdquo; and it is here to stay. We will get down and dirty with actually creating and deploying Docker very soon. Until then, have a nice day.There you go guys, you made it to end of the post. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
-        int a = 3;
-        var b = 3;
-        dynamic c = 3;
-
-        // code starts here
-
-    }
-</code></pre>
-
-<p>We have already looked into first one here, it declares a integer variable. We will look into other data types in greater detail in later posts, for now let&rsquo;s stick to integers. Second one is very similar to the first. It auto infers the data type from the initialization, so b will become an integer type automatically. Declaring local variables using var is recommended in dart. These two variable declaration are static declaration i.e. their type cannot be changed, we cannot put a string value into them later on in the program.</p>
-
-<p>The third type is a interesting one, it is as the name suggests dynamic declaration. Even though the variable is assigned a integer value, we can put any type of value in the variable later on in the program.</p>
-
-<h1 id="printing-values">Printing Values</h1>
-
-<p>Now that we have three variables in our program, let&rsquo;s go ahead and print them.</p>
-
-<pre><code class="language-dart">    void mian(){
-        // code starts here
-
-        int a = 3;
-        var b = 3;
-        dynamic c = 3;
-
-        c = &quot;stuart&quot;;
-
-        print(a);
-        print(b);
-        print(c);
-    }
-</code></pre>
-
-<p>Notice two things here, I changed the value of <code>c</code> to a string, I cannot do the same thing with <code>a</code> and <code>b</code> . Second, semicolons in dart are <strong><em>required</em></strong>. Next is a simple print statement to print the values of our variables to screen.</p>
-
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts, subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> for regular updates, subscribe to my mailing list below, follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
-
-<p>Stay tuned and see you around :)
-
-<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/gL7hifdjsoY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
- </div>
-</p>
+<p>Stay tuned and see you around :)</p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fdart%2f2018%2f08%2fdart-programming-language-tutorial-part-2-variables%2f - Dart%20Programming%20Language%20Tutorial%20Part%202%20%7c%20Variables by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fdocker%2f2018%2f09%2fa-brief-introduction-to-docker%2f - A%20Brief%20Introduction%20to%20Docker by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -257,10 +220,6 @@ your program, you need some place, a container to store that number <code>3.14</
     
     
         <li>
-            <a href="/posts/docker/2018/09/a-brief-introduction-to-docker/">A Brief Introduction to Docker<aside class="dates">Sep 17 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-grading-students-in-golang/">Hackerrank | Solution of Grading Students in Golang<aside class="dates">Sep 16 2018</aside></a>
         </li>
     
@@ -294,6 +253,10 @@ your program, you need some place, a container to store that number <code>3.14</
     
         <li>
             <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-plus-minus-in-golang/">Hackerrank | Solution of Plus Minus in Golang<aside class="dates">Aug 31 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/coding/hackerrank/2018/08/hackerrank-solution-of-diagonal-difference-in-golang/">Hackerrank | Solution of Diagonal Difference in Golang<aside class="dates">Aug 30 2018</aside></a>
         </li>
     
 </ul>
