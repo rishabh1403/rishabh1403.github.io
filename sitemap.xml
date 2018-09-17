@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rishabh1403.com/posts/games/pubg/2018/09/pubg-a-new-gaming-sensation/</loc>
+    <lastmod>2018-09-17T23:13:22+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rishabh1403.com/posts/docker/2018/09/a-brief-introduction-to-docker/</loc>
     <lastmod>2018-09-17T23:01:36+05:30</lastmod>
   </url>
@@ -153,6 +158,18 @@
   </url>
   
   <url>
+    <loc>https://rishabh1403.com/tags/games/</loc>
+    <lastmod>2018-09-17T23:13:22+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rishabh1403.com/categories/games/</loc>
+    <lastmod>2018-09-17T23:13:22+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rishabh1403.com/tags/golang/</loc>
     <lastmod>2018-09-16T23:35:13+05:30</lastmod>
     <priority>0</priority>
@@ -190,13 +207,13 @@
   
   <url>
     <loc>https://rishabh1403.com/posts/</loc>
-    <lastmod>2018-09-17T23:01:36+05:30</lastmod>
+    <lastmod>2018-09-17T23:13:22+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rishabh1403.com/</loc>
-    <lastmod>2018-09-17T23:01:36+05:30</lastmod>
+    <lastmod>2018-09-17T23:13:22+05:30</lastmod>
     <priority>0</priority>
   </url>
   
