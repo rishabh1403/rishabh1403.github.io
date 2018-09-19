@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rishabh1403.com/posts/privacy/2018/09/they-can-smell-what-you-are-cooking/</loc>
+    <lastmod>2018-09-19T21:06:20+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-apple-and-orange-in-golang/</loc>
     <lastmod>2018-09-19T20:55:26+05:30</lastmod>
   </url>
@@ -212,13 +217,25 @@
   
   <url>
     <loc>https://rishabh1403.com/posts/</loc>
-    <lastmod>2018-09-19T20:55:26+05:30</lastmod>
+    <lastmod>2018-09-19T21:06:20+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rishabh1403.com/tags/privacy/</loc>
+    <lastmod>2018-09-19T21:06:20+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rishabh1403.com/categories/privacy/</loc>
+    <lastmod>2018-09-19T21:06:20+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rishabh1403.com/</loc>
-    <lastmod>2018-09-19T20:55:26+05:30</lastmod>
+    <lastmod>2018-09-19T21:06:20+05:30</lastmod>
     <priority>0</priority>
   </url>
   
