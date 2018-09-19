@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Hackerrank Solve Me First Solution"/>
-  <meta name="twitter:description" content="Solution for hackerrank warmup question solve me first in golang. In this blog I&#39;ll discuss my solution, what mistakes I initially made and what concepts I learned."/>
+  <meta name="twitter:title" content="Hackerrank | Solution of Apple and Orange in Golang"/>
+  <meta name="twitter:description" content="In this post we will solve question apple and orange from hackerrank implementation section. A very easy one, let&#39;s dive right into it."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="Solution for hackerrank warmup question solve me first in golang. In this blog I&#39;ll discuss my solution, what mistakes I initially made and what concepts I learned.">
+                <meta name="description" content="In this post we will solve question apple and orange from hackerrank implementation section. A very easy one, let&#39;s dive right into it.">
                 
-	  <meta name="keywords" content="rishabh, rishabh jain, solve, me, first, rishabh1403, hackerrank, blog, golang, solution, learn, code">
+	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, go, golang, hackerrank, apple and orange, hackerrank solutions, blog, competitive, coding, programming, tech, technology">
 	
-                <title>Hackerrank Solve Me First Solution &middot; Rishabh Jain</title>
+                <title>Hackerrank | Solution of Apple and Orange in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,12 +87,12 @@
             <article>
                 <header>
                     <h1>
-                        Hackerrank Solve Me First Solution
+                        Hackerrank | Solution of Apple and Orange in Golang
                     </h1>
                     <h2 class="headline">
-                    Aug 22, 2018 12:32
-                    · 690 words
-                    · 4 minute read
+                    Sep 19, 2018 20:55
+                    · 949 words
+                    · 5 minute read
                       <span class="tags">
                       
                       
@@ -122,108 +122,206 @@
                   
                 
                 <section id="post-body">
-                    <p>Solution for hackerrank warmup question solve me first in golang. In this blog I&rsquo;ll discuss my solution, what mistakes I initially made and what concepts I learned.
+                    <p>In this post we will solve question apple and orange from hackerrank implementation section. A very easy one, let&rsquo;s dive right into it.
 </p>
 
 <h1 id="problem-statement">Problem Statement</h1>
 
-<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/solve-me-first/problem">link</a>. The question is pretty straight forward. We have to take two integers as input, and print their sum.
-Couple of things to note here is</p>
-
-<ul>
-<li>The inputs are separated by new line character</li>
-<li>we are solving this in <a href="https://golang.org/">golang</a> <strong>(assuming we have no or very little knowledge of <a href="https://golang.org/">golang</a>)</strong></li>
-</ul>
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/apple-and-orange/problem">link</a>. The problem statement states that we are given two trees, an apple and an orange tree, and fruits are falling from those trees. We need to find out if those fruits are falling in a given line segment or not.</p>
 
 <h1 id="challenges">Challenges</h1>
 
 <ul>
-<li>At first glance the platform opens up and we choose our preferred language as <a href="https://golang.org/">golang</a>. The moment we do that, we get some 10-15 lines of code which are very unfamiliar to someone who is new to language.</li>
-<li>To solve this problem only thing we need to know is how to take input, show output, and do a sum.</li>
+<li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
+<li>Cracking the logic required to solve the question.</li>
 </ul>
 
 <h1 id="solution">Solution</h1>
 
 <p>This is the template you get on <a href="https://www.hackerrank.com/">hackerrank</a> for this problem statement.</p>
 
-<pre><code class="language-go">package main
-import &quot;fmt&quot;
+<pre><code class="language-go">    package main
 
-func solveMeFirst(a uint32,b uint32) uint32{
-  // Hint: Type return (a+b) below
-}
+    import (
+        &quot;bufio&quot;
+        &quot;fmt&quot;
+        &quot;io&quot;
+        &quot;os&quot;
+        &quot;strconv&quot;
+        &quot;strings&quot;
+    )
 
-func main() {
-    var a, b, res uint32
-    fmt.Scanf(&quot;%v\n%v&quot;, &amp;a,&amp;b)
-    res = solveMeFirst(a,b)
-    fmt.Println(res)
-}
+    // Complete the countApplesAndOranges function below.
+    func countApplesAndOranges(s int32, t int32, a int32, b int32, apples []int32, oranges []int32) {
+
+
+    }
+
+    func main() {
+        reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
+
+        st := strings.Split(readLine(reader), &quot; &quot;)
+
+        sTemp, err := strconv.ParseInt(st[0], 10, 64)
+        checkError(err)
+        s := int32(sTemp)
+
+        tTemp, err := strconv.ParseInt(st[1], 10, 64)
+        checkError(err)
+        t := int32(tTemp)
+
+        ab := strings.Split(readLine(reader), &quot; &quot;)
+
+        aTemp, err := strconv.ParseInt(ab[0], 10, 64)
+        checkError(err)
+        a := int32(aTemp)
+
+        bTemp, err := strconv.ParseInt(ab[1], 10, 64)
+        checkError(err)
+        b := int32(bTemp)
+
+        mn := strings.Split(readLine(reader), &quot; &quot;)
+
+        mTemp, err := strconv.ParseInt(mn[0], 10, 64)
+        checkError(err)
+        m := int32(mTemp)
+
+        nTemp, err := strconv.ParseInt(mn[1], 10, 64)
+        checkError(err)
+        n := int32(nTemp)
+
+        applesTemp := strings.Split(readLine(reader), &quot; &quot;)
+
+        var apples []int32
+
+        for i := 0; i &lt; int(m); i++ {
+            applesItemTemp, err := strconv.ParseInt(applesTemp[i], 10, 64)
+            checkError(err)
+            applesItem := int32(applesItemTemp)
+            apples = append(apples, applesItem)
+        }
+
+        orangesTemp := strings.Split(readLine(reader), &quot; &quot;)
+
+        var oranges []int32
+
+        for i := 0; i &lt; int(n); i++ {
+            orangesItemTemp, err := strconv.ParseInt(orangesTemp[i], 10, 64)
+            checkError(err)
+            orangesItem := int32(orangesItemTemp)
+            oranges = append(oranges, orangesItem)
+        }
+
+        countApplesAndOranges(s, t, a, b, apples, oranges)
+    }
+
+    func readLine(reader *bufio.Reader) string {
+        str, _, err := reader.ReadLine()
+        if err == io.EOF {
+            return &quot;&quot;
+        }
+
+        return strings.TrimRight(string(str), &quot;\r\n&quot;)
+    }
+
+    func checkError(err error) {
+        if err != nil {
+            panic(err)
+        }
+    }
+
+
 </code></pre>
 
 <ul>
 <li>First go ahead and delete everything in the pre-existing template.</li>
-<li>Now every Go code needs a package name, and if it is the main package it is supposed to named <em>main</em>  (more on that in later blogs)</li>
-<li>we need to import the <strong>fmt</strong> library for standard input output operations.</li>
-<li>Next thing we need is our <strong>main</strong> function which automatically gets called and is necessary if your program is supposed to be run.</li>
-<li>we declare functions with <strong>func</strong> keyword, it takes no argument and has no return type</li>
+<li>Let&rsquo;s write down our main wrapper function.</li>
 </ul>
-
-<p>Up until now our code should look something like this</p>
 
 <pre><code class="language-go">package main
 import &quot;fmt&quot;
 
-func main() {
+func main(){
+
+}
+</code></pre>
+
+<p>Let&rsquo;s figure out the variables we need for this problem. We need to store the co-ordinates of line segment <code>s,t</code>, we need co-ordinates of the apple tree <code>a</code> and the co-ordinates of the orange tree <code>b</code>. We need the number of apples falling <code>m</code>, the number of oranges falling <code>n</code>. Now do we need to store the entire array or can we just have a temporary variable, store input one by one, decide if it falls under the line segment and be done with it? we will go with second approach. So we need a temporary variable <code>temp</code>. Next we need two counter variables to store the number of times an apple or orange falls in the given segment, so two more variables, <code>ac and oc</code>. Phew!!! let&rsquo;s declare them and take the required inputs.</p>
+
+<pre><code class="language-go">
+    ...
+    var s,t,a,b,m,n,temp,ac,oc int
+    fmt.Scan(&amp;s,&amp;t)
+    fmt.Scan(&amp;a,&amp;b)
+    fmt.Scan(&amp;m,&amp;n)
+
+</code></pre>
+
+<p>Okay, now we have our variables, next we will take the distance that a fruit travels after falling as input one by one and calculate if it lies inside the line segment. Now if the co-ordinate of the tree when added to the distance lies inside the segment we will increase the counter else no increase, and same logic for orange tree as well. It doesn&rsquo;t matter if the distance is negative or positive, the summation will always provide desired result. So here goes the code.</p>
+
+<pre><code class="language-go">
+	...
+    for i:= 0;i&lt;m;i++{
+        fmt.Scan(&amp;temp)
+        if a+temp &gt;= s &amp;&amp; a+temp &lt;= t {
+            ac++
+        }
+    }
+    for i:= 0;i&lt;n;i++{
+        fmt.Scan(&amp;temp)
+        if b+temp &gt;= s &amp;&amp; b+temp &lt;= t {
+            oc++
+        }
+    }
+    fmt.Printf(&quot;%d\n%d&quot;,ac,oc)
+
+</code></pre>
+
+<p>So we have two loops here, completely similar, we&rsquo;ll just discuss one. We are looping the number of fruits time, taking an input in the temporary variable, now if the co-ordinate of apple or orange tree plus the distance the fruit travels is greater than equal to <code>s</code> and less than equal to <code>t</code> we say that the fruit fell inn the segment and increase the occurence of that event. After the loops we just print the out, since we are required to print the output in two lines, we use formatted printing, <code>%d</code> for integer, <code>\n</code> for new line. Now the complete code should look like</p>
+
+<pre><code class="language-go">
+package main
+
+import &quot;fmt&quot;
+
+func main(){
+    var s,t,a,b,m,n,temp,ac,oc int
+    fmt.Scan(&amp;s,&amp;t)
+    fmt.Scan(&amp;a,&amp;b)
+    fmt.Scan(&amp;m,&amp;n)
     
+    for i:= 0;i&lt;m;i++{
+        fmt.Scan(&amp;temp)
+        if a+temp &gt;= s &amp;&amp; a+temp &lt;= t {
+            ac++
+        }
+    }
+    for i:= 0;i&lt;n;i++{
+        fmt.Scan(&amp;temp)
+        if b+temp &gt;= s &amp;&amp; b+temp &lt;= t {
+            oc++
+        }
+    }
+    fmt.Printf(&quot;%d\n%d&quot;,ac,oc)
 }
+
 </code></pre>
 
-<p>Now it is time to write the program logic. First thing we need is declare three variables inside our main function. Two of them to hold the inputs and third for the sum. Add the declaration in side main function.</p>
+<p>Let&rsquo;s review what are the highlights to take away from this question. We take a bunch of variables as input and then discussed the logic. Next we take the distance each fruit travels as input one by one and add it to tree co-ordinate to check if it falls in the line segment, and finally print our result in the desired format. This is it for this one, complete source code for this post can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions/blob/master/practice/algorithms/implementation/apple-and-orange.go">Github Repo</a>. Will see you in the next one.</p>
 
-<pre><code class="language-go">var a,b,sum int;
-</code></pre>
-
-<p>This bit of weird syntax is declaring three variables of integer type. If you are coming from java or c background this might look a bit different, but you&rsquo;ll get the hang of it. The best part is many a times we don&rsquo;t need to declare variables with types in golang. We will see examples of that in later blogs, or refer to the video below for more detailed explanation. Next we will take in the inputs. For taking input we have two options. Either take formatted input using <strong>Scanf</strong> or simple input using <strong>Scan</strong>. I will show you both. Type the following lines of code below your variable declaration.</p>
-
-<pre><code class="language-go">fmt.Scanf(&quot;%d\n%d&quot;,&amp;a,&amp;b)
-//fmt.Scan(&amp;a,&amp;b)
-</code></pre>
-
-<p>According to the problem statement we will be given two integers seperated by a new line, and that is exactly what <strong>&rdquo;%d\n%d&rdquo;</strong> is specifying here. <strong>%d</strong> means we want to take a integer input <strong>\n</strong> is the new line character followed by another integer. What follows next is not very staright forward to understand at first. It is saving those integers to memony where a and b is pointing to. It is related to the concept of pointers, which we will deal with in much greater detail in future.
-Second line which is commented is another way of taking input which directly takes the input as integers. Next we need to calculate the sum and   print out the result</p>
-
-<pre><code class="language-go">sum = a+b
-fmt.Println(sum)
-</code></pre>
-
-<p>I guess it is pretty straight forward. We are taking the sum, and printing it out. We use <strong>Println</strong> to print out the result.
-Now your complete code should look like</p>
-
-<pre><code class="language-go">import &quot;fmt&quot;
-
-func main() {
-    var a,b,sum int;
-    fmt.Scanf(&quot;%d\n%d&quot;,&amp;a,&amp;b)
-    //fmt.Scan(&amp;a,&amp;b)
-    sum = a+b
-    fmt.Println(sum)
-}
-</code></pre>
-
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts, subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> for regular updates, follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a  comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+<p>There you go guys, you made it to end of the post. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/yNzVtH2xsfQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/UJBdyCUR4h8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f08%2fhackerrank-solve-me-first-solution%2f - Hackerrank%20Solve%20Me%20First%20Solution by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f09%2fhackerrank-solution-of-apple-and-orange-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Apple%20and%20Orange%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -264,10 +362,6 @@ func main() {
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-apple-and-orange-in-golang/">Hackerrank | Solution of Apple and Orange in Golang<aside class="dates">Sep 19 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/games/pubg/2018/09/pubg-a-new-gaming-sensation/">PUBG: A New Gaming Sensation<aside class="dates">Sep 17 2018</aside></a>
         </li>
     
@@ -301,6 +395,10 @@ func main() {
     
         <li>
             <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-mini-max-sum-in-golang/">Hackerrank | Solution of Mini-Max Sum in Golang<aside class="dates">Sep 2 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-staircase-in-golang/">Hackerrank | Solution of Staircase in Golang<aside class="dates">Sep 1 2018</aside></a>
         </li>
     
 </ul>
