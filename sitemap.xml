@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rishabh1403.com/posts/life/2018/09/new-mornings-new-subscribers/</loc>
+    <lastmod>2018-09-20T21:35:47+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rishabh1403.com/posts/privacy/2018/09/they-can-smell-what-you-are-cooking/</loc>
     <lastmod>2018-09-19T21:06:20+05:30</lastmod>
   </url>
@@ -132,20 +137,14 @@
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/tags/coding/</loc>
-    <lastmod>2018-09-19T20:55:26+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://rishabh1403.com/categories/coding/</loc>
     <lastmod>2018-09-19T20:55:26+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/tags/dart/</loc>
-    <lastmod>2018-09-10T19:45:19+05:30</lastmod>
+    <loc>https://rishabh1403.com/tags/coding/</loc>
+    <lastmod>2018-09-19T20:55:26+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -156,8 +155,8 @@
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/tags/docker/</loc>
-    <lastmod>2018-09-17T23:01:36+05:30</lastmod>
+    <loc>https://rishabh1403.com/tags/dart/</loc>
+    <lastmod>2018-09-10T19:45:19+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -168,8 +167,8 @@
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/tags/games/</loc>
-    <lastmod>2018-09-17T23:13:22+05:30</lastmod>
+    <loc>https://rishabh1403.com/tags/docker/</loc>
+    <lastmod>2018-09-17T23:01:36+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -180,8 +179,8 @@
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/tags/golang/</loc>
-    <lastmod>2018-09-19T20:55:26+05:30</lastmod>
+    <loc>https://rishabh1403.com/tags/games/</loc>
+    <lastmod>2018-09-17T23:13:22+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -192,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/tags/hackerrank/</loc>
+    <loc>https://rishabh1403.com/tags/golang/</loc>
     <lastmod>2018-09-19T20:55:26+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -204,19 +203,31 @@
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/tags/life/</loc>
-    <lastmod>2018-08-21T01:17:37+05:30</lastmod>
+    <loc>https://rishabh1403.com/tags/hackerrank/</loc>
+    <lastmod>2018-09-19T20:55:26+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rishabh1403.com/categories/life/</loc>
-    <lastmod>2018-08-21T01:17:37+05:30</lastmod>
+    <lastmod>2018-09-20T21:35:47+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rishabh1403.com/tags/life/</loc>
+    <lastmod>2018-09-20T21:35:47+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rishabh1403.com/posts/</loc>
+    <lastmod>2018-09-20T21:35:47+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rishabh1403.com/categories/privacy/</loc>
     <lastmod>2018-09-19T21:06:20+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -228,14 +239,8 @@
   </url>
   
   <url>
-    <loc>https://rishabh1403.com/categories/privacy/</loc>
-    <lastmod>2018-09-19T21:06:20+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://rishabh1403.com/</loc>
-    <lastmod>2018-09-19T21:06:20+05:30</lastmod>
+    <lastmod>2018-09-20T21:35:47+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -247,6 +252,12 @@
   <url>
     <loc>https://rishabh1403.com/tags/tutorial/</loc>
     <lastmod>2018-09-10T19:45:19+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rishabh1403.com/tags/youtube/</loc>
+    <lastmod>2018-09-20T21:35:47+05:30</lastmod>
     <priority>0</priority>
   </url>
   
