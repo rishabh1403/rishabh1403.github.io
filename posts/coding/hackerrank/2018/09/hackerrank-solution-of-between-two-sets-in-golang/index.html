@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Hackerrank | Solution of Birthday Cake Candles in Golang"/>
-  <meta name="twitter:description" content="In this post we will solve question Birthday Cake Candles from hackerrank. This is one of those questions, which packs a fancy description but in the end needs a simple logic to solve. Let&#39;s dive right into it."/>
+  <meta name="twitter:title" content="Hackerrank | Solution of Between Two Sets in Golang"/>
+  <meta name="twitter:description" content="In this one we will discuss the solution of Between two sets in Golang. It wraps good amount of logic, will be fun solving it. Let&#39;s dive right into it."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.25.1" />
                 
-                <meta name="description" content="In this post we will solve question Birthday Cake Candles from hackerrank. This is one of those questions, which packs a fancy description but in the end needs a simple logic to solve. Let&#39;s dive right into it.">
+                <meta name="description" content="In this one we will discuss the solution of Between two sets in Golang. It wraps good amount of logic, will be fun solving it. Let&#39;s dive right into it.">
                 
-	  <meta name="keywords" content="rishabh, jain, rishabh jain, hackerrank, solution, go, golang, birthday, cake, candles, birthday cake candles, rishabh1403, blog, competitive, coding, programming, tech, technology">
+	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, go, golang, hackerrank solutions, solutions in golang, between two sets hackerrank, blog, competitive, coding, programming, tech, technology">
 	
-                <title>Hackerrank | Solution of Birthday Cake Candles in Golang &middot; Rishabh Jain</title>
+                <title>Hackerrank | Solution of Between Two Sets in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,21 +87,21 @@
             <article>
                 <header>
                     <h1>
-                        Hackerrank | Solution of Birthday Cake Candles in Golang
+                        Hackerrank | Solution of Between Two Sets in Golang
                     </h1>
                     <h2 class="headline">
-                    Sep 3, 2018 19:35
-                    · 1325 words
-                    · 7 minute read
+                    Sep 21, 2018 18:39
+                    · 1182 words
+                    · 6 minute read
                       <span class="tags">
                       
                       
                           
-                              <a href="https://rishabh1403.com/tags/hackerrank">hackerrank</a>
-                          
                               <a href="https://rishabh1403.com/tags/coding">coding</a>
                           
                               <a href="https://rishabh1403.com/tags/golang">golang</a>
+                          
+                              <a href="https://rishabh1403.com/tags/hackerrank">hackerrank</a>
                           
                       
                       
@@ -122,25 +122,24 @@
                   
                 
                 <section id="post-body">
-                    <p>In this post we will solve question Birthday Cake Candles from hackerrank. This is one of those questions, which packs a fancy description but in the end needs a simple logic to solve. Let&rsquo;s dive right into it.
+                    <p>In this one we will discuss the solution of Between two sets in Golang. It wraps good amount of logic, will be fun solving it. Let&rsquo;s dive right into it.
 </p>
 
 <h1 id="problem-statement">Problem Statement</h1>
 
-<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/birthday-cake-candles/problem">link</a>. The problem statement states something about birthday and candles. In simple terms it wants us to calculate the number of times the maxiumum element in a given list of numbers occurred. We will need an array, then we will find which is the maximum element in the array, and then we will traverse the array and count the number of times the maximum element is present in the array.</p>
-
-<p>Couple of things to note here is</p>
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/between-two-sets/problem">link</a>. The problem statement states that we need to find the number of all the integers which satisfy two given conditions.</p>
 
 <ul>
-<li>We will use Golang slices here, we could have gone with arrays too, but let&rsquo;s introduce slices more formally.</li>
-<li>The number of elements in array is huge, so we need to be careful of how many loops we use.</li>
+<li>The integers of first given array are all factors of the selected integer i.e. all the numbers in the first array should divide the given integer perfectly.</li>
+<li>The integer being chosen divides all the numbers of second array perfectly.</li>
 </ul>
 
 <h1 id="challenges">Challenges</h1>
 
 <ul>
 <li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
-<li>Working with slices in Golang.</li>
+<li>Working with factors.</li>
+<li>Cracking the range of numbers in which our integers exist.</li>
 </ul>
 
 <h1 id="solution">Solution</h1>
@@ -158,39 +157,61 @@
         &quot;strings&quot;
     )
 
-    // Complete the birthdayCakeCandles function below.
-    func birthdayCakeCandles(ar []int32) int32 {
-
+    /*
+     * Complete the getTotalX function below.
+     */
+    func getTotalX(a []int32, b []int32) int32 {
+        /*
+         * Write your code here.
+         */
 
     }
 
     func main() {
         reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
 
-        stdout, err := os.Create(os.Getenv(&quot;OUTPUT_PATH&quot;))
+        outputFile, err := os.Create(os.Getenv(&quot;OUTPUT_PATH&quot;))
         checkError(err)
 
-        defer stdout.Close()
+        defer outputFile.Close()
 
-        writer := bufio.NewWriterSize(stdout, 1024 * 1024)
+        writer := bufio.NewWriterSize(outputFile, 1024 * 1024)
 
-        arCount, err := strconv.ParseInt(readLine(reader), 10, 64)
+        nm := strings.Split(readLine(reader), &quot; &quot;)
+
+        nTemp, err := strconv.ParseInt(nm[0], 10, 64)
         checkError(err)
+        n := int32(nTemp)
 
-        arTemp := strings.Split(readLine(reader), &quot; &quot;)
+        mTemp, err := strconv.ParseInt(nm[1], 10, 64)
+        checkError(err)
+        m := int32(mTemp)
 
-        var ar []int32
+        aTemp := strings.Split(readLine(reader), &quot; &quot;)
 
-        for i := 0; i &lt; int(arCount); i++ {
-            arItemTemp, err := strconv.ParseInt(arTemp[i], 10, 64)
+        var a []int32
+
+        for aItr := 0; aItr &lt; int(n); aItr++ {
+            aItemTemp, err := strconv.ParseInt(aTemp[aItr], 10, 64)
             checkError(err)
-            arItem := int32(arItemTemp)
-            ar = append(ar, arItem)
+            aItem := int32(aItemTemp)
+            a = append(a, aItem)
         }
 
-        result := birthdayCakeCandles(ar)
+        bTemp := strings.Split(readLine(reader), &quot; &quot;)
 
-        fmt.Fprintf(writer, &quot;%d\n&quot;, result)
+        var b []int32
+
+        for bItr := 0; bItr &lt; int(m); bItr++ {
+            bItemTemp, err := strconv.ParseInt(bTemp[bItr], 10, 64)
+            checkError(err)
+            bItem := int32(bItemTemp)
+            b = append(b, bItem)
+        }
+
+        total := getTotalX(a, b)
+
+        fmt.Fprintf(writer, &quot;%d\n&quot;, total)
 
         writer.Flush()
     }
@@ -210,6 +231,7 @@
         }
     }
 
+
 </code></pre>
 
 <ul>
@@ -225,95 +247,124 @@ func main(){
 }
 </code></pre>
 
-<p>Now let&rsquo;s think about how many variables we need to declare. We need to take length of the array as input, we need a variable to store the maximum element in array, we need one for keeping the count of maximum element, we also need a <strong><em>temporary</em></strong> variable to take input for slices. The way slices work is when you initially declare an empty slice, it has no element, and length is zero. So, if we try to take input like <code>fmt.Scan(&amp;a[index])</code> it will throw an error, since that would be out of bounds of slice length. The length of a slice is variable in Golang, so we can append and remove values to and from it, but we cannot reference an index which doesn&rsquo;t exist yet. When we did <code>make([]int, 5)</code>, we were creating a slice of length 5, specifically allocating memory for all five indexes. It was initialized with zero, and thus we were able to refer with <code>a[index]</code>. In the current scenario, we will create a slice without using make, and take input in temporary variable. Then, we will keep on appending that value to our slice. Let&rsquo;s take our variables as input, create a slice and take input for slice.</p>
+<p>First of all as always we will discuss on how many variables we need. We need the length of first array <code>n</code>, length of second array <code>m</code>, and a counter variable to store the result <code>c</code>. Now we need to make a decision whether we need to take whole array as input or we can just take array elements as input in temporay variable, use it and let go of it. In this case we need to do some operation of our array elements after all the elements have been taken as input, so we need to take the whole array as input, for both the arrays. So let&rsquo;s go ahead, declare our variables, take our inputs, create arrays and we will discuss the logic after that.</p>
 
 <pre><code class="language-go">
-    package main
-    import &quot;fmt&quot;
-
-    func main(){
-        var n,t,max,occ int
-        fmt.Scan(&amp;n)
-
-        a := []int{}
-        for i:=0;i&lt;n;i++{
-            fmt.Scan(&amp;t)
-            a = append(a,t)
-            // Calculate max		           
-        }
+    ...
+    var n,m,c int
+    fmt.Scan(&amp;n,&amp;m)
+    
+    a := make([]int,n)
+    b := make([]int,m)
+    
+    for i :=0;i&lt;n;i++{
+        fmt.Scan(&amp;a[i])
+    }
+    for i:=0;i&lt;m;i++{
+        fmt.Scan(&amp;b[i])
     }
 
 </code></pre>
 
-<p>So in the snippet above, we are declaring variables as we planned, taking length of slice as input, and creating a slice. This <code>a:=[]int{}</code> is another way to create an empty slice. Next we are looping over <code>n</code> times, taking a input for our slice and appending it to the slice. Basically adding the taken input to the slice. Now we need to write the logic for calculation of maximum in the slice. So, when we declared our <code>max</code> variable it was assigned a value i.e. zero, because that is how Golang works. When ever you declare a variable, a default <strong><em>zero value (not zero)</em></strong> gets assigned to it. This is very important, the question states that the array in input will have a lower bound of one. That is the reason we will get our max for sure, max i.e. zero will always be smaller than all of the array elements. Now inside the loop, when we are getting an input, we need to compare that input with our max, if the provided input is greater than max, assign that input&rsquo;s value to max. By the time we reach to the end of loop, we will have the maximum element in array/ slice. Let&rsquo;s remove the <code>// calculate max</code> comment and replace it with our logic.</p>
+<p>So, we declared our variables, took the length of arrays as inputs, declared arrays and took array elements as input. Now comes the logic. Let&rsquo;s first think in what range can a number lie which will satisfy both the required conditions. If a number is divisible by all numbers of an array (<strong><em>first condition</em></strong>) it has to be larger than or equal to all the numbers in the array. Now the array size is <code>1 &lt;= a[i] &lt;= 100</code>, so taking the worst case where all numbers in the array are <code>1</code>, our search parameter can be any number <strong><em>greater than or equal to 1</em></strong> . That is infinite possibilities. But we got a lower bound, <strong><em>Number should be greater than or equal to 1</em></strong>, next second condition says the number should be a factor or all the numbers in second array, for that to happpen <strong><em>the number chosen should be less than or equal to all the numbers of array</em></strong>, taking the worst case again, if all the numbers of the array are <code>100</code> i.e. the largest number, our chosen number should be <strong><em>less than or equal to 100</em></strong>. So now we have our lower bound as well as the uppper bound for our number. So our answers lie in the range from <strong><em>1 to 100</em></strong>. Now we need to loop over the numbers, check if they satisfy both the conditions and increase the counter. Let&rsquo;s look at the code and then we will discuss the minute details about the code implementation</p>
 
 <pre><code class="language-go">
 	...
-	if t &gt; max {
-		max = t
-	}
-	...
-</code></pre>
-
-<p>Now we have our maximum element in array and we have the array. How do we count the number of times <code>max</code> occurred in the array? We loop over the array and increase the count if the number is same as max. Again the counter is auto assigned a value zero, when we declared it. This time we can either use length of slice to loop over the slice and reference an element based on index or we can use something called <code>range</code>. Let&rsquo;s learn something new. <code>Range</code> is used to range over a slice and it gives us the index and the value at that index for every iteration in the loop. Now if you remember in Golang we cannot have an used variable in our code, and we don&rsquo;t need index here, we just need to use the value at that index to compare it with our max. How do we instruct the compiler to ignore the variable which stores index from range, and not throw an error? We will assign the value to an special variable <code>underscore(_)</code>. Compiler ignores anything assigned to an underscore. Let&rsquo;s see how does the code like for counting the occurence. Use the following snippet below the for-loop we already wrote.</p>
-
-<pre><code class="language-go">        ...
-        for _,num := range a{
-            if num == max{
-                occ++
+    for i:=1;i&lt;=100;i++{
+        factor := true
+        
+        //check first
+        for j:=0;j&lt;n;j++{
+            if i % a[j] != 0 {
+                factor = false
+                break
             }
         }
-
-        fmt.Println(occ)
-
-</code></pre>
-
-<p>We have already discussed the explanation of above code snippet, and the only thing we are adding extra over here is a print statement to print our count. Now you complete code should look something like</p>
-
-<pre><code class="language-go">
-    package main
-    import &quot;fmt&quot;
-
-    func main(){
-        var n,t,max,occ int
-        fmt.Scan(&amp;n)
-
-        a := []int{}
-        for i:=0;i&lt;n;i++{
-            fmt.Scan(&amp;t)
-            a = append(a,t)
-            if t &gt; max {
-                max = t
+        // check second
+        if factor {
+            for j :=0;j&lt;m;j++{
+                if b[j]%i !=0 {
+                    factor = false
+                    break
+                }
             }
         }
-
-        for _,num := range a{
-            if num == max{
-                occ++
-            }
+        //update counter
+        if factor{
+            c++
         }
-
-        fmt.Println(occ)
-
+        
     }
+    fmt.Println(c)
 
 </code></pre>
 
-<p>Let&rsquo;s review what are the highlights to take away from this question. We can use slices instead of an array, which gives us a greater flexibility on some operations like adding and removing elements to and from an slice. We discussed how to add a value to slice, and we also learned how to loop over a slice using <code>range</code>. We also covered how to ignore a variable in Golang, so that it doesn&rsquo;t throw an error on compilation if the variable is not used. Range gives us two vaalues i.e. the index and the value of the index, represented here using <code>_, num</code>. This is it for this one, complete source code for this post can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions/blob/master/practice/algorithms/warmup/birthday-cake-candles.go">Github Repo</a>. Will see you in the next one.</p>
+<p>Here we are looping over our decided range and assuming the number satisfies both the condition. <code>factor := 0</code> holds the flag for that logic. Now we will loop over our first array and check for our condition i.e. all number of the array should perfectly divide the number. If at any point the condition is not met we flip the <code>factor</code> to false and break out of the loop, as there is no point checking any further. Now we only check for our condition in second loop if the <strong><em>factor is still true</em></strong> , otherwise there is really no point checking. If the factor is true, we applu the same logic here. Now after all these checks if factor is still true, we have found a match, and we increment our counter. At the end of our for loop we just print out the result. So now your complete code should look like</p>
+
+<pre><code class="language-go">
+package main
+
+import &quot;fmt&quot;
+
+func main(){
+    var n,m,c int
+    fmt.Scan(&amp;n,&amp;m)
+    
+    a := make([]int,n)
+    b := make([]int,m)
+    
+    for i :=0;i&lt;n;i++{
+        fmt.Scan(&amp;a[i])
+    }
+    for i:=0;i&lt;m;i++{
+        fmt.Scan(&amp;b[i])
+    }
+    
+    for i:=1;i&lt;=100;i++{
+        factor := true
+        
+        //check first
+        for j:=0;j&lt;n;j++{
+            if i % a[j] != 0 {
+                factor = false
+                break
+            }
+        }
+        // check second
+        if factor {
+            for j :=0;j&lt;m;j++{
+                if b[j]%i !=0 {
+                    factor = false
+                    break
+                }
+            }
+        }
+        //update counter
+        if factor{
+            c++
+        }
+        
+    }
+    fmt.Println(c)
+}
+
+</code></pre>
+
+<p>Phew!!! it was a good one. We discussed how to narrow down our search space, used a flag and break to limit the computations, and came out with a working solution. This is it for this one, complete source code for this post can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions/blob/master/practice/algorithms/implementation/between-two-sets.go">Github Repo</a>. Will see you in the next one.</p>
 
 <p>There you go guys, you made it to end of the post. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/3iT1akTZzqU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  <iframe src="//www.youtube.com/embed/LJ6nUUZpBiE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f09%2fhackerrank-solution-of-birthday-cake-candles-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Birthday%20Cake%20Candles%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f09%2fhackerrank-solution-of-between-two-sets-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Between%20Two%20Sets%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -354,10 +405,6 @@ func main(){
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-between-two-sets-in-golang/">Hackerrank | Solution of Between Two Sets in Golang<aside class="dates">Sep 21 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/life/2018/09/new-mornings-new-subscribers/">New Mornings New Subscribers<aside class="dates">Sep 20 2018</aside></a>
         </li>
     
@@ -391,6 +438,10 @@ func main(){
     
         <li>
             <a href="/posts/dart/2018/09/dart-programming-language-tutorial-part-6-built-in-types-part-2/">Dart Programming Language Tutorial Part 6 | Built-In Types Part 2<aside class="dates">Sep 7 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/dart/2018/09/dart-programming-language-tutorial-part-5-built-in-types-part-1/">Dart Programming Language Tutorial Part 5 | Built-In Types Part 1<aside class="dates">Sep 4 2018</aside></a>
         </li>
     
 </ul>
