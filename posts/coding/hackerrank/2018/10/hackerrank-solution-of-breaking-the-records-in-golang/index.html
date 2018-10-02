@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="A Brief Introduction to Docker"/>
-  <meta name="twitter:description" content="In this post we will introduce dockers a bit, just a bit of preparation for what is to come in near future on my blog."/>
+  <meta name="twitter:title" content="Hackerrank | Solution of Breaking the Records in Golang"/>
+  <meta name="twitter:description" content="In this one we will solve question breaking the records from hackerrank in golang. Let&#39;s dive right into it."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.48" />
                 
-                <meta name="description" content="In this post we will introduce dockers a bit, just a bit of preparation for what is to come in near future on my blog.">
+                <meta name="description" content="In this one we will solve question breaking the records from hackerrank in golang. Let&#39;s dive right into it.">
                 
-	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, blog, programming, tech, technology, docker, introduction">
+	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, blog, competitive, coding, programming, tech, technology, go, golang, hackerrank, breaking the records, solutions inj golang, hackerrank solutions">
 	
-                <title>A Brief Introduction to Docker &middot; Rishabh Jain</title>
+                <title>Hackerrank | Solution of Breaking the Records in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,17 +87,21 @@
             <article>
                 <header>
                     <h1>
-                        A Brief Introduction to Docker
+                        Hackerrank | Solution of Breaking the Records in Golang
                     </h1>
                     <h2 class="headline">
-                    Sep 17, 2018 23:01
-                    · 615 words
-                    · 3 minute read
+                    Oct 2, 2018 18:25
+                    · 751 words
+                    · 4 minute read
                       <span class="tags">
                       
                       
                           
-                              <a href="https://rishabh1403.com/tags/docker">docker</a>
+                              <a href="https://rishabh1403.com/tags/hackerrank">hackerrank</a>
+                          
+                              <a href="https://rishabh1403.com/tags/golang">golang</a>
+                          
+                              <a href="https://rishabh1403.com/tags/coding">coding</a>
                           
                       
                       
@@ -109,77 +113,211 @@
                     <div id="toc">
                       <nav id="TableOfContents">
 <ul>
-<li>
-<ul>
-<li><a href="#the-origins">The Origins</a></li>
-<li><a href="#what-s-the-hype-about">What&rsquo;s the hype about?</a></li>
-<li><a href="#how-does-it-work">How does it work?</a>
-<ul>
-<li>
-<ul>
-<li><a href="#container">Container</a></li>
-<li><a href="#image">Image</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#until-next-time">Until Next Time</a></li>
-</ul></li>
+<li><a href="#problem-statement">Problem Statement</a></li>
+<li><a href="#challenges">Challenges</a></li>
+<li><a href="#solution">Solution</a></li>
 </ul>
 </nav>
                     </div>
                   
                 
                 <section id="post-body">
-                    <p>In this post we will introduce dockers a bit, just a bit of preparation for what is to come in near future on my blog.
+                    <p>In this one we will solve question breaking the records from hackerrank in golang. Let&rsquo;s dive right into it.
 </p>
 
-<p><img src="https://c1.staticflickr.com/1/778/22947137613_69a88cb94b_b.jpg" alt="Docker" /></p>
+<h1 id="problem-statement">Problem Statement</h1>
 
-<h2 id="the-origins">The Origins</h2>
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem">link</a>. The problem statement states that we are given a list of scores and we need to find out how many times the records of lowest and highest scores were broken.</p>
 
-<p>The foundation for Docker was laid by Solomon Hykes, as an in-house project at dotCloud. <a href="www.docker.com">Docker</a> was made open source in March 2013, but the hype really began around June when Docker Inc. announced the release of Docker 1.0 and the rest is history.</p>
+<h1 id="challenges">Challenges</h1>
 
-<p>According to Docker, the number of applications containerized in the past years is somewhere in the vicinity of a whopping 3.5 million. Not only that, over 37 billion &ldquo;dockerized&rdquo; applications have been downloaded, thus far, and the number is growing by the minute.</p>
+<ul>
+<li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
+<li>Cracking the logic required to solve the question.</li>
+</ul>
 
-<h2 id="what-s-the-hype-about">What&rsquo;s the hype about?</h2>
+<h1 id="solution">Solution</h1>
 
-<p>Containerization is not a recent technology. It&rsquo;s been around for quite some time (e.g. LXC, in its rudimentary form) and yet it wasn&rsquo;t doing rounds over the Internet&hellip; until the inception of Docker.</p>
+<p>This is the template you get on <a href="https://www.hackerrank.com/">hackerrank</a> for this problem statement.</p>
 
-<p>Basically, Docker makes life a whole lot simpler. It&rsquo;s appeal mainly lies in its ability to provision the delivery of lightweight, portable and isolated bundle of applications without the need of running multiple OS instances on a Hypervisor. It saves a ton of resources, thus <a href="https://www.docker.com/why-docker">&ldquo;reducing the infrastructure and maintenance costs of supporting an existing application portfolio&rdquo;</a>. Not to mention, the degree of ease which docker brings to the table helps a great deal in expediting the process of continuous integration, delivery, and deployment.</p>
+<pre><code class="language-go">
+    package main
 
-<h2 id="how-does-it-work">How does it work?</h2>
+    import (
+        &quot;bufio&quot;
+        &quot;fmt&quot;
+        &quot;io&quot;
+        &quot;os&quot;
+        &quot;strconv&quot;
+        &quot;strings&quot;
+    )
 
-<p>Docker is primarily developed for Linux and relies on its key component <strong>libcontainer</strong>, which enables direct leveraging of the virtualization facilities provisioned by the Linux kernel. Formerly, Docker relied on LXC as its default execution environment but it was dropped since the release of version <strong>0.9</strong>.</p>
+    // Complete the breakingRecords function below.
+    func breakingRecords(scores []int32) []int32 {
 
-<p><img src="https://docs.docker.com/v17.09/engine/userguide/storagedriver/images/sharing-layers.jpg" alt="Layers of a container based on the Ubuntu image" title="Courtesy - https://docs.docker.com" /></p>
 
-<h4 id="container">Container</h4>
+    }
 
-<blockquote>
-<p>A docker <strong>container</strong> runs natively on Linux and shares the kernel of the host machine with other containers. It runs a discrete process, taking no more memory than any other executable, making it lightweight.</p>
-</blockquote>
+    func main() {
+        reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
 
-<p>So basically, Docker abstracts out the kernel and runs a very lightweight containerized instance of an application on top of it. These containers, by themselves, add very little overhead and are optimized to make use of already existing information by usage of a <a href="https://en.wikipedia.org/wiki/Union_mount">union mount</a> filesystem, e.g. <a href="https://en.wikipedia.org/wiki/Aufs">aufs</a> and <a href="https://en.wikipedia.org/wiki/OverlayFS" title="OverlayFS">overlay</a>.</p>
+        stdout, err := os.Create(os.Getenv(&quot;OUTPUT_PATH&quot;))
+        checkError(err)
 
-<h4 id="image">Image</h4>
+        defer stdout.Close()
 
-<blockquote>
-<p>A container is launched by running an <strong>image</strong>. An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files.</p>
-</blockquote>
+        writer := bufio.NewWriterSize(stdout, 1024 * 1024)
 
-<p>In other words, a container is just the running instance of an image. Images can be built using a <a href="https://docs.docker.com/engine/reference/builder/#usage">Dockerfile</a>.</p>
+        nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+        checkError(err)
+        n := int32(nTemp)
 
-<p>A Dockerfile contains all the instructions required to put together an image. Once created, multiple container instances can be spawned using a single base image, which will be shared across all the containers. It is important to note that an image is <strong>read-only</strong> with a <strong>mutable layer</strong>, to which a container can write. An image once built cannot be manipulated during the course of its execution. You can find an in-depth explanation of how images and containers work in the <a href="https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/">official documentation</a>.</p>
+        scoresTemp := strings.Split(readLine(reader), &quot; &quot;)
 
-<h2 id="until-next-time">Until Next Time</h2>
+        var scores []int32
 
-<p>This has been a short introduction to Docker. In conclusion, Docker <em>is</em> what can be termed as a &ldquo;disruptive technology&rdquo; and it is here to stay. We will get down and dirty with actually creating and deploying Docker very soon. Until then, have a nice day.There you go guys, you made it to end of the post. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+        for i := 0; i &lt; int(n); i++ {
+            scoresItemTemp, err := strconv.ParseInt(scoresTemp[i], 10, 64)
+            checkError(err)
+            scoresItem := int32(scoresItemTemp)
+            scores = append(scores, scoresItem)
+        }
 
-<p>Stay tuned and see you around :)</p>
+        result := breakingRecords(scores)
+
+        for i, resultItem := range result {
+            fmt.Fprintf(writer, &quot;%d&quot;, resultItem)
+
+            if i != len(result) - 1 {
+                fmt.Fprintf(writer, &quot; &quot;)
+            }
+        }
+
+        fmt.Fprintf(writer, &quot;\n&quot;)
+
+        writer.Flush()
+    }
+
+    func readLine(reader *bufio.Reader) string {
+        str, _, err := reader.ReadLine()
+        if err == io.EOF {
+            return &quot;&quot;
+        }
+
+        return strings.TrimRight(string(str), &quot;\r\n&quot;)
+    }
+
+    func checkError(err error) {
+        if err != nil {
+            panic(err)
+        }
+    }
+
+</code></pre>
+
+<ul>
+<li>First go ahead and delete everything in the pre-existing template.</li>
+<li>Let&rsquo;s write down our main wrapper function.</li>
+</ul>
+
+<pre><code class="language-go">package main
+import &quot;fmt&quot;
+
+func main(){
+
+}
+</code></pre>
+
+<p>Let&rsquo;s think about the variables we would need. We need the number of scores <code>n</code>, the nax score <code>max</code>, min score <code>min</code>, maximum counter <code>cmax</code>, minimum counter <code>cmin</code>. Now do we need to take the array as an input or we can just store each element in temporary variables and be done with it. We don&rsquo;t need to store array elements for any future reference, so we would need only one temporary variable <code>t</code>. Let&rsquo;s declare these variables and take input.</p>
+
+<pre><code class="language-go">	
+	...
+	var n,min,max,cmin,cmax,t int
+    fmt.Scan(&amp;n)
+
+</code></pre>
+
+<p>Now we need to loop over <code>n</code> times and take scores as input in our temprary variables. Let&rsquo;s do that and then we will decide our logic.</p>
+
+<pre><code class="language-go">
+	...
+	for i:=0;i&lt;n;i++{
+		fmt.Scan(&amp;t)
+		//logic here
+	}
+
+</code></pre>
+
+<p>Let&rsquo;s discuss the logic. For the first score, whatever the score is, that is the lowest and highest for the games, after that whatever we get we need to check it with the lowest and highest number to see if it broke the record. If yes, we increase the corresponding counter and update the min/max variable with new one. Let&rsquo;s implement this.</p>
+
+<pre><code class="language-go">
+	...
+    for i:=0;i&lt;n;i++{
+        fmt.Scan(&amp;t)
+        if i ==0 {
+            min = t
+            max = t
+        }else{
+            if t &lt; min {
+                cmin++
+                min = t
+            }
+            if t &gt; max{
+                max = t
+                cmax++
+            }
+        }
+    }
+    fmt.Println(cmax,cmin)
+
+</code></pre>
+
+<p>Okay, we have the for loop that we had earlier, we take our score, if the index is <code>0</code> i.e. first score, we assign min and max variable to the the score. If the index is something else, we check two conditions. First, if the score is lower than the previous minimum, we update the minimum and increrase the counter, second, if the score is more than the previous maximum, we update the max variable and increase the counter. Next after the loop, we print the counters in the required formats. Now your complete code should look like</p>
+
+<pre><code class="language-go">package main
+import &quot;fmt&quot;
+
+func main(){
+    var n,min,max,cmin,cmax,t int
+    fmt.Scan(&amp;n)
+    
+    for i:=0;i&lt;n;i++{
+        fmt.Scan(&amp;t)
+        if i ==0 {
+            min = t
+            max = t
+        }else{
+            if t &lt; min {
+                cmin++
+                min = t
+            }
+            if t &gt; max{
+                max = t
+                cmax++
+            }
+        }
+    }
+    fmt.Println(cmax,cmin)
+    
+}
+
+</code></pre>
+
+<p>This is it for this one, complete source code for this post can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions/blob/master/practice/algorithms/implementation/breaking-the-records.go">Github Repo</a>. Will see you in the next one.</p>
+
+<p>There you go guys, you made it to end of the post. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+
+<p>Stay tuned and see you around :)
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/7RKyPKN1rP0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fdocker%2f2018%2f09%2fa-brief-introduction-to-docker%2f - A%20Brief%20Introduction%20to%20Docker by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f10%2fhackerrank-solution-of-breaking-the-records-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Breaking%20the%20Records%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -220,10 +358,6 @@
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/10/hackerrank-solution-of-breaking-the-records-in-golang/">Hackerrank | Solution of Breaking the Records in Golang<aside class="dates">Oct 2 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-between-two-sets-in-golang/">Hackerrank | Solution of Between Two Sets in Golang<aside class="dates">Sep 21 2018</aside></a>
         </li>
     
@@ -241,6 +375,10 @@
     
         <li>
             <a href="/posts/games/pubg/2018/09/pubg-a-new-gaming-sensation/">PUBG: A New Gaming Sensation<aside class="dates">Sep 17 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/docker/2018/09/a-brief-introduction-to-docker/">A Brief Introduction to Docker<aside class="dates">Sep 17 2018</aside></a>
         </li>
     
         <li>

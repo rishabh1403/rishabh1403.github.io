@@ -6,10 +6,20 @@
     <description>Recent content in Hackerrank on Rishabh Jain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Sep 2018 18:39:04 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 02 Oct 2018 18:25:16 +0530</lastBuildDate>
     
 	<atom:link href="https://rishabh1403.com/categories/hackerrank/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hackerrank | Solution of Breaking the Records in Golang</title>
+      <link>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-breaking-the-records-in-golang/</link>
+      <pubDate>Tue, 02 Oct 2018 18:25:16 +0530</pubDate>
+      
+      <guid>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-breaking-the-records-in-golang/</guid>
+      <description>&lt;p&gt;In this one we will solve question breaking the records from hackerrank in golang. Let&amp;rsquo;s dive right into it.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hackerrank | Solution of Between Two Sets in Golang</title>
