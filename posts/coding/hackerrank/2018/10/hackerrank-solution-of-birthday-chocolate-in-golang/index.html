@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Hackerrank | Solution of Staircase in Golang"/>
-  <meta name="twitter:description" content="In this post we will solve question staircase from Hackerrank. A simple one, only requires to decode the logic for pattern. Will need if-else and a nested for loop. Let&#39;s get started."/>
+  <meta name="twitter:title" content="Hackerrank | Solution of Birthday Chocolate in Golang"/>
+  <meta name="twitter:description" content="In this one we will solve question birthday chocolate from hackerrank in golang. Sweet one, let&#39;s dive right into it."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.48" />
                 
-                <meta name="description" content="In this post we will solve question staircase from Hackerrank. A simple one, only requires to decode the logic for pattern. Will need if-else and a nested for loop. Let&#39;s get started.">
+                <meta name="description" content="In this one we will solve question birthday chocolate from hackerrank in golang. Sweet one, let&#39;s dive right into it.">
                 
-	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, blog, competitive, coding, programming, tech, technology, go, golang, hackerrank, solution, tutorial, staircase">
+	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, blog, competitive, coding, programming, tech, technology, go, golang, hackerrank, hackerrank solutions, solutions in golang, birthday chocolate">
 	
-                <title>Hackerrank | Solution of Staircase in Golang &middot; Rishabh Jain</title>
+                <title>Hackerrank | Solution of Birthday Chocolate in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,12 +87,12 @@
             <article>
                 <header>
                     <h1>
-                        Hackerrank | Solution of Staircase in Golang
+                        Hackerrank | Solution of Birthday Chocolate in Golang
                     </h1>
                     <h2 class="headline">
-                    Sep 1, 2018 16:45
-                    · 683 words
-                    · 4 minute read
+                    Oct 5, 2018 01:05
+                    · 871 words
+                    · 5 minute read
                       <span class="tags">
                       
                       
@@ -122,33 +122,27 @@
                   
                 
                 <section id="post-body">
-                    <p>In this post we will solve question staircase from Hackerrank. A simple one, only requires to decode the logic for pattern. Will need if-else and a nested for loop. Let&rsquo;s get started.
+                    <p>In this one we will solve question birthday chocolate from hackerrank in golang. Sweet one, let&rsquo;s dive right into it.
 </p>
 
 <h1 id="problem-statement">Problem Statement</h1>
 
-<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/staircase/problem">link</a>. The problem statement basically states that we need to print the given pattern for any given number as input.
-Couple of things to note here is</p>
-
-<ul>
-<li>We need to take a single integer as input.</li>
-<li>Print the given pattern.</li>
-<li>we are solving this in <a href="https://golang.org/">golang</a>.</li>
-</ul>
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/the-birthday-bar/problem">link</a>. The problem statement states that we are given a chocolate bar and two numbers. We need to find all those continuous length of chocolate bars where length of bar is equal to one number and sum of weights of bar is equal to other.</p>
 
 <h1 id="challenges">Challenges</h1>
 
 <ul>
 <li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
-<li>To solve this problem only thing we need to decode the logic for the pattern.</li>
-<li>Formatted printing required.</li>
+<li>Cracking the logic required to solve the question.</li>
+<li>A chocolate bar nearby to celebrate once we solve the question</li>
 </ul>
 
 <h1 id="solution">Solution</h1>
 
 <p>This is the template you get on <a href="https://www.hackerrank.com/">hackerrank</a> for this problem statement.</p>
 
-<pre><code class="language-go">    package main
+<pre><code class="language-go">
+    package main
 
     import (
         &quot;bufio&quot;
@@ -159,20 +153,52 @@ Couple of things to note here is</p>
         &quot;strings&quot;
     )
 
-    // Complete the staircase function below.
-    func staircase(n int32) {
+    // Complete the birthday function below.
+    func birthday(s []int32, d int32, m int32) int32 {
 
 
     }
 
     func main() {
-        reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
+        reader := bufio.NewReaderSize(os.Stdin, 16 * 1024 * 1024)
 
-        nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+        stdout, err := os.Create(os.Getenv(&quot;OUTPUT_PATH&quot;))
+        checkError(err)
+
+        defer stdout.Close()
+
+        writer := bufio.NewWriterSize(stdout, 16 * 1024 * 1024)
+
+        nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
         checkError(err)
         n := int32(nTemp)
 
-        staircase(n)
+        sTemp := strings.Split(strings.TrimSpace(readLine(reader)), &quot; &quot;)
+
+        var s []int32
+
+        for i := 0; i &lt; int(n); i++ {
+            sItemTemp, err := strconv.ParseInt(sTemp[i], 10, 64)
+            checkError(err)
+            sItem := int32(sItemTemp)
+            s = append(s, sItem)
+        }
+
+        dm := strings.Split(strings.TrimSpace(readLine(reader)), &quot; &quot;)
+
+        dTemp, err := strconv.ParseInt(dm[0], 10, 64)
+        checkError(err)
+        d := int32(dTemp)
+
+        mTemp, err := strconv.ParseInt(dm[1], 10, 64)
+        checkError(err)
+        m := int32(mTemp)
+
+        result := birthday(s, d, m)
+
+        fmt.Fprintf(writer, &quot;%d\n&quot;, result)
+
+        writer.Flush()
     }
 
     func readLine(reader *bufio.Reader) string {
@@ -190,6 +216,7 @@ Couple of things to note here is</p>
         }
     }
 
+
 </code></pre>
 
 <ul>
@@ -205,88 +232,95 @@ func main(){
 }
 </code></pre>
 
-<p>Next we need to take an input, so let&rsquo;s go ahead declare a variable and take an input for our program.</p>
+<p>Let&rsquo;s think about the variables we would need. We need the length of the bar <code>n</code>, the day <code>d</code> of birthday, the month of birthday <code>m</code> and the count of bar segments which satisfy the condition <code>c</code>. Now what about the array, do we need to take the whole array as input in an array or can we just keep taking the input in some temporary variable do some operation and be done with it ? In this case we need to loop over the bar segment after we have taken the input, so we need the array itself. Let&rsquo;s go ahead, declare the variables, array, and take the inputs as required.</p>
 
 <pre><code class="language-go">
-    ...
-    var n int
+	...
+    var n,d,m,c int
     fmt.Scan(&amp;n)
-
-</code></pre>
-
-<p>Now let&rsquo;s look at the pattern and try to uunderstand the logic required to print it.</p>
-
-<pre><code class="language-go">
-    for an input 4
-       #
-      ##
-     ###
-    ####
     
+    a:= make([]int,n)
+    for i:=0;i&lt;n;i++{
+        fmt.Scan(&amp;a[i])
+    }
+    fmt.Scan(&amp;d,&amp;m)
+
 </code></pre>
 
-<p>Now let&rsquo;s start noting down the points that would help us in printing this pattern</p>
-
-<ul>
-<li>The pattern has 4 rows, i.e. equal to input number. So we would need a loop which loops over input times</li>
-<li>It has four columns in every row. We would need inner nested loop, which would also loop over input times</li>
-<li>There are two types of output, either an <strong><em>space</em></strong> or an <strong><em>#</em></strong>. So we need two inner loops instead of one.</li>
-<li>In the first line spaces are 3, # is 1, in second line spaces are 2 and # are 2. If we notice the index of outer loop for the first and second case it is 0,1. So we need to print <strong><em>#</em></strong> <code>i+i</code> times. For the spaces, we need to print it <code>input-index-1</code> times.</li>
-</ul>
-
-<p>Now that we have figured out the logic of the pattern, let&rsquo;s see how the code goes.</p>
+<p>Here we have declared the variables, our array, and taken the inputs in the desired format. Now Let&rsquo;s discuss the logic. We need to start looking from the first block to last block. We also need an inner loop. We pick one block and start looping from there, adding the length of the bar as well as it&rsquo;s weight. The moment either the length <strong><em>or</em></strong> weight increases the month or day we break out of inner loop. The moment the length <strong><em>and</em></strong> weight equals month and day we found a match, we increase the counter and break out of loop. At the last we print the counter. If this sounds clear let&rsquo;s implement it.</p>
 
 <pre><code class="language-go">
-    ...
     for i:=0;i&lt;n;i++{
-        for j:=0;j&lt;n-i-1;j++{
-            fmt.Print(&quot; &quot;)
+        length,sum := 0,0
+        for j:=i;j&lt;n;j++{
+            length++
+            sum += a[j]
+            if length == m &amp;&amp; sum == d {
+                c++
+                break;
+            }
+            if sum &gt; d || length &gt; m{
+                break
+            }
         }
-        for j:=0;j&lt;=i;j++{
-            fmt.Print(&quot;#&quot;)
-        }
-        fmt.Println()
+        // break brings here
     }
+    fmt.Println(c)
 
 </code></pre>
 
-<p>So we have a outer loop which runs <code>n</code> times. This to make sure our pattern has <code>n</code> rows. Next we have two inner loops, one to print spaces, other for the hash. The first one is running <code>n-i-i</code> times and second one <code>i+1</code> times. Notice the use of <code>Print</code> instead of <code>Println</code> , because we need everything to print in one line. Next after the inner loops we print a new line, to move the cursor to next line. This completes our program, and your complete code should look like</p>
+<p>So here we have an outer loop which will pick up the starting point of our bar. At the start we initialize the length and sum to <code>0</code>. Then we start looping from the <code>ith</code> position to end, till we find a match or condition fails. On each iteration, we increase the length of bar that we traversed and add the weight to sum. Then we apply our logic which we previously discussed. At the end we just print the counter. So now your complete code should look something like.</p>
 
-<pre><code class="language-go">package main
+<pre><code class="language-go">
+package main
 
 import &quot;fmt&quot;
 
 func main(){
-    var n int
+    var n,d,m,c int
     fmt.Scan(&amp;n)
     
+    a:= make([]int,n)
     for i:=0;i&lt;n;i++{
-        for j:=0;j&lt;n-i-1;j++{
-            fmt.Print(&quot; &quot;)
-        }
-        for j:=0;j&lt;=i;j++{
-            fmt.Print(&quot;#&quot;)
-        }
-        fmt.Println()
+        fmt.Scan(&amp;a[i])
     }
+    fmt.Scan(&amp;d,&amp;m)
+    
+    for i:=0;i&lt;n;i++{
+        length,sum := 0,0
+        for j:=i;j&lt;n;j++{
+            length++
+            sum += a[j]
+            if length == m &amp;&amp; sum == d {
+                c++
+                break;
+            }
+            if sum &gt; d || length &gt; m{
+                break
+            }
+        }
+        // break brings here
+    }
+    fmt.Println(c)
 }
+
 </code></pre>
 
-<p>So this is it for this one guys, complete source code for this one can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions/blob/master/practice/algorithms/warmup/staircase.go">Github Repo</a>. Will see you in the next one.</p>
+<p>Now you can enjoy the chocolate bar I asked you keep nearby at the start of the article. This is it for this one, complete source code for this post can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions">Github Repo</a>. Will see you in the next one.</p>
 
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+<p>There you go guys, you made it to end of the post. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/f9hHJSxUfX4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="//www.youtube.com/embed/W55rjPR7TtM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f09%2fhackerrank-solution-of-staircase-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Staircase%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f10%2fhackerrank-solution-of-birthday-chocolate-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Birthday%20Chocolate%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -327,10 +361,6 @@ func main(){
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/10/hackerrank-solution-of-birthday-chocolate-in-golang/">Hackerrank | Solution of Birthday Chocolate in Golang<aside class="dates">Oct 5 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/coding/hackerrank/2018/10/hackerrank-solution-of-breaking-the-records-in-golang/">Hackerrank | Solution of Breaking the Records in Golang<aside class="dates">Oct 2 2018</aside></a>
         </li>
     
@@ -364,6 +394,10 @@ func main(){
     
         <li>
             <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-time-conversion-in-golang/">Hackerrank | Solution of Time Conversion in Golang<aside class="dates">Sep 11 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/dart/2018/09/dart-programming-language-tutorial-part-7-if-else-and-ternary-operators-in-dart/">Dart Programming Language Tutorial Part 7 | If Else and Ternary Operators in Dart<aside class="dates">Sep 10 2018</aside></a>
         </li>
     
 </ul>

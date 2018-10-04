@@ -6,10 +6,20 @@
     <description>Recent content in Golang on Rishabh Jain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Oct 2018 18:25:16 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 05 Oct 2018 01:05:59 +0530</lastBuildDate>
     
 	<atom:link href="https://rishabh1403.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hackerrank | Solution of Birthday Chocolate in Golang</title>
+      <link>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-birthday-chocolate-in-golang/</link>
+      <pubDate>Fri, 05 Oct 2018 01:05:59 +0530</pubDate>
+      
+      <guid>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-birthday-chocolate-in-golang/</guid>
+      <description>&lt;p&gt;In this one we will solve question birthday chocolate from hackerrank in golang. Sweet one, let&amp;rsquo;s dive right into it.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hackerrank | Solution of Breaking the Records in Golang</title>
