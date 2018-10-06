@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Hackerrank | Solution of Staircase in Golang"/>
-  <meta name="twitter:description" content="In this post we will solve question staircase from Hackerrank. A simple one, only requires to decode the logic for pattern. Will need if-else and a nested for loop. Let&#39;s get started."/>
+  <meta name="twitter:title" content="Hackerrank | Solution of Divisible Sum Pairs in Golang"/>
+  <meta name="twitter:description" content="In this one we will solve question divisible sum pairs from hackerrank in golang. Let&#39;s get right into it."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.48" />
                 
-                <meta name="description" content="In this post we will solve question staircase from Hackerrank. A simple one, only requires to decode the logic for pattern. Will need if-else and a nested for loop. Let&#39;s get started.">
+                <meta name="description" content="In this one we will solve question divisible sum pairs from hackerrank in golang. Let&#39;s get right into it.">
                 
-	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, blog, competitive, coding, programming, tech, technology, go, golang, hackerrank, solution, tutorial, staircase">
+	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, blog, competitive, coding, programming, tech, technology, go, golang, hackerrank, hackerrank solutions, solutions in golang, divisible sum pairs">
 	
-                <title>Hackerrank | Solution of Staircase in Golang &middot; Rishabh Jain</title>
+                <title>Hackerrank | Solution of Divisible Sum Pairs in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,11 +87,11 @@
             <article>
                 <header>
                     <h1>
-                        Hackerrank | Solution of Staircase in Golang
+                        Hackerrank | Solution of Divisible Sum Pairs in Golang
                     </h1>
                     <h2 class="headline">
-                    Sep 1, 2018 16:45
-                    · 683 words
+                    Oct 6, 2018 22:10
+                    · 678 words
                     · 4 minute read
                       <span class="tags">
                       
@@ -122,26 +122,18 @@
                   
                 
                 <section id="post-body">
-                    <p>In this post we will solve question staircase from Hackerrank. A simple one, only requires to decode the logic for pattern. Will need if-else and a nested for loop. Let&rsquo;s get started.
+                    <p>In this one we will solve question divisible sum pairs from hackerrank in golang. Let&rsquo;s get right into it.
 </p>
 
 <h1 id="problem-statement">Problem Statement</h1>
 
-<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/staircase/problem">link</a>. The problem statement basically states that we need to print the given pattern for any given number as input.
-Couple of things to note here is</p>
-
-<ul>
-<li>We need to take a single integer as input.</li>
-<li>Print the given pattern.</li>
-<li>we are solving this in <a href="https://golang.org/">golang</a>.</li>
-</ul>
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/divisible-sum-pairs/problem">link</a>. The problem statement states that we need to find all those pairs of numbers where sum of those numbers are divisible by a given number <code>k</code>.</p>
 
 <h1 id="challenges">Challenges</h1>
 
 <ul>
 <li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
-<li>To solve this problem only thing we need to decode the logic for the pattern.</li>
-<li>Formatted printing required.</li>
+<li>Cracking the logic required to solve the question.</li>
 </ul>
 
 <h1 id="solution">Solution</h1>
@@ -159,8 +151,8 @@ Couple of things to note here is</p>
         &quot;strings&quot;
     )
 
-    // Complete the staircase function below.
-    func staircase(n int32) {
+    // Complete the divisibleSumPairs function below.
+    func divisibleSumPairs(n int32, k int32, ar []int32) int32 {
 
 
     }
@@ -168,11 +160,39 @@ Couple of things to note here is</p>
     func main() {
         reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
 
-        nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+        stdout, err := os.Create(os.Getenv(&quot;OUTPUT_PATH&quot;))
+        checkError(err)
+
+        defer stdout.Close()
+
+        writer := bufio.NewWriterSize(stdout, 1024 * 1024)
+
+        nk := strings.Split(readLine(reader), &quot; &quot;)
+
+        nTemp, err := strconv.ParseInt(nk[0], 10, 64)
         checkError(err)
         n := int32(nTemp)
 
-        staircase(n)
+        kTemp, err := strconv.ParseInt(nk[1], 10, 64)
+        checkError(err)
+        k := int32(kTemp)
+
+        arTemp := strings.Split(readLine(reader), &quot; &quot;)
+
+        var ar []int32
+
+        for i := 0; i &lt; int(n); i++ {
+            arItemTemp, err := strconv.ParseInt(arTemp[i], 10, 64)
+            checkError(err)
+            arItem := int32(arItemTemp)
+            ar = append(ar, arItem)
+        }
+
+        result := divisibleSumPairs(n, k, ar)
+
+        fmt.Fprintf(writer, &quot;%d\n&quot;, result)
+
+        writer.Flush()
     }
 
     func readLine(reader *bufio.Reader) string {
@@ -190,6 +210,7 @@ Couple of things to note here is</p>
         }
     }
 
+
 </code></pre>
 
 <ul>
@@ -205,88 +226,80 @@ func main(){
 }
 </code></pre>
 
-<p>Next we need to take an input, so let&rsquo;s go ahead declare a variable and take an input for our program.</p>
+<p>Let&rsquo;s discuss the variables that we would need for our question. We need the length of array <code>n</code>, the number <code>k</code>, the counter the store the result <code>c</code>,  and the array itself. Since we need to find pairs of numbers, instead of taking inputs in temporary variables we would need it in a array so that we can loop over it and form a pair. Let&rsquo;s declare our variables, our array, takes inputs and come back again to discuss the logic.</p>
 
 <pre><code class="language-go">
-    ...
-    var n int
-    fmt.Scan(&amp;n)
-
-</code></pre>
-
-<p>Now let&rsquo;s look at the pattern and try to uunderstand the logic required to print it.</p>
-
-<pre><code class="language-go">
-    for an input 4
-       #
-      ##
-     ###
-    ####
+	...
+    var n,k,c int
+    fmt.Scan(&amp;n,&amp;k)
     
+    a := make([]int,n)
+    
+    for i:=0;i&lt;n;i++ {
+        fmt.Scan(&amp;a[i])
+    }
+   
 </code></pre>
 
-<p>Now let&rsquo;s start noting down the points that would help us in printing this pattern</p>
-
-<ul>
-<li>The pattern has 4 rows, i.e. equal to input number. So we would need a loop which loops over input times</li>
-<li>It has four columns in every row. We would need inner nested loop, which would also loop over input times</li>
-<li>There are two types of output, either an <strong><em>space</em></strong> or an <strong><em>#</em></strong>. So we need two inner loops instead of one.</li>
-<li>In the first line spaces are 3, # is 1, in second line spaces are 2 and # are 2. If we notice the index of outer loop for the first and second case it is 0,1. So we need to print <strong><em>#</em></strong> <code>i+i</code> times. For the spaces, we need to print it <code>input-index-1</code> times.</li>
-</ul>
-
-<p>Now that we have figured out the logic of the pattern, let&rsquo;s see how the code goes.</p>
+<p>Nothing fancy here, declaring the variables as discussed, declaring the array and taking it&rsquo;s elements as inputs. Let&rsquo;s discuss the logic now. So we need to form pairs in a way where the <code>a[i]+a[j] % k = 0 and i&lt;j</code> , so it&rsquo;s pretty simple we will have an outer loop which will loop over the array from <code>0</code> to length of array while the inner loop will loop over the array from <code>i+1</code> i.e. the condition that <code>j&gt;i</code> to length of array. Now we can form pairs of numbers from <code>(i,j) index</code> and check for divisibility by <code>k</code>. If it is divisible, we will increase the counter, else we will move one in the next loop. If that sounds clear, let&rsquo;s implement it now.</p>
 
 <pre><code class="language-go">
-    ...
+	...
     for i:=0;i&lt;n;i++{
-        for j:=0;j&lt;n-i-1;j++{
-            fmt.Print(&quot; &quot;)
+        for j:=i+1;j&lt;n;j++{
+            if (a[i]+a[j]) % k == 0 {
+                c++
+            }
         }
-        for j:=0;j&lt;=i;j++{
-            fmt.Print(&quot;#&quot;)
-        }
-        fmt.Println()
     }
+    fmt.Println(c)
 
 </code></pre>
 
-<p>So we have a outer loop which runs <code>n</code> times. This to make sure our pattern has <code>n</code> rows. Next we have two inner loops, one to print spaces, other for the hash. The first one is running <code>n-i-i</code> times and second one <code>i+1</code> times. Notice the use of <code>Print</code> instead of <code>Println</code> , because we need everything to print in one line. Next after the inner loops we print a new line, to move the cursor to next line. This completes our program, and your complete code should look like</p>
+<p>Just implementing the logic we discussed and printing our counter. Now your complete code should look like</p>
 
-<pre><code class="language-go">package main
+<pre><code class="language-go">
+package main
 
 import &quot;fmt&quot;
 
 func main(){
-    var n int
-    fmt.Scan(&amp;n)
+    var n,k,c int
+    fmt.Scan(&amp;n,&amp;k)
+    
+    a := make([]int,n)
+    
+    for i:=0;i&lt;n;i++ {
+        fmt.Scan(&amp;a[i])
+    }
     
     for i:=0;i&lt;n;i++{
-        for j:=0;j&lt;n-i-1;j++{
-            fmt.Print(&quot; &quot;)
+        for j:=i+1;j&lt;n;j++{
+            if (a[i]+a[j]) % k == 0 {
+                c++
+            }
         }
-        for j:=0;j&lt;=i;j++{
-            fmt.Print(&quot;#&quot;)
-        }
-        fmt.Println()
     }
+    fmt.Println(c)
 }
+
 </code></pre>
 
-<p>So this is it for this one guys, complete source code for this one can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions/blob/master/practice/algorithms/warmup/staircase.go">Github Repo</a>. Will see you in the next one.</p>
+<p>This was a quick and easy one. This is it for this one, complete source code for this post can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions">Github Repo</a>. Will see you in the next one.</p>
 
-<p>There you go guys, you made it to the end of the blog. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
+<p>There you go guys, you made it to end of the post. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/f9hHJSxUfX4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="//www.youtube.com/embed/UgTCStBlcj4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f09%2fhackerrank-solution-of-staircase-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Staircase%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f10%2fhackerrank-solution-of-divisible-sum-pairs-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Divisible%20Sum%20Pairs%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -327,10 +340,6 @@ func main(){
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/10/hackerrank-solution-of-divisible-sum-pairs-in-golang/">Hackerrank | Solution of Divisible Sum Pairs in Golang<aside class="dates">Oct 6 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/general/2018/10/from-the-agc-to-smartphones-and-beyond/">From The AGC to Smartphones and Beyond<aside class="dates">Oct 6 2018</aside></a>
         </li>
     
@@ -364,6 +373,10 @@ func main(){
     
         <li>
             <a href="/posts/docker/2018/09/a-brief-introduction-to-docker/">A Brief Introduction to Docker<aside class="dates">Sep 17 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-grading-students-in-golang/">Hackerrank | Solution of Grading Students in Golang<aside class="dates">Sep 16 2018</aside></a>
         </li>
     
 </ul>
