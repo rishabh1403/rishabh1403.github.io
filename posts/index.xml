@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Rishabh Jain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Oct 2018 01:05:59 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 06 Oct 2018 10:56:20 +0530</lastBuildDate>
     
 	<atom:link href="https://rishabh1403.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>From The AGC to Smartphones and Beyond</title>
+      <link>https://rishabh1403.com/posts/general/2018/10/from-the-agc-to-smartphones-and-beyond/</link>
+      <pubDate>Sat, 06 Oct 2018 10:56:20 +0530</pubDate>
+      
+      <guid>https://rishabh1403.com/posts/general/2018/10/from-the-agc-to-smartphones-and-beyond/</guid>
+      <description>Today, space technology has evolved to an extent that mankind can envisage a future where space tourism could be a thing. In contrast, not even five decades ago, a single space expedition was a near to impossible task. The journey has been a historic one, much of which has been made possible by the power of modern computers, the foundation for which was laid in the 1960&amp;rsquo;s.
+The Moon Shot Computers played a fundamental role in the first Apollo mission, and then eventual moon landing.</description>
+    </item>
     
     <item>
       <title>Hackerrank | Solution of Birthday Chocolate in Golang</title>

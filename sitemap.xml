@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rishabh1403.com/posts/general/2018/10/from-the-agc-to-smartphones-and-beyond/</loc>
+    <lastmod>2018-10-06T10:56:20+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-birthday-chocolate-in-golang/</loc>
     <lastmod>2018-10-05T01:05:59+05:30</lastmod>
   </url>
@@ -200,6 +205,18 @@
   </url>
   
   <url>
+    <loc>https://rishabh1403.com/categories/general/</loc>
+    <lastmod>2018-10-06T10:56:20+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rishabh1403.com/tags/genral/</loc>
+    <lastmod>2018-10-06T10:56:20+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rishabh1403.com/tags/golang/</loc>
     <lastmod>2018-10-05T01:05:59+05:30</lastmod>
     <priority>0</priority>
@@ -237,7 +254,7 @@
   
   <url>
     <loc>https://rishabh1403.com/posts/</loc>
-    <lastmod>2018-10-05T01:05:59+05:30</lastmod>
+    <lastmod>2018-10-06T10:56:20+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -255,7 +272,13 @@
   
   <url>
     <loc>https://rishabh1403.com/</loc>
-    <lastmod>2018-10-05T01:05:59+05:30</lastmod>
+    <lastmod>2018-10-06T10:56:20+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rishabh1403.com/tags/space/</loc>
+    <lastmod>2018-10-06T10:56:20+05:30</lastmod>
     <priority>0</priority>
   </url>
   
