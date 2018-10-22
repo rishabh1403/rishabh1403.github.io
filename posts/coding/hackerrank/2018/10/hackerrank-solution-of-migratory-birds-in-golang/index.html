@@ -13,8 +13,8 @@
     
   
   
-  <meta name="twitter:title" content="Hackerrank | Solution of Apple and Orange in Golang"/>
-  <meta name="twitter:description" content="In this post we will solve question apple and orange from hackerrank implementation section. A very easy one, let&#39;s dive right into it."/>
+  <meta name="twitter:title" content="Hackerrank | Solution of Migratory Birds in Golang"/>
+  <meta name="twitter:description" content="In this one we will solve question migratory birds from hackerrank in golang. This one wraps a logic which can be used to solve many questions. Let&#39;s dive right into it."/>
   
     <meta name="twitter:site" content="@rishabhjain1403"/>
   
@@ -31,11 +31,11 @@
                 
 		<meta name="generator" content="Hugo 0.48" />
                 
-                <meta name="description" content="In this post we will solve question apple and orange from hackerrank implementation section. A very easy one, let&#39;s dive right into it.">
+                <meta name="description" content="In this one we will solve question migratory birds from hackerrank in golang. This one wraps a logic which can be used to solve many questions. Let&#39;s dive right into it.">
                 
-	  <meta name="keywords" content="rishabh, jain, rishabh jain, rishabh1403, go, golang, hackerrank, apple and orange, hackerrank solutions, blog, competitive, coding, programming, tech, technology">
+	  <meta name="keywords" content="hackerrank, go, golang, solution of migratory birds, rishabh, jain, rishabh jain, rishabh1403, blog, competitive, coding, programming, tech, technology">
 	
-                <title>Hackerrank | Solution of Apple and Orange in Golang &middot; Rishabh Jain</title>
+                <title>Hackerrank | Solution of Migratory Birds in Golang &middot; Rishabh Jain</title>
 		<link rel="shortcut icon" href="https://rishabh1403.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/style.css">
 		<link rel="stylesheet" href="https://rishabh1403.com/css/highlight.css">
@@ -87,11 +87,11 @@
             <article>
                 <header>
                     <h1>
-                        Hackerrank | Solution of Apple and Orange in Golang
+                        Hackerrank | Solution of Migratory Birds in Golang
                     </h1>
                     <h2 class="headline">
-                    Sep 19, 2018 20:55
-                    · 949 words
+                    Oct 22, 2018 21:45
+                    · 998 words
                     · 5 minute read
                       <span class="tags">
                       
@@ -122,25 +122,27 @@
                   
                 
                 <section id="post-body">
-                    <p>In this post we will solve question apple and orange from hackerrank implementation section. A very easy one, let&rsquo;s dive right into it.
+                    <p>In this one we will solve question migratory birds from hackerrank in golang. This one wraps a logic which can be used to solve many questions. Let&rsquo;s dive right into it.
 </p>
 
 <h1 id="problem-statement">Problem Statement</h1>
 
-<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/apple-and-orange/problem">link</a>. The problem statement states that we are given two trees, an apple and an orange tree, and fruits are falling from those trees. We need to find out if those fruits are falling in a given line segment or not.</p>
+<p>The question can be found at this <a href="https://www.hackerrank.com/challenges/migratory-birds/problem">link</a>. The problem statement states that there are many birds of <strong><em>very few</em></strong> types and we need to find which type of bird is most in number. In case we have multiple types with same number we need to answer the bird with lower type.</p>
 
 <h1 id="challenges">Challenges</h1>
 
 <ul>
 <li>Choose our preferred language as <a href="https://golang.org/">golang</a> on hackerrank. The moment we do that, we get some 50-60 lines of code which are very unfamiliar to someone who is new to language.</li>
 <li>Cracking the logic required to solve the question.</li>
+<li>A keen interest in bird watching</li>
 </ul>
 
 <h1 id="solution">Solution</h1>
 
 <p>This is the template you get on <a href="https://www.hackerrank.com/">hackerrank</a> for this problem statement.</p>
 
-<pre><code class="language-go">    package main
+<pre><code class="language-go">
+    package main
 
     import (
         &quot;bufio&quot;
@@ -151,68 +153,41 @@
         &quot;strings&quot;
     )
 
-    // Complete the countApplesAndOranges function below.
-    func countApplesAndOranges(s int32, t int32, a int32, b int32, apples []int32, oranges []int32) {
+    // Complete the migratoryBirds function below.
+    func migratoryBirds(arr []int32) int32 {
 
 
     }
 
     func main() {
-        reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
+        reader := bufio.NewReaderSize(os.Stdin, 16 * 1024 * 1024)
 
-        st := strings.Split(readLine(reader), &quot; &quot;)
-
-        sTemp, err := strconv.ParseInt(st[0], 10, 64)
+        stdout, err := os.Create(os.Getenv(&quot;OUTPUT_PATH&quot;))
         checkError(err)
-        s := int32(sTemp)
 
-        tTemp, err := strconv.ParseInt(st[1], 10, 64)
+        defer stdout.Close()
+
+        writer := bufio.NewWriterSize(stdout, 16 * 1024 * 1024)
+
+        arrCount, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
         checkError(err)
-        t := int32(tTemp)
 
-        ab := strings.Split(readLine(reader), &quot; &quot;)
+        arrTemp := strings.Split(strings.TrimSpace(readLine(reader)), &quot; &quot;)
 
-        aTemp, err := strconv.ParseInt(ab[0], 10, 64)
-        checkError(err)
-        a := int32(aTemp)
+        var arr []int32
 
-        bTemp, err := strconv.ParseInt(ab[1], 10, 64)
-        checkError(err)
-        b := int32(bTemp)
-
-        mn := strings.Split(readLine(reader), &quot; &quot;)
-
-        mTemp, err := strconv.ParseInt(mn[0], 10, 64)
-        checkError(err)
-        m := int32(mTemp)
-
-        nTemp, err := strconv.ParseInt(mn[1], 10, 64)
-        checkError(err)
-        n := int32(nTemp)
-
-        applesTemp := strings.Split(readLine(reader), &quot; &quot;)
-
-        var apples []int32
-
-        for i := 0; i &lt; int(m); i++ {
-            applesItemTemp, err := strconv.ParseInt(applesTemp[i], 10, 64)
+        for i := 0; i &lt; int(arrCount); i++ {
+            arrItemTemp, err := strconv.ParseInt(arrTemp[i], 10, 64)
             checkError(err)
-            applesItem := int32(applesItemTemp)
-            apples = append(apples, applesItem)
+            arrItem := int32(arrItemTemp)
+            arr = append(arr, arrItem)
         }
 
-        orangesTemp := strings.Split(readLine(reader), &quot; &quot;)
+        result := migratoryBirds(arr)
 
-        var oranges []int32
+        fmt.Fprintf(writer, &quot;%d\n&quot;, result)
 
-        for i := 0; i &lt; int(n); i++ {
-            orangesItemTemp, err := strconv.ParseInt(orangesTemp[i], 10, 64)
-            checkError(err)
-            orangesItem := int32(orangesItemTemp)
-            oranges = append(oranges, orangesItem)
-        }
-
-        countApplesAndOranges(s, t, a, b, apples, oranges)
+        writer.Flush()
     }
 
     func readLine(reader *bufio.Reader) string {
@@ -230,7 +205,6 @@
         }
     }
 
-
 </code></pre>
 
 <ul>
@@ -246,38 +220,50 @@ func main(){
 }
 </code></pre>
 
-<p>Let&rsquo;s figure out the variables we need for this problem. We need to store the co-ordinates of line segment <code>s,t</code>, we need co-ordinates of the apple tree <code>a</code> and the co-ordinates of the orange tree <code>b</code>. We need the number of apples falling <code>m</code>, the number of oranges falling <code>n</code>. Now do we need to store the entire array or can we just have a temporary variable, store input one by one, decide if it falls under the line segment and be done with it? we will go with second approach. So we need a temporary variable <code>temp</code>. Next we need two counter variables to store the number of times an apple or orange falls in the given segment, so two more variables, <code>ac and oc</code>. Phew!!! let&rsquo;s declare them and take the required inputs.</p>
+<p>I&rsquo;ll break this question into four parts. I just love this question.</p>
 
-<pre><code class="language-go">
-    ...
-    var s,t,a,b,m,n,temp,ac,oc int
-    fmt.Scan(&amp;s,&amp;t)
-    fmt.Scan(&amp;a,&amp;b)
-    fmt.Scan(&amp;m,&amp;n)
+<ul>
+<li>Declaring the required variables</li>
+<li>Deciding on our array</li>
+<li>Taking our array as input and doing some operations on it</li>
+<li>Writing the logic of the program and printing the result</li>
+</ul>
 
-</code></pre>
-
-<p>Okay, now we have our variables, next we will take the distance that a fruit travels after falling as input one by one and calculate if it lies inside the line segment. Now if the co-ordinate of the tree when added to the distance lies inside the segment we will increase the counter else no increase, and same logic for orange tree as well. It doesn&rsquo;t matter if the distance is negative or positive, the summation will always provide desired result. So here goes the code.</p>
+<p>So, let&rsquo;s look into the variables. According to the input format we are given the length of birds <code>n</code>, and in next line we are given the types of birds we encounter. If you look at the constraints of the types, it is between <code>1 and 5</code> , i.e. the type of bird can only be between 1 to 5. The number of birds are huge but the type is limited. We are required to find the bird type with highest number. So we can take an array with size <code>5</code> ( because our bird type is between 1 to 5 ) and when even we encounter a type we will add a counter at that index of the array. Since array index starts at 0, we also need to decrease the type by 1. So we need an array declaration, and a temporary variable <code>t</code> to hold the input. Let&rsquo;s go ahead and convert everything we discussed now into code.</p>
 
 <pre><code class="language-go">
 	...
-    for i:= 0;i&lt;m;i++{
-        fmt.Scan(&amp;temp)
-        if a+temp &gt;= s &amp;&amp; a+temp &lt;= t {
-            ac++
-        }
+    var n,t int
+    
+    fmt.Scan(&amp;n)
+    
+    a := make([]int,5)
+    
+    for i:=0;i&lt;n;i++{
+        fmt.Scan(&amp;t)
+        t = t -1
+        a[t]++
     }
-    for i:= 0;i&lt;n;i++{
-        fmt.Scan(&amp;temp)
-        if b+temp &gt;= s &amp;&amp; b+temp &lt;= t {
-            oc++
-        }
-    }
-    fmt.Printf(&quot;%d\n%d&quot;,ac,oc)
 
 </code></pre>
 
-<p>So we have two loops here, completely similar, we&rsquo;ll just discuss one. We are looping the number of fruits time, taking an input in the temporary variable, now if the co-ordinate of apple or orange tree plus the distance the fruit travels is greater than equal to <code>s</code> and less than equal to <code>t</code> we say that the fruit fell inn the segment and increase the occurence of that event. After the loops we just print the out, since we are required to print the output in two lines, we use formatted printing, <code>%d</code> for integer, <code>\n</code> for new line. Now the complete code should look like</p>
+<p>We are declaring the variables as discussed, creating an array, taking input for the array. Then we decrease the type by one to adjust for zero based indexing and increase the count for that index. Now we have count for all types of birds. Next we need our logic. So we need to display the type of bird whose <strong><em>occurrence</em></strong> was maximum, in case where multiple types of birds had same occurrence, display the one with lower number as type. To implement this, we will assume that the bird with maximum occurrence is of type <code>1</code>, and then loop over the array from the beginning. If the number at any particular index is more than the number at our occurrence index, we will update our occurence index as well the max number and continue our search. In this way we will find the index with max number, and avoid the case of same maximum. At the end we will print the occurrence after adding <code>1</code> to it ( the adjustment for zero based indexing ). Let&rsquo;s convert that into code.</p>
+
+<pre><code class="language-go">
+	...
+    max,occ := a[0],0
+    
+    for i,num := range a{
+        if num &gt; max{
+            max = num
+            occ = i+1
+        }
+    }
+    fmt.Println(occ)
+
+</code></pre>
+
+<p>Here we are taking two variables ( yeah, didn&rsquo;t mention at the beginning, would have become difficult to explain ) one to store the actual maximum, the number at the index, another is the index itself ( the type ) and assigning <code>0</code> to that. Assuming that is the index with maximum birds. Next we loop over the array using the fancy range syntax, and check if we find another maximum, if yes we keep updating our variables. At the end we just print the <code>occ</code> i.e. index or the type of bird. So now your complete code should look something like</p>
 
 <pre><code class="language-go">
 package main
@@ -285,43 +271,45 @@ package main
 import &quot;fmt&quot;
 
 func main(){
-    var s,t,a,b,m,n,temp,ac,oc int
-    fmt.Scan(&amp;s,&amp;t)
-    fmt.Scan(&amp;a,&amp;b)
-    fmt.Scan(&amp;m,&amp;n)
+    var n,t int
     
-    for i:= 0;i&lt;m;i++{
-        fmt.Scan(&amp;temp)
-        if a+temp &gt;= s &amp;&amp; a+temp &lt;= t {
-            ac++
+    fmt.Scan(&amp;n)
+    
+    a := make([]int,5)
+    
+    for i:=0;i&lt;n;i++{
+        fmt.Scan(&amp;t)
+        t = t -1
+        a[t]++
+    }
+    max,occ := a[0],0
+    
+    for i,num := range a{
+        if num &gt; max{
+            max = num
+            occ = i+1
         }
     }
-    for i:= 0;i&lt;n;i++{
-        fmt.Scan(&amp;temp)
-        if b+temp &gt;= s &amp;&amp; b+temp &lt;= t {
-            oc++
-        }
-    }
-    fmt.Printf(&quot;%d\n%d&quot;,ac,oc)
+    fmt.Println(occ)
 }
 
 </code></pre>
 
-<p>Let&rsquo;s review what are the highlights to take away from this question. We take a bunch of variables as input and then discussed the logic. Next we take the distance each fruit travels as input one by one and add it to tree co-ordinate to check if it falls in the line segment, and finally print our result in the desired format. This is it for this one, complete source code for this post can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions/blob/master/practice/algorithms/implementation/apple-and-orange.go">Github Repo</a>. Will see you in the next one.</p>
+<p>I hope you enjoyed solving this question. This appproach of using array to store count of something where index becomes the key is very common. It helps in faster lookup for results. This is it for this one, complete source code for this post can be found on my <a href="https://github.com/rishabh1403/hackerrank-golang-solutions">Github Repo</a>. Will see you in the next one.</p>
 
 <p>There you go guys, you made it to end of the post. Please check out the video below if you still have any doubts. Subscribe to my <a href="https://www.youtube.com/channel/UC4syrEYE9_fzeVBajZIyHlA">youtube channel</a> and my mailing list below for regular updates. Follow me on <a href="https://www.twitter.com/rishabhjain1403">twitter</a> , drop me a mail or leave a comment here if you still have any doubts and I will try my best to help you out. Thanks</p>
 
 <p>Stay tuned and see you around :)
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/UJBdyCUR4h8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="//www.youtube.com/embed/IoX_OBCVIOw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 </p>
                 </section>
             </article>
 
             
-                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f09%2fhackerrank-solution-of-apple-and-orange-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Apple%20and%20Orange%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2frishabh1403.com%2fposts%2fcoding%2fhackerrank%2f2018%2f10%2fhackerrank-solution-of-migratory-birds-in-golang%2f - Hackerrank%20%7c%20Solution%20of%20Migratory%20Birds%20in%20Golang by @rishabhjain1403"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -362,10 +350,6 @@ func main(){
     
     
         <li>
-            <a href="/posts/coding/hackerrank/2018/10/hackerrank-solution-of-migratory-birds-in-golang/">Hackerrank | Solution of Migratory Birds in Golang<aside class="dates">Oct 22 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/posts/coding/hackerrank/2018/10/hackerrank-solution-of-divisible-sum-pairs-in-golang/">Hackerrank | Solution of Divisible Sum Pairs in Golang<aside class="dates">Oct 6 2018</aside></a>
         </li>
     
@@ -391,6 +375,10 @@ func main(){
     
         <li>
             <a href="/posts/privacy/2018/09/they-can-smell-what-you-are-cooking/">They Can Smell What You are Cooking<aside class="dates">Sep 19 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/coding/hackerrank/2018/09/hackerrank-solution-of-apple-and-orange-in-golang/">Hackerrank | Solution of Apple and Orange in Golang<aside class="dates">Sep 19 2018</aside></a>
         </li>
     
         <li>
