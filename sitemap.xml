@@ -1,312 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-migratory-birds-in-golang/</loc>
-    <lastmod>2018-10-22T21:45:53+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-divisible-sum-pairs-in-golang/</loc>
-    <lastmod>2018-10-06T22:10:10+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/general/2018/10/from-the-agc-to-smartphones-and-beyond/</loc>
-    <lastmod>2018-10-06T10:56:20+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-birthday-chocolate-in-golang/</loc>
-    <lastmod>2018-10-05T01:05:59+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-breaking-the-records-in-golang/</loc>
-    <lastmod>2018-10-02T18:25:16+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-between-two-sets-in-golang/</loc>
-    <lastmod>2018-09-21T18:39:04+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/life/2018/09/new-mornings-new-subscribers/</loc>
-    <lastmod>2018-09-20T21:35:47+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/privacy/2018/09/they-can-smell-what-you-are-cooking/</loc>
-    <lastmod>2018-09-19T21:06:20+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-apple-and-orange-in-golang/</loc>
-    <lastmod>2018-09-19T20:55:26+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/games/pubg/2018/09/pubg-a-new-gaming-sensation/</loc>
-    <lastmod>2018-09-17T23:13:22+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/docker/2018/09/a-brief-introduction-to-docker/</loc>
-    <lastmod>2018-09-17T23:01:36+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-grading-students-in-golang/</loc>
-    <lastmod>2018-09-16T23:35:13+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-time-conversion-in-golang/</loc>
-    <lastmod>2018-09-11T21:55:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/dart/2018/09/dart-programming-language-tutorial-part-7-if-else-and-ternary-operators-in-dart/</loc>
-    <lastmod>2018-09-10T19:45:19+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/dart/2018/09/dart-programming-language-tutorial-part-6-built-in-types-part-2/</loc>
-    <lastmod>2018-09-07T19:45:11+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/dart/2018/09/dart-programming-language-tutorial-part-5-built-in-types-part-1/</loc>
-    <lastmod>2018-09-04T21:30:59+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-birthday-cake-candles-in-golang/</loc>
-    <lastmod>2018-09-03T19:35:03+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-mini-max-sum-in-golang/</loc>
-    <lastmod>2018-09-02T18:35:00+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-staircase-in-golang/</loc>
-    <lastmod>2018-09-01T16:45:26+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-plus-minus-in-golang/</loc>
-    <lastmod>2018-08-31T20:10:21+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-diagonal-difference-in-golang/</loc>
-    <lastmod>2018-08-30T19:05:56+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/dart/2018/08/dart-programming-language-tutorial-part-4-comments/</loc>
-    <lastmod>2018-08-30T01:15:14+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/dart/2018/08/dart-programming-language-tutorial-part-3-final-const-default-values/</loc>
-    <lastmod>2018-08-29T21:45:47+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/dart/2018/08/dart-programming-language-tutorial-part-2-variables/</loc>
-    <lastmod>2018-08-28T20:00:01+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/dart/2018/08/dart-programming-language-tutorial-part-1-series-introduction/</loc>
-    <lastmod>2018-08-27T20:15:08+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-a-very-big-sum-in-golang/</loc>
-    <lastmod>2018-08-26T18:45:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-compare-the-triplets-in-golang/</loc>
-    <lastmod>2018-08-25T23:00:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-simple-array-sum-in-golang/</loc>
-    <lastmod>2018-08-25T00:55:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/</loc>
-    <lastmod>2018-08-22T12:32:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solutions-in-golang/</loc>
-    <lastmod>2018-08-21T12:32:25+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/life/2018/08/new-blog-new-beginnings/</loc>
-    <lastmod>2018-08-21T01:17:37+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/tags/coding/</loc>
-    <lastmod>2018-10-22T21:45:53+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/categories/coding/</loc>
-    <lastmod>2018-10-22T21:45:53+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/tags/dart/</loc>
-    <lastmod>2018-09-10T19:45:19+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/categories/dart/</loc>
-    <lastmod>2018-09-10T19:45:19+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/tags/docker/</loc>
-    <lastmod>2018-09-17T23:01:36+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/categories/docker/</loc>
-    <lastmod>2018-09-17T23:01:36+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/tags/games/</loc>
-    <lastmod>2018-09-17T23:13:22+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/categories/games/</loc>
-    <lastmod>2018-09-17T23:13:22+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/tags/general/</loc>
-    <lastmod>2018-10-06T10:56:20+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/categories/general/</loc>
-    <lastmod>2018-10-06T10:56:20+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/tags/golang/</loc>
-    <lastmod>2018-10-22T21:45:53+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/categories/golang/</loc>
-    <lastmod>2018-10-22T21:45:53+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/tags/hackerrank/</loc>
-    <lastmod>2018-10-22T21:45:53+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/categories/hackerrank/</loc>
-    <lastmod>2018-10-22T21:45:53+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/tags/life/</loc>
-    <lastmod>2018-09-20T21:35:47+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/categories/life/</loc>
-    <lastmod>2018-09-20T21:35:47+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/posts/</loc>
-    <lastmod>2018-10-22T21:45:53+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/tags/privacy/</loc>
-    <lastmod>2018-09-19T21:06:20+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/categories/privacy/</loc>
-    <lastmod>2018-09-19T21:06:20+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/</loc>
-    <lastmod>2018-10-22T21:45:53+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/tags/space/</loc>
-    <lastmod>2018-10-06T10:56:20+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/tags/</loc>
-    <lastmod>2018-10-22T21:45:53+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/tags/tutorial/</loc>
-    <lastmod>2018-09-10T19:45:19+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rishabh1403.com/tags/youtube/</loc>
-    <lastmod>2018-09-20T21:35:47+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-migratory-birds-in-golang</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-divisible-sum-pairs-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/general/2018/10/from-the-agc-to-smartphones-and-beyond/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-birthday-chocolate-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-breaking-the-records-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-between-two-sets-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/life/2018/09/new-mornings-new-subscribers/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/privacy/2018/09/they-can-smell-what-you-are-cooking/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-apple-and-orange-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/games/pubg/2018/09/pubg-a-new-gaming-sensation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/docker/2018/09/a-brief-introduction-to-docker/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-grading-students-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-time-conversion-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/dart/2018/09/dart-programming-language-tutorial-part-7-if-else-and-ternary-operators-in-dart/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/dart/2018/09/dart-programming-language-tutorial-part-6-built-in-types-part-2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/dart/2018/09/dart-programming-language-tutorial-part-5-built-in-types-part-1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-birthday-cake-candles-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-mini-max-sum-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/09/hackerrank-solution-of-staircase-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-plus-minus-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-diagonal-difference-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/dart/2018/08/dart-programming-language-tutorial-part-4-comments/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/dart/2018/08/dart-programming-language-tutorial-part-3-final-const-default-values/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/dart/2018/08/dart-programming-language-tutorial-part-2-variables/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/dart/2018/08/dart-programming-language-tutorial-part-1-series-introduction/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-a-very-big-sum-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-compare-the-triplets-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solution-of-simple-array-sum-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solve-me-first-solution/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solutions-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/life/2018/08/new-blog-new-beginnings/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/categories/hackerrank</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/categories/coding</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/categories/golang</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/categories/general</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/categories/life</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/categories/privacy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/categories/games</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/categories/docker</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/categories/dart</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/page/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

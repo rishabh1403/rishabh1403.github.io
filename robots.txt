@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://rishabh1403.com/sitemap.xml
+Host: https://rishabh1403.com
