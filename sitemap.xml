@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://rishabh1403.com/leetcode-solution-of-palindrome-number-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rishabh1403.com/leetcode-solution-of-two-sum-ii-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rishabh1403.com/trip-to-rishikesh</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rishabh1403.com/leetcode-solution-of-reverse-integer-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rishabh1403.com/leetcode-solution-of-two-sum-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rishabh1403.com/leetcode-solution-of-valid-parentheses-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rishabh1403.com/stepping-into-the-awe-inspiring-world-of-augmented-reality-aka-ar</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/leetcode/2019/12/leetcode-solution-of-palindrome-number-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/leetcode/2019/12/leetcode-solution-of-two-sum-ii-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/travel/2019/11/trip-to-rishikesh</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/leetcode/2019/11/leetcode-solution-of-reverse-integer-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/leetcode/2019/11/leetcode-solution-of-two-sum-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/coding/leetcode/2019/09/leetcode-solution-of-valid-parentheses-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/general/2019/07/stepping-into-the-awe-inspiring-world-of-augmented-reality-aka-ar</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-migratory-birds-in-golang</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/10/hackerrank-solution-of-divisible-sum-pairs-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/posts/general/2018/10/from-the-agc-to-smartphones-and-beyond/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
