@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://rishabh1403.com/posts/life/2020/03/jim-corbett-bike-ride</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/life/2020/03/lansdowne-bike-trip</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/life/2020/03/small-rides</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/life/2020/03/joined-biking-group</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/posts/life/2020/03/bought-a-new-bike</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/posts/coding/leetcode/2019/12/leetcode-solution-of-palindrome-number-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/posts/coding/leetcode/2019/12/leetcode-solution-of-two-sum-ii-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/posts/travel/2019/11/trip-to-rishikesh</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -39,12 +44,12 @@
 <url> <loc>https://rishabh1403.com/posts/coding/hackerrank/2018/08/hackerrank-solutions-in-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/posts/life/2018/08/new-blog-new-beginnings/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rishabh1403.com/categories/leetcode</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rishabh1403.com/categories/coding</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rishabh1403.com/categories/javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/categories/life</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/categories/travel</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/categories/biking</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/categories/leetcode</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/categories/coding</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rishabh1403.com/categories/javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/categories/general</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/categories/Augmented Reality</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rishabh1403.com/categories/Virtual Reality</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
