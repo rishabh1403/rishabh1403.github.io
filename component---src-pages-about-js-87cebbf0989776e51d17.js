@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{319:function(n,t,e){"use strict";e.r(t),e.d(t,"query",(function(){return u}));var a=e(1),o=e.n(a),r=e(305),i=e(307);t.default=function(){return o.a.createElement(r.a,null,o.a.createElement(i.a,{title:"About",description:"About page of Rishabh Jain's blog.Empty right now"}))};var u="3518984476"}}]);
-//# sourceMappingURL=component---src-pages-about-js-87cebbf0989776e51d17.js.map
